@@ -7,6 +7,7 @@ const { logger } = require('./middleware/logEvents');
 const errorHandler = require('./middleware/errorHandler');
 const config = require("./config/config");
 const consolelog = require("./Tools/consolelog")
+const cookieParser = require('cookie-parser');
 
 // custom middleware logger
 app.use(logger);
@@ -18,7 +19,8 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 //serve static files
 app.use('/', express.static(path.join(__dirname, '/public')));
-
+// built-in middleware pour parse les cookies
+app.use(cookieParser());
 
 // Middleware pour l'acces à l'api (check le autorization Headers dans une requete pour voir si cela correspond à notre clé d'api):
 const accesMiddleware = require('./middleware/acces.middleware');
