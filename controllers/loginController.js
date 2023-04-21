@@ -3,97 +3,83 @@ const config = require("../config/config");
 const { query } = require("../services/database.service");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
-const bodyParser = require("body-parser");
 
-async function loginUser(req, res) {
+async function handleLogin(req, res) {
   try {
-    consolelog("// Appel de la method loginUser //");
+    consolelog("// Appel de la method handleLogin //");
+    //   On déconstruit req.body
     const { email, password } = req.body;
+    if (!email || !password) {
+      return res.status(400).json({
+        message: "Il faut saisir un email Et un mot de passe.",
+        result: `false`,
+      });
+    }
 
+    // query pour chercher l'utilisateur en fonction du mail reçu
     const sql = `SELECT * FROM account WHERE deletedBy = 0 AND email = ?`;
     const [user] = await query(sql, [email]);
     consolelog("++ L'utilisateur trouvé est :", user);
     if (!user) {
-      throw new Error("Bad Login 1");
+      return res
+        .status(401)
+        .json({ message: "Non autorisé.", result: "false" });
     }
+
+    // On compare le password reçu avec celui en db.
     const passwordMatch = await bcrypt.compare(
       password,
       config.hash.prefix + user.password
     );
-    if (passwordMatch) {
-      const sql2 = `SELECT * FROM customer WHERE id_account = ?`;
-      const [customer] = await query(sql2, [user.id]);
-      consolelog("++ Customer trouvé est :", customer);
-
-      const data = { ...user, ...customer };
-      const token = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn: "2m",
-      });
-
-      const refreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
-        expiresIn: "1d",
-      });
-
-      // Assigning refresh token in http-only cookie
-      res.cookie("jwt", refreshToken, {
-        httpOnly: true,
-        sameSite: "None",
-        secure: true,
-        maxAge: 24 * 60 * 60 * 1000,
-      });
-      consolelog(
-        "Login successful ! sending token and refreshToken (httpOnly)"
-      );
-      res.status(200).json({ result: true, message: "Login OK", token });
-    } else {
+    consolelog("Comparons les mots de passe reçus :", passwordMatch);
+    // ca correspond donc on va chercher le customer qui correspond
+    if (!passwordMatch) {
       // Passwords do not match, reject login attempt
-      throw new Error("Bad Login 2");
+      return res
+        .status(401)
+        .json({ message: "Non autorisé.", result: "false" });
     }
-  } catch (error) {
-    res.status(500).json({
-      message: "Erreur d'authentification.",
+
+    const sql2 = `SELECT * FROM customer WHERE id_account = ?`;
+    const [customer] = await query(sql2, [user.id]);
+    consolelog("++ Customer trouvé est :", customer);
+
+    // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
+    const data = { ...user, ...customer };
+    // On crée un JWT avec la clé secrete dans .env
+    const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
+      expiresIn: "1h",
     });
+    // On crée un JWT de refresh  avec la clé secrete dans .env
+    const refreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
+      expiresIn: "10d",
+    });
+
+    // save refresh token to database
+    const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
+    await query(sql3, [refreshToken, user.id]);
+
+    // Assigning refresh token in http-only cookie et envoi en cookie.
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+      maxAge: 24 * 60 * 60 * 1000,
+    });
+    consolelog("Login successful ! sending token and refreshToken (httpOnly)");
+    return res.status(200).json({
+      data,
+      result: true,
+      message: "Authentification avec succes.",
+      accessToken,
+    });
+  } catch (error) {
+    console.error(`Error in handleLogin: ${error}`);
+    consolelog(`Error in handleLogin: ${error}`);
+    return res
+      .status(500)
+      .json({ message: "Erreur interne.", result: "false" });
   }
 }
 
-async function refreshToken(req, res) {
-    consolelog("// Appel de la fonction refreshToken")
-    if (req.cookies?.jwt) {
-        consolelog("Réception du cookie suivant :",req.cookies?.jwt);
-      // Destructuring refreshToken from cookie
-      const refreshToken = req.cookies.jwt;
-  
-      try {
-        // Verify refresh token
-        const decoded = jwt.verify(refreshToken, process.env.REFRESH_TOKEN_SECRET);
-        consolelog("yo decoded is:",decoded);
-        const sql = `SELECT * FROM account WHERE id = ?`;
-        const [user] = await query(sql, [decoded.id_account]);
-        if (!user) {
-            throw new Error("User not found");
-        }
-        consolelog("++ L'utilisateur trouvé est :", user);
-        const sql2 = `SELECT * FROM customer WHERE id_account = ?`;
-        const [customer] = await query(sql2, [user.id]);
-        consolelog("++ Customer trouvé est :", customer);
-        
-
-        // Generate new access token
-        const data = { ...user , ...customer};
-        const token = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
-          expiresIn: "2m",
-        });
-        consolelog("__ Génération d'un nouveau token d'access grace au token refresh sécurisé !")
-  
-        // Send new token in response
-        res.status(200).json({ result: true, message: "Token refreshed", token });
-      } catch (error) {
-        console.error(`Error in refreshToken: ${error}`);
-        res.status(406).json({ message: "Unauthorized" });
-      }
-    } else {
-      return res.status(406).json({ message: "Unauthorized" });
-    }
-  }  
-
-module.exports = { loginUser, refreshToken };
+module.exports = { handleLogin };

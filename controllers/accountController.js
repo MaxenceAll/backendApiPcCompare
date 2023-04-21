@@ -8,6 +8,7 @@ async function selectAll(req, res) {
   try {
     const data = await query(sql, [0]);
     consolelog("---> Sortie de la method selectAll de database.service. //");
+    // consolelog("yo la data trouvée est :",data)
     res.status(200).json({
       data,
       result: true,

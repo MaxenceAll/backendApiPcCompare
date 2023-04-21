@@ -1,10 +1,9 @@
 const express = require('express');
 const router = express.Router();
-const accountController = require('../controllers/accountController');
-
+const authController = require('../controllers/authController');
 
 router.get('/', async (req, res) => {
-  await accountController.selectAll(req, res);
+  await authController.handleAuth(req, res);
 });
 
 module.exports = router;

@@ -8,11 +8,18 @@ const errorHandler = require('./middleware/errorHandler');
 const config = require("./config/config");
 const consolelog = require("./Tools/consolelog")
 const cookieParser = require('cookie-parser');
+const credentials = require('./middleware/credentials');
+
 
 // custom middleware logger
 app.use(logger);
+
+// Handle options credentials check - before CORS!
+// and fetch cookies credentials requirement
+app.use(credentials);
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
+
 // built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
@@ -22,17 +29,25 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());
 
+
+// KO :
 // Middleware pour l'acces à l'api (check le autorization Headers dans une requete pour voir si cela correspond à notre clé d'api):
-const accesMiddleware = require('./middleware/acces.middleware');
-app.use(accesMiddleware);
+// const accesMiddleware = require('./middleware/acces.middleware');
+// app.use(accesMiddleware);
 
 
 // routes
 // Route root, pour l'affichage doc de l'API
 app.use('/', require('./routes/root'));
-app.use('/account', require('./routes/account'));
+app.use('/register', require('./routes/register'));
 app.use('/login', require('./routes/login'));
+app.use('/refresh', require('./routes/refresh'));
+app.use('/auth', require('./routes/auth'));
 
+
+const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
+// Debut des routes protégées :
+app.use('/account',verifyRefreshToken, require('./routes/account'));
 
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
