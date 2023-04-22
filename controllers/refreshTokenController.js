@@ -66,10 +66,10 @@ async function handleRefreshToken(req, res) {
       });
     } catch (error) {
       console.error(`Error in refreshToken: ${error}`);
-      res.status(406).json({ message: "Unauthorized" });
+      res.status(406).json({ message: "Unauthorized 1 " });
     }
   } else {
-    return res.status(406).json({ message: "Unauthorized" });
+    return res.json({ message: "No refresh token found, you need to login" });
   }
 }
 

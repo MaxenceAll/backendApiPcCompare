@@ -40,6 +40,7 @@ app.use(cookieParser());
 // Route root, pour l'affichage doc de l'API
 app.use('/', require('./routes/root'));
 app.use('/register', require('./routes/register'));
+app.use('/reset', require('./routes/reset'));
 app.use('/login', require('./routes/login'));
 app.use('/refresh', require('./routes/refresh'));
 app.use('/auth', require('./routes/auth'));
