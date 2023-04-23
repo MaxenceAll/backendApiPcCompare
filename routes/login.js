@@ -6,4 +6,10 @@ router.post('/', async (req, res) => {
   await loginController.handleLogin(req, res);
 });
 
+router.post('/logout', async (req, res) => {
+  await loginController.handleLogout(req, res);
+});
+
+
+
 module.exports = router;

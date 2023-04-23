@@ -82,4 +82,44 @@ async function handleLogin(req, res) {
   }
 }
 
-module.exports = { handleLogin };
+async function handleLogout(req, res) {
+  try {
+    // décoder le refresh token pour savoir a qui on a afaire
+    const refreshToken = req.cookies.refreshToken;
+    consolelog("yo refreshToken:",refreshToken);
+    const decodedRefreshToken = jwt.verify(
+        refreshToken,
+      process.env.REFRESH_TOKEN_SECRET
+    );
+    consolelog("yo decodedRefreshToken:",decodedRefreshToken);
+    const userId = decodedRefreshToken.id_account;
+    consolelog("yo userId:",userId);
+
+    // update le token dans la database
+    const sql = "UPDATE account SET refresh_token = NULL WHERE id = ?";
+    await query(sql, [userId]);
+
+    // envoyer un nouveau refreshToken "vide" et expiré
+    res.cookie("refreshToken", "", {
+      httpOnly: true,
+      expires: new Date(0),
+      path: "/",
+      sameSite: "None",
+      secure: true,
+    });
+
+    return res.status(200).json({
+      result: true,
+      message: "Logout successful",
+    });
+  } catch (error) {
+    console.error(`Error in handleLogout: ${error}`);
+    consolelog(`Error in handleLogout: ${error}`);
+    return res.status(500).json({
+      message: "Internal Server Error",
+      result: false,
+    });
+  }
+}
+
+module.exports = { handleLogin, handleLogout };
