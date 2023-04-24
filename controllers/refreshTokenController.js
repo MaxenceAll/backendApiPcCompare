@@ -17,14 +17,16 @@ async function handleRefreshToken(req, res) {
       const decoded = jwt.verify(
         refreshToken,
         process.env.REFRESH_TOKEN_SECRET
-      );
-      consolelog("yo le decoded refreshToken is :",decoded)
-      if (!decoded.id_account) {
+        );
+        consolelog("yo le decoded refreshToken is :",decoded)
+        if (!decoded.id_account) {
+        // TODO si la verif est KO il faut un return avec msg d'erreur.
         throw new Error("Refresh token invalide !");
       }
       const sql = `SELECT * FROM account WHERE id = ?`;
       const [user] = await query(sql, [decoded.id_account]);
       if (!user) {
+        // TODO return ici pas error
         throw new Error("User not found");
       }
       consolelog("++ L'utilisateur trouvé est :", user);
@@ -46,16 +48,19 @@ async function handleRefreshToken(req, res) {
         expiresIn: "10d",
       });
 
+      //TODO a supprimer.
       // Update refresh token in database
-      const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-      await query(sql3, [newRefreshToken, user.id]);
+      // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
+      // await query(sql3, [newRefreshToken, user.id]);
 
       // Set new refresh token cookie in response
+
+      //TODO var maxAge
       res.cookie("refreshToken", newRefreshToken, {
         httpOnly: true,
         sameSite: "None",
         secure: true,
-        maxAge: 24 * 60 * 60 * 1000,
+        maxAge: 10 * 24 * 60 * 60 * 1000,
       });
 
       // Send new token in response

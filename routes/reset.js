@@ -12,11 +12,6 @@ router.post("/newpassword", async (req, res) => {
 });
 
 
-
-
-
-
-
 module.exports = router;
 
 

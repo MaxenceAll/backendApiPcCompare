@@ -4,9 +4,9 @@ const { query } = require("../services/database.service");
 
 async function selectAll(req, res) {
   consolelog("// Appel de la method selectAll de carouselController//");
-  const sql = `SELECT * FROM carousel WHERE deletedBy = ?`;
+  const sql = `SELECT * FROM carousel WHERE deletedBy = 0`;
   try {
-    const data = await query(sql, [0]);
+    const data = await query(sql);
     consolelog("---> Sortie de la method selectAll de carouselController //");
     // consolelog("yo la data trouvée est :",data)
     res.status(200).json({

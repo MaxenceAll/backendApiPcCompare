@@ -44,6 +44,15 @@ async function handleLogin(req, res) {
     const [customer] = await query(sql2, [user.id]);
     consolelog("++ Customer trouvé est :", customer);
 
+    // update après avoir retrouvé la table cusotmer pour avoir la dernière connexion (avant celle-ci)
+    const sql4 = `
+    UPDATE customer
+    SET last_connection = NOW()
+    WHERE id = ?;
+    `;
+    const resultTest = await query(sql4, [customer.id]);
+    // consolelog("yo le restultat est:", resultTest);
+
     // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
     const data = { ...user, ...customer };
     // On crée un JWT avec la clé secrete dans .env
@@ -59,12 +68,13 @@ async function handleLogin(req, res) {
     const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
     await query(sql3, [refreshToken, user.id]);
 
+    // TODO ajoute var au max age et vérif que tout est ISO
     // Assigning refresh token in http-only cookie et envoi en cookie.
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       sameSite: "None",
       secure: true,
-      maxAge: 24 * 60 * 60 * 1000,
+      maxAge: 10 * 24 * 60 * 60 * 1000,
     });
     consolelog("Login successful ! sending token and refreshToken (httpOnly)");
     return res.status(200).json({
@@ -86,14 +96,14 @@ async function handleLogout(req, res) {
   try {
     // décoder le refresh token pour savoir a qui on a afaire
     const refreshToken = req.cookies.refreshToken;
-    consolelog("yo refreshToken:",refreshToken);
+    consolelog("yo refreshToken:", refreshToken);
     const decodedRefreshToken = jwt.verify(
-        refreshToken,
+      refreshToken,
       process.env.REFRESH_TOKEN_SECRET
     );
-    consolelog("yo decodedRefreshToken:",decodedRefreshToken);
+    consolelog("yo decodedRefreshToken:", decodedRefreshToken);
     const userId = decodedRefreshToken.id_account;
-    consolelog("yo userId:",userId);
+    consolelog("yo userId:", userId);
 
     // update le token dans la database
     const sql = "UPDATE account SET refresh_token = NULL WHERE id = ?";

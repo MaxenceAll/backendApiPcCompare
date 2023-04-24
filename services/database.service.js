@@ -3,19 +3,19 @@ const config = require("../config/config");
 //  IMPORT d'une fonction custom pour log avec timestamp:
 const consolelog = require("../Tools/consolelog");
 
-const pool = mysql.createPool({
-  host: config.db.host,
-  port: config.db.port,
-  database: config.db.database,
-  user: config.db.user,
-  password: config.db.password,
-  connectionLimit: 10
-});
+// const pool = mysql.createPool({
+//   host: config.db.host,
+//   port: config.db.port,
+//   database: config.db.database,
+//   user: config.db.user,
+//   password: config.db.password,
+//   connectionLimit: 10
+// });
 
 let db;
 async function connect() {
   if (!db) {
-    console.log("new connexion made");
+    consolelog("new connexion made");
     const { host, port, database, user, password } = config.db;
     db = await mysql.createConnection({
       host,

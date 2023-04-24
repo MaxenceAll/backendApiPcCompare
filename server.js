@@ -1,5 +1,4 @@
 const express = require('express');
-const app = express();
 const path = require('path');
 const cors = require('cors');
 const corsOptions = require('./config/corsOptions');
@@ -9,11 +8,11 @@ const config = require("./config/config");
 const consolelog = require("./Tools/consolelog")
 const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
+const app = express();
 
 
 // custom middleware logger
 app.use(logger);
-
 // Handle options credentials check - before CORS!
 // and fetch cookies credentials requirement
 app.use(credentials);

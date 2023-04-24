@@ -22,7 +22,7 @@ const config = {
             secure: false,
             auth: {
                 user: "maxtestnodejs@gmail.com",
-                pass: 'ocirsznbrkcqnrav'
+                pass: 'xiwkuvhwjlwjhrtq'
             },
         },
         // API ACCESS key :

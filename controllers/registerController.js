@@ -30,7 +30,7 @@ async function sendVerifMail(req, res) {
     const retourMailer = await mailer.send(emailOptions);
     consolelog(`Verification email sent to ${email}`);
     consolelog("le retourMailer est = à:", retourMailer);
-    res.status(200).json({ message: "Verification email sent." });
+    res.status(200).json({ result: true,  message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.` });
   } catch (error) {
     consolelog(`Error sending verification email to ${email}: ${error}`);
     res.status(500).json({ message: "Error sending verification email." });
