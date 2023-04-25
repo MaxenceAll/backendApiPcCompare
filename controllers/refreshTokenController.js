@@ -34,6 +34,7 @@ async function handleRefreshToken(req, res) {
       const [customer] = await query(sql2, [user.id]);
       consolelog("++ Customer trouvé est :", customer);
 
+      // TODO pas envoyer le hashedpassword
       // Generate new access token
       const data = { ...user, ...customer };
       const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
@@ -50,8 +51,8 @@ async function handleRefreshToken(req, res) {
 
       //TODO a supprimer.
       // Update refresh token in database
-      // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-      // await query(sql3, [newRefreshToken, user.id]);
+      const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
+      await query(sql3, [newRefreshToken, user.id]);
 
       // Set new refresh token cookie in response
 
@@ -74,7 +75,7 @@ async function handleRefreshToken(req, res) {
       res.status(406).json({ message: "Unauthorized 1 " });
     }
   } else {
-    return res.json({ message: "No refresh token found, you need to login" });
+    return res.json({ data: null, result: false, message: "No refresh token found, you need to login" });
   }
 }
 

@@ -55,6 +55,7 @@ async function handleLogin(req, res) {
 
     // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
     const data = { ...user, ...customer };
+    // consolelog("yoyoyo data:", data);
     // On crée un JWT avec la clé secrete dans .env
     const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
       expiresIn: "1h",
@@ -78,10 +79,12 @@ async function handleLogin(req, res) {
     });
     consolelog("Login successful ! sending token and refreshToken (httpOnly)");
     return res.status(200).json({
-      data,
-      result: true,
-      message: "Authentification avec succes.",
-      accessToken,
+      data: {
+        data,
+        result: true,
+        message: "Authentification avec succes.",
+        accessToken,
+      },
     });
   } catch (error) {
     console.error(`Error in handleLogin: ${error}`);
