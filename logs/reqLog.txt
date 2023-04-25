@@ -681,3 +681,9 @@
 25/04/2023	10:35:00	d4b40aa0-678f-4bba-a503-2a77575fad98	POST	http://localhost:5173	/login/logout
 25/04/2023	10:35:05	7626679d-5650-4ad0-a875-79092b6c70b7	OPTIONS	http://localhost:5173	/login
 25/04/2023	10:35:05	73177ef1-f960-4fc9-bb7f-929d8f485686	POST	http://localhost:5173	/login
+25/04/2023	11:36:15	38534414-9e3b-4d00-ba50-3b35590498bf	GET	http://localhost:5173	/carousel?signal=[object+AbortSignal]
+25/04/2023	11:36:15	e497f816-5d35-4033-b8f5-b53352e11941	GET	http://localhost:5173	/carousel?signal=[object+AbortSignal]
+25/04/2023	13:04:12	4ee47a80-429c-4a3e-99db-17e6be2bf84a	OPTIONS	http://localhost:5173	/login/logout
+25/04/2023	13:04:12	d96dea0a-daba-460b-ae96-bd89c5c6b500	POST	http://localhost:5173	/login/logout
+25/04/2023	13:28:10	b07c7135-205b-48dc-bfb4-8fccea80bd26	OPTIONS	http://localhost:5173	/login
+25/04/2023	13:28:10	58f587bc-8ac4-44d8-9ba6-d2a099e268a6	POST	http://localhost:5173	/login

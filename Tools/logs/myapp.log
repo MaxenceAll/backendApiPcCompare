@@ -557,3 +557,286 @@
 25/04/23 08:35:05 :: Login successful ! sending token and refreshToken (httpOnly) 
 25/04/23 08:35:05 :: ---> Sortie de la method QUERY de database.service. // 
 25/04/23 08:46:51 :: Ouverture d'un port d'écoute sur : 5050 
+25/04/23 09:36:15 :: // Appel de la method selectAll de carouselController// 
+25/04/23 09:36:15 :: // Appel de la method QUERY de database.service. // 
+25/04/23 09:36:15 :: new connexion made 
+25/04/23 09:36:15 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
+25/04/23 09:36:15 :: ==>Retour de la requete: [
+  [
+    {
+      id: 1,
+      img_src: 'https://picsum.photos/id/1/850/300',
+      img_alt: 'lien vers builder',
+      description: 'Venez découvrir le builder !',
+      button_text: 'Découvrir içi',
+      createdAt: 2023-04-23T17:03:47.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:03:47.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'builder'
+    },
+    {
+      id: 2,
+      img_src: 'https://picsum.photos/id/2/850/400',
+      img_alt: 'lien vers page about',
+      description: 'Venez découvrir qui nous-sommes !',
+      button_text: 'Cliquez ici',
+      createdAt: 2023-04-23T17:27:05.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:27:05.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'about'
+    },
+    {
+      id: 3,
+      img_src: 'https://picsum.photos/id/3/850/500',
+      img_alt: 'lien vers compare',
+      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
+      button_text: 'Trouver les meilleurs prix',
+      createdAt: 2023-04-23T17:28:04.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:28:04.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'compare'
+    },
+    {
+      id: 4,
+      img_src: 'https://picsum.photos/id/4/850/600',
+      img_alt: 'lien vers test',
+      description: 'hello world',
+      button_text: 'hello',
+      createdAt: 2023-04-23T17:29:09.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:29:09.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'themes'
+    },
+    {
+      id: 5,
+      img_src: 'https://picsum.photos/id/145/850/600',
+      img_alt: 'TOTO TEEST',
+      description: 'Hello new test',
+      button_text: 'LETS GO',
+      createdAt: 2023-04-23T17:29:09.000Z,
+      createdBy: 'admin',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-24T12:31:28.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'about'
+    }
+  ]
+] 
+25/04/23 09:36:15 :: ---> Sortie de la method selectAll de carouselController // 
+25/04/23 09:36:15 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 09:36:15 :: // Appel de la method selectAll de carouselController// 
+25/04/23 09:36:15 :: // Appel de la method QUERY de database.service. // 
+25/04/23 09:36:15 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
+25/04/23 09:36:15 :: ==>Retour de la requete: [
+  [
+    {
+      id: 1,
+      img_src: 'https://picsum.photos/id/1/850/300',
+      img_alt: 'lien vers builder',
+      description: 'Venez découvrir le builder !',
+      button_text: 'Découvrir içi',
+      createdAt: 2023-04-23T17:03:47.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:03:47.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'builder'
+    },
+    {
+      id: 2,
+      img_src: 'https://picsum.photos/id/2/850/400',
+      img_alt: 'lien vers page about',
+      description: 'Venez découvrir qui nous-sommes !',
+      button_text: 'Cliquez ici',
+      createdAt: 2023-04-23T17:27:05.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:27:05.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'about'
+    },
+    {
+      id: 3,
+      img_src: 'https://picsum.photos/id/3/850/500',
+      img_alt: 'lien vers compare',
+      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
+      button_text: 'Trouver les meilleurs prix',
+      createdAt: 2023-04-23T17:28:04.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:28:04.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'compare'
+    },
+    {
+      id: 4,
+      img_src: 'https://picsum.photos/id/4/850/600',
+      img_alt: 'lien vers test',
+      description: 'hello world',
+      button_text: 'hello',
+      createdAt: 2023-04-23T17:29:09.000Z,
+      createdBy: 'site',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-23T17:29:09.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'themes'
+    },
+    {
+      id: 5,
+      img_src: 'https://picsum.photos/id/145/850/600',
+      img_alt: 'TOTO TEEST',
+      description: 'Hello new test',
+      button_text: 'LETS GO',
+      createdAt: 2023-04-23T17:29:09.000Z,
+      createdBy: 'admin',
+      deletedAt: null,
+      deletedBy: '0',
+      modifiedAt: 2023-04-24T12:31:28.000Z,
+      modifiedBy: 'site',
+      navigate_to: 'about'
+    }
+  ]
+] 
+25/04/23 09:36:15 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 09:36:15 :: ---> Sortie de la method selectAll de carouselController // 
+25/04/23 11:04:12 :: yo refreshToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTQsImVtYWlsIjoibWF4b2E1OUBnbWFpbC5jb20iLCJwYXNzd29yZCI6Ildlay41T1I5dWhvNnMxSHhveFBpVU9CUHRkRnY0NDg1L0YvOEpDTWguNDQ5d09tOXZwTmNxIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjFUMTU6MDI6NTguMDAwWiIsImRlbGV0ZWRCeSI6IjAiLCJkZWxldGVkQXQiOm51bGwsIm1vZGlmaWVkQnkiOiJzaXRlIiwibW9kaWZpZWRBdCI6IjIwMjMtMDQtMjNUMTI6MDU6MDAuMDAwWiIsInJlZnJlc2hfdG9rZW4iOm51bGwsInBzZXVkbyI6Im1tbW0iLCJmaXJzdG5hbWUiOiJtYXhlbmNlIiwibGFzdG5hbWUiOiJBbGxhcnQiLCJpZF9hY2NvdW50IjoyNSwiaWRfcm9sZSI6MCwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNC0yNVQwODoxNDowNy4wMDBaIiwiaWF0IjoxNjgyNDExNzA1LCJleHAiOjE2ODMyNzU3MDV9.Ar2RWKq1oYmTqDItGk2nRZRly1YAJWxOb7J_syPKSJ0 
+25/04/23 11:04:12 :: yo decodedRefreshToken: {
+  id: 14,
+  email: 'maxoa59@gmail.com',
+  password: 'Wek.5OR9uho6s1HxoxPiUOBPtdFv4485/F/8JCMh.449wOm9vpNcq',
+  createdBy: 'site',
+  createdAt: '2023-04-21T15:02:58.000Z',
+  deletedBy: '0',
+  deletedAt: null,
+  modifiedBy: 'site',
+  modifiedAt: '2023-04-23T12:05:00.000Z',
+  refresh_token: null,
+  pseudo: 'mmmm',
+  firstname: 'maxence',
+  lastname: 'Allart',
+  id_account: 25,
+  id_role: 0,
+  last_connection: '2023-04-25T08:14:07.000Z',
+  iat: 1682411705,
+  exp: 1683275705
+} 
+25/04/23 11:04:12 :: yo userId: 25 
+25/04/23 11:04:12 :: // Appel de la method QUERY de database.service. // 
+25/04/23 11:04:12 :: => Requete appelée: UPDATE account SET refresh_token = NULL WHERE id = ? 
+25/04/23 11:04:12 :: ==>Retour de la requete: [
+  ResultSetHeader {
+    fieldCount: 0,
+    affectedRows: 1,
+    insertId: 0,
+    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
+    serverStatus: 2,
+    warningStatus: 0
+  }
+] 
+25/04/23 11:04:12 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: // Appel de la method handleLogin // 
+25/04/23 11:28:10 :: // Appel de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: => Requete appelée: SELECT * FROM account WHERE deletedBy = 0 AND email = ? 
+25/04/23 11:28:10 :: ==>Retour de la requete: [
+  [
+    {
+      id: 25,
+      email: 'maxoa59@gmail.com',
+      password: 'Wek.5OR9uho6s1HxoxPiUOBPtdFv4485/F/8JCMh.449wOm9vpNcq',
+      createdBy: 'site',
+      createdAt: 2023-04-21T15:02:58.000Z,
+      deletedBy: '0',
+      deletedAt: null,
+      modifiedBy: 'site',
+      modifiedAt: 2023-04-23T12:05:00.000Z,
+      refresh_token: null
+    }
+  ]
+] 
+25/04/23 11:28:10 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: ++ L'utilisateur trouvé est : {
+  id: 25,
+  email: 'maxoa59@gmail.com',
+  password: 'Wek.5OR9uho6s1HxoxPiUOBPtdFv4485/F/8JCMh.449wOm9vpNcq',
+  createdBy: 'site',
+  createdAt: 2023-04-21T15:02:58.000Z,
+  deletedBy: '0',
+  deletedAt: null,
+  modifiedBy: 'site',
+  modifiedAt: 2023-04-23T12:05:00.000Z,
+  refresh_token: null
+} 
+25/04/23 11:28:10 :: Comparons les mots de passe reçus : true 
+25/04/23 11:28:10 :: // Appel de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: => Requete appelée: SELECT * FROM customer WHERE id_account = ? 
+25/04/23 11:28:10 :: ==>Retour de la requete: [
+  [
+    {
+      id: 14,
+      pseudo: 'mmmm',
+      firstname: 'maxence',
+      lastname: 'Allart',
+      id_account: 25,
+      id_role: 0,
+      last_connection: 2023-04-25T08:35:05.000Z
+    }
+  ]
+] 
+25/04/23 11:28:10 :: ++ Customer trouvé est : {
+  id: 14,
+  pseudo: 'mmmm',
+  firstname: 'maxence',
+  lastname: 'Allart',
+  id_account: 25,
+  id_role: 0,
+  last_connection: 2023-04-25T08:35:05.000Z
+} 
+25/04/23 11:28:10 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: // Appel de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: => Requete appelée: 
+    UPDATE customer
+    SET last_connection = NOW()
+    WHERE id = ?;
+     
+25/04/23 11:28:10 :: ==>Retour de la requete: [
+  ResultSetHeader {
+    fieldCount: 0,
+    affectedRows: 1,
+    insertId: 0,
+    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
+    serverStatus: 2,
+    warningStatus: 0
+  }
+] 
+25/04/23 11:28:10 :: // Appel de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: => Requete appelée: UPDATE account SET refresh_token = ? WHERE id = ? 
+25/04/23 11:28:10 :: ==>Retour de la requete: [
+  ResultSetHeader {
+    fieldCount: 0,
+    affectedRows: 1,
+    insertId: 0,
+    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 1',
+    serverStatus: 2,
+    warningStatus: 1
+  }
+] 
+25/04/23 11:28:10 :: ---> Sortie de la method QUERY de database.service. // 
+25/04/23 11:28:10 :: Login successful ! sending token and refreshToken (httpOnly) 
