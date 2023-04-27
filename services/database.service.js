@@ -15,8 +15,8 @@ const consolelog = require("../Tools/consolelog");
 let db;
 async function connect() {
   if (!db) {
-    consolelog("new connexion made");
     const { host, port, database, user, password } = config.db;
+    consolelog(`new connexion made sur la database: ${database}`);
     db = await mysql.createConnection({
       host,
       port,

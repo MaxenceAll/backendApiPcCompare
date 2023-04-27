@@ -14,7 +14,7 @@ const config = {
             port: "3306",
             user: "root",
             password: "",
-            database:"pccompare"
+            database: process.env.DATABASE_NAME
         },
         mail:{
             host: "smtp.gmail.com",

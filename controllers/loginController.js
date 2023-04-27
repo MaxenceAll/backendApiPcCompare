@@ -17,7 +17,7 @@ async function handleLogin(req, res) {
     }
 
     // query pour chercher l'utilisateur en fonction du mail reçu
-    const sql = `SELECT * FROM account WHERE deletedBy = 0 AND email = ?`;
+    const sql = `SELECT * FROM account WHERE deletedBy IS NULL AND email = ?`;
     const [user] = await query(sql, [email]);
     consolelog("++ L'utilisateur trouvé est :", user);
     if (!user) {
@@ -40,17 +40,17 @@ async function handleLogin(req, res) {
         .json({ message: "Non autorisé.", result: "false" });
     }
 
-    const sql2 = `SELECT * FROM customer WHERE id_account = ?`;
-    const [customer] = await query(sql2, [user.id]);
+    const sql2 = `SELECT * FROM customer WHERE Id_account = ?`;
+    const [customer] = await query(sql2, [user.Id_account]);
     consolelog("++ Customer trouvé est :", customer);
 
     // update après avoir retrouvé la table cusotmer pour avoir la dernière connexion (avant celle-ci)
     const sql4 = `
     UPDATE customer
     SET last_connection = NOW()
-    WHERE id = ?;
+    WHERE Id_customer = ?;
     `;
-    const resultTest = await query(sql4, [customer.id]);
+    const resultTest = await query(sql4, [customer.Id_customer]);
     // consolelog("yo le restultat est:", resultTest);
 
     // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
@@ -66,8 +66,9 @@ async function handleLogin(req, res) {
     });
 
     // save refresh token to database
-    const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-    await query(sql3, [refreshToken, user.id]);
+    // TODO NO LONGER USED:
+    // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
+    // await query(sql3, [refreshToken, user.id]);
 
     // TODO ajoute var au max age et vérif que tout est ISO
     // Assigning refresh token in http-only cookie et envoi en cookie.
@@ -109,8 +110,8 @@ async function handleLogout(req, res) {
     consolelog("yo userId:", userId);
 
     // update le token dans la database
-    const sql = "UPDATE account SET refresh_token = NULL WHERE id = ?";
-    await query(sql, [userId]);
+    // const sql = "UPDATE account SET refresh_token = NULL WHERE id = ?";
+    // await query(sql, [userId]);
 
     // envoyer un nouveau refreshToken "vide" et expiré
     res.cookie("refreshToken", "", {

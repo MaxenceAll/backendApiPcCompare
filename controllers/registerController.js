@@ -59,8 +59,8 @@ async function verifySentMail(req, res) {
       consolelog(`User ${email} added to database account`);
   
       // Insert new user into customer database
-      const sql2 = "INSERT INTO customer (pseudo, firstname, lastname, id_role, id_account) VALUES (?, ?, ?, ?, ?)";
-      const params2 = [pseudo, firstname, lastname, "0", insertId];
+      const sql2 = "INSERT INTO customer (pseudo, firstname, lastname, Id_role, Id_account) VALUES (?, ?, ?, ?, ?)";
+      const params2 = [pseudo, firstname, lastname, "1", insertId];
       await query(sql2, params2);
       consolelog(`Customer ${pseudo} added to database customer`);
   

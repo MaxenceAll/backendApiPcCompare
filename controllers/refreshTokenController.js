@@ -19,19 +19,19 @@ async function handleRefreshToken(req, res) {
         process.env.REFRESH_TOKEN_SECRET
         );
         consolelog("yo le decoded refreshToken is :",decoded)
-        if (!decoded.id_account) {
+        if (!decoded.Id_account) {
         // TODO si la verif est KO il faut un return avec msg d'erreur.
         throw new Error("Refresh token invalide !");
       }
-      const sql = `SELECT * FROM account WHERE id = ?`;
-      const [user] = await query(sql, [decoded.id_account]);
+      const sql = `SELECT * FROM account WHERE Id_account = ?`;
+      const [user] = await query(sql, [decoded.Id_account]);
       if (!user) {
         // TODO return ici pas error
         throw new Error("User not found");
       }
       consolelog("++ L'utilisateur trouvé est :", user);
-      const sql2 = `SELECT * FROM customer WHERE id_account = ?`;
-      const [customer] = await query(sql2, [user.id]);
+      const sql2 = `SELECT * FROM customer WHERE Id_account = ?`;
+      const [customer] = await query(sql2, [user.Id_account]);
       consolelog("++ Customer trouvé est :", customer);
 
       // TODO pas envoyer le hashedpassword
@@ -51,8 +51,8 @@ async function handleRefreshToken(req, res) {
 
       //TODO a supprimer.
       // Update refresh token in database
-      const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-      await query(sql3, [newRefreshToken, user.id]);
+      // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
+      // await query(sql3, [newRefreshToken, user.id]);
 
       // Set new refresh token cookie in response
 
