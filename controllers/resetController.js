@@ -15,7 +15,7 @@ async function resetPassword(req, res) {
   // préparer un mail avec le token dans l'URL
   // envoyer le mail
   // voir ce que renvoi mailer service pour l'utiliser en front.
-  const sql = "SELECT * FROM account WHERE deletedBy = 0 AND email = ?";
+  const sql = "SELECT * FROM account WHERE deletedBy IS NULL AND email = ?";
   await query(sql, [email])
     .then(async (json) => {
       const user = json.length === 1 ? json.pop() : null;
@@ -33,6 +33,7 @@ async function resetPassword(req, res) {
         consolelog(mailResult);
         res.json(mailResult);
       } else {
+        // TODO fix this, needs a res.json .res.status
         throw new Error(
           "Error while trying to get your password back (either mail is wrong or doesnt exists)"
         );
@@ -64,9 +65,9 @@ async function newPassword(req, res) {
         SET password = ?,
             modifiedBy = 'site',
             modifiedAt = NOW()
-        WHERE id = ?
+        WHERE Id_account = ?
       `;
-      const params = [hashedPassword, data.id];
+      const params = [hashedPassword, data.Id_account];
   
       try {
         const result = await query(sql, params);

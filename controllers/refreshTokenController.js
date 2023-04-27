@@ -34,9 +34,14 @@ async function handleRefreshToken(req, res) {
       const [customer] = await query(sql2, [user.Id_account]);
       consolelog("++ Customer trouvé est :", customer);
 
+      const sql5= `SELECT * FROM role WHERE Id_role = ?`;
+      const [role] = await query(sql5, [customer.Id_role]);
+      consolelog("++ Le customer trouvé est du role:", role);
+  
+
       // TODO pas envoyer le hashedpassword
       // Generate new access token
-      const data = { ...user, ...customer };
+    const data = { ...user, ...customer , role: role.title};
       const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
         expiresIn: "1h",
       });

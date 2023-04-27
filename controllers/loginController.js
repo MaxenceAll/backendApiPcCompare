@@ -19,7 +19,7 @@ async function handleLogin(req, res) {
     // query pour chercher l'utilisateur en fonction du mail reçu
     const sql = `SELECT * FROM account WHERE deletedBy IS NULL AND email = ?`;
     const [user] = await query(sql, [email]);
-    consolelog("++ L'utilisateur trouvé est :", user);
+    consolelog("++ L'utilisateur (account) trouvé est :", user);
     if (!user) {
       return res
         .status(401)
@@ -44,6 +44,11 @@ async function handleLogin(req, res) {
     const [customer] = await query(sql2, [user.Id_account]);
     consolelog("++ Customer trouvé est :", customer);
 
+    const sql5= `SELECT * FROM role WHERE Id_role = ?`;
+    const [role] = await query(sql5, [customer.Id_role]);
+    consolelog("++ Le customer trouvé est du role:", role);
+
+
     // update après avoir retrouvé la table cusotmer pour avoir la dernière connexion (avant celle-ci)
     const sql4 = `
     UPDATE customer
@@ -54,7 +59,7 @@ async function handleLogin(req, res) {
     // consolelog("yo le restultat est:", resultTest);
 
     // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
-    const data = { ...user, ...customer };
+    const data = { ...user, ...customer , role: role.title};
     // consolelog("yoyoyo data:", data);
     // On crée un JWT avec la clé secrete dans .env
     const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
