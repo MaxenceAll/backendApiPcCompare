@@ -2,12 +2,12 @@ const consolelog = require("../Tools/consolelog");
 const config = require("../config/config");
 const { query } = require("../services/database.service");
 
-async function selectAll(req, res) {
-  consolelog("// Appel de la method selectAll //");
-  const sql = `SELECT * FROM account WHERE deletedBy = ?`;
+async function selectAllAccount(req, res) {
+  consolelog("// Appel de la method selectAllAccount //");
+  const sql = `SELECT * FROM account`;
   try {
-    const data = await query(sql, [0]);
-    consolelog("---> Sortie de la method selectAll de database.service. //");
+    const data = await query(sql);
+    consolelog("---> Sortie de la method selectAllAccount de database.service. //");
     // consolelog("yo la data trouvée est :",data)
     res.status(200).json({
       data,
@@ -24,4 +24,24 @@ async function selectAll(req, res) {
   }
 }
 
-module.exports = { selectAll };
+// const Db = require("../models/dataBase");
+// const Customer = require("../models/customer");
+
+// Db.synchronize();
+// async function selectAll(req, res) {
+//   try {
+//     const customer = await Customer.findOne({
+//       where: { Id_customer: 1 },
+//       include: [Db.getModel("Account")],
+//     });
+//     console.log("==============================")
+//     console.log(customer.Account);
+//     console.log("==============================")
+//     res.send("Success!");
+//   } catch (error) {
+//     console.log(error);
+//     res.status(500).send("Something went wrong!");
+//   }
+// }
+
+module.exports = { selectAllAccount };

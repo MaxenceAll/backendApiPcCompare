@@ -48,7 +48,9 @@ app.use('/auth', require('./routes/auth'));
 
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
 // Debut des routes protégées :
-app.use('/account',verifyRefreshToken, require('./routes/account'));
+// app.use('/account', require('./routes/account'));
+app.use('/alluserdata',verifyRefreshToken, require('./routes/api/allUsersData'));
+app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData'));
 
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {

@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const accountController = require('../controllers/accountController');
+const customerController = require('../controllers/customerController');
 
 
 router.get('/', async (req, res) => {
-  await accountController.selectAllAccount(req, res);
+  await customerController.selectAllCustomer(req, res);
 });
 
 module.exports = router;
