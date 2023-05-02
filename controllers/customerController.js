@@ -1,6 +1,7 @@
 const consolelog = require("../Tools/consolelog");
 const config = require("../config/config");
 const { query } = require("../services/database.service");
+const jwt = require("jsonwebtoken");
 
 async function selectAllCustomer(req, res) {
   consolelog("// Appel de la method selectAllCustomer //");
@@ -29,17 +30,19 @@ async function selectAllCustomer(req, res) {
 async function selectOneCustomer(req, res) {
   consolelog("// Appel de la method selectOneCustomer //");
   const { Id_customer } = req.params;
-  const sql = 'SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ?';
+  const sql =
+    "SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ?";
   try {
-    const [customer] = await query(sql, [Id_customer]);  
+    const [customer] = await query(sql, [Id_customer]);
+    consolelog("yoyo account c'est:", customer);
     consolelog(
       "---> Sortie de la method selectOneCustomer de customerController. //"
     );
-    const sql2 = 'SELECT * FROM account WHERE deletedBy IS NULL AND Id_account = ?';
+    const sql2 = "SELECT * FROM account WHERE Id_account = ?";
     const [account] = await query(sql2, [customer.Id_account]);
     // TODO: ne pas renvoyer le hashedpassword
-      const data = { ...customer, ...account }
-      // consolelog("Yo le data=",data)
+    const data = { ...customer, ...account };
+    consolelog("Yo le data=", data);
 
     res.status(200).json({
       data,
@@ -101,5 +104,6 @@ async function modifyCustomer(req, res) {
       res.json({ data: null, result: false, message: err.message });
     });
 }
+
 
 module.exports = { selectAllCustomer, modifyCustomer, selectOneCustomer };

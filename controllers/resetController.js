@@ -15,14 +15,14 @@ async function resetPassword(req, res) {
   // préparer un mail avec le token dans l'URL
   // envoyer le mail
   // voir ce que renvoi mailer service pour l'utiliser en front.
-  const sql = "SELECT * FROM account WHERE deletedBy IS NULL AND email = ?";
+  const sql = "SELECT * FROM account WHERE email = ?";
   await query(sql, [email])
     .then(async (json) => {
       const user = json.length === 1 ? json.pop() : null;
       if (user) {
         const { id, email } = user;
         const data = { id, email };
-        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '10m' });
+        const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1h' });
         const html = `Pour renouveler votre mot de passe, cliquez sur ce lien <a href="${config.FRONTEND.URL}reset?t=${token}">Nouveau mot de passe</a>`;
         const mailParams = {
           to: email,

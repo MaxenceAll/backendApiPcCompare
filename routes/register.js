@@ -13,4 +13,13 @@ router.get('/verify', async (req, res) => {
     await registerController.verifySentMail(req, res);
   });
 
+
+  
+router.post('/pseudo', async (req, res) => {
+    await registerController.verifyPseudoAvailable(req, res);
+  });
+
+
+
+
 module.exports = router;

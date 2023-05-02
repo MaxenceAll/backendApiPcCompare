@@ -17,10 +17,10 @@ async function handleLogin(req, res) {
     }
 
     // query pour chercher l'utilisateur en fonction du mail reçu
-    const sql = `SELECT * FROM account WHERE deletedBy IS NULL AND email = ?`;
-    const [user] = await query(sql, [email]);
-    consolelog("++ L'utilisateur (account) trouvé est :", user);
-    if (!user) {
+    const sql = `SELECT * FROM account WHERE email = ?`;
+    const [account] = await query(sql, [email]);
+    consolelog("++ L'utilisateur (account) trouvé est :", account);
+    if (!account) {
       return res
         .status(401)
         .json({ message: "Non autorisé.", result: "false" });
@@ -29,7 +29,7 @@ async function handleLogin(req, res) {
     // On compare le password reçu avec celui en db.
     const passwordMatch = await bcrypt.compare(
       password,
-      config.hash.prefix + user.password
+      config.hash.prefix + account.password
     );
     consolelog("Comparons les mots de passe reçus :", passwordMatch);
     // ca correspond donc on va chercher le customer qui correspond
@@ -41,7 +41,7 @@ async function handleLogin(req, res) {
     }
 
     const sql2 = `SELECT * FROM customer WHERE Id_account = ?`;
-    const [customer] = await query(sql2, [user.Id_account]);
+    const [customer] = await query(sql2, [account.Id_account]);
     consolelog("++ Customer trouvé est :", customer);
 
     const sql5= `SELECT * FROM role WHERE Id_role = ?`;
@@ -49,7 +49,7 @@ async function handleLogin(req, res) {
     consolelog("++ Le customer trouvé est du role:", role);
 
 
-    // update après avoir retrouvé la table cusotmer pour avoir la dernière connexion (avant celle-ci)
+    // update après avoir retrouvé la table customer pour avoir la dernière connexion (avant celle-ci)
     const sql4 = `
     UPDATE customer
     SET last_connection = NOW()
@@ -59,7 +59,7 @@ async function handleLogin(req, res) {
     // consolelog("yo le restultat est:", resultTest);
 
     // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
-    const data = { ...user, ...customer , role: role.title};
+    const data = { ...account, ...customer , role: role.title};
     // consolelog("yoyoyo data:", data);
     // On crée un JWT avec la clé secrete dans .env
     const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
@@ -73,7 +73,7 @@ async function handleLogin(req, res) {
     // save refresh token to database
     // TODO NO LONGER USED:
     // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-    // await query(sql3, [refreshToken, user.id]);
+    // await query(sql3, [refreshToken, account.id]);
 
     // TODO ajoute var au max age et vérif que tout est ISO
     // Assigning refresh token in http-only cookie et envoi en cookie.
