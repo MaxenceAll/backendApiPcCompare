@@ -42,11 +42,9 @@ async function handleAuth(req, res) {
     }
   } catch (error) {
     if (error.name === "TokenExpiredError") {
-      consolelog(
-        "!! Le accessToken est expiré !",
-        error
-      );
-      return res.status(401).json({
+      consolelog("!! Le accessToken est expiré !", error);
+      // Http status 204 est bonne pratique d'un retour APIrest sans contenu, juste informationnel
+      return res.status(204).json({
         data: null,
         result: false,
         message: "Le accessToken est expiré !",

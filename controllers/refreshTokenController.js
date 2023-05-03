@@ -27,29 +27,38 @@ async function handleRefreshToken(req, res) {
       });
     }
 
-    // Décodage du refresh token
-    const decodedRefreshToken = jwt.verify(
-      refreshTokenCookie,
-      process.env.REFRESH_TOKEN_SECRET
-    );
-    consolelog(
-      "?? Décodage du refreshToken avec les informations suivantes :",
-      decodedRefreshToken
-    );
-    // Décodé mais expiré :
-    if (decodedRefreshToken.exp < Date.now() / 1000) {
-      return res.status(401).json({
-        result: false,
-        message: "Le refreshToken est expiré, il faut se re-identifier.",
-      });
-    }
-    // Décodé mais verification KO (message d'erreur neutre)
-    if (!decodedRefreshToken) {
-      return res.status(401).json({
-        data: null,
-        result: false,
-        message: "Erreur lors de l'authentification 4.",
-      });
+    let decodedRefreshToken
+    try {
+      // Décodage du refresh token
+      decodedRefreshToken = jwt.verify(
+        refreshTokenCookie,
+        process.env.REFRESH_TOKEN_SECRET
+      );
+      consolelog(
+        "?? Décodage du refreshToken avec les informations suivantes :",
+        decodedRefreshToken
+      );
+      // Décodé mais expiré :
+      if (decodedRefreshToken.exp < Date.now() / 1000) {
+        return res.status(401).json({
+          result: false,
+          message: "Le refreshToken est expiré, il faut se re-identifier.",
+        });
+      }
+      // Décodé mais verification KO (message d'erreur neutre) //TODO supprimer le 4 en prod
+      if (!decodedRefreshToken) {
+        return res.status(401).json({
+          data: null,
+          result: false,
+          message: "Erreur lors de l'authentification 4.",
+        });
+      }
+    } catch (error) {
+      console.error(`Error in handleLogout: ${error}`);
+      consolelog(`Error in handleLogout: ${error}`);
+      return res
+        .status(500)
+        .json({ message: "Erreur interne.", result: false });
     }
 
     // Le jwt est vérifié, on peut continuer !
@@ -65,12 +74,12 @@ async function handleRefreshToken(req, res) {
       JOIN role ON customer.Id_role = role.Id_role
       WHERE account.email = ?
       `;
-      const [allData] = await query(SQL_allData, [decodedRefreshToken.account]);
+      const [allData] = await query(SQL_allData, [decodedRefreshToken.email]);
       // Si je n'ai pas de retour de la requete alors je n'ai aucun compte avec ce email (mettre un message de retour neutre)
       if (!allData) {
         consolelog(
           "XX Aucune donnée trouvée pour l'email:",
-          decodedRefreshToken.account
+          decodedRefreshToken.email
         );
         return res.status(401).json({
           message: "Erreur lors de l'authentification 3.",
@@ -105,7 +114,7 @@ async function handleRefreshToken(req, res) {
       consolelog("?? Last info de role trouvé est:", role);
     } catch (error) {
       consolelog(
-        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        "XX Erreur lors de la recherche des données de l'utilisateur 3:",
         error
       );
       return res.status(500).json({
@@ -179,7 +188,7 @@ async function handleRefreshToken(req, res) {
       });
     } else {
       consolelog(
-        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        "XX Erreur lors de la recherche des données de l'utilisateur 2:",
         error
       );
       return res.status(500).json({

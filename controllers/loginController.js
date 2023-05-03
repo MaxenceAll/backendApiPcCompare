@@ -7,6 +7,7 @@ const jwt = require("jsonwebtoken");
 
 async function handleLogin(req, res) {
   try {
+    consolelog("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     consolelog("// Appel de la method handleLogin de loginController //");
     // On déconstruit req.body
     const { email, password } = req.body;
@@ -25,14 +26,13 @@ async function handleLogin(req, res) {
     try {
       // Query pour aller chercher toutes les données utilisateur (account/customer/role) en fonction du mail reçu:
       const SQL_allData = `        
-    SELECT account.email, account.password, customer.*, role.*
-    FROM account
-    JOIN customer ON account.Id_account = customer.Id_account
-    JOIN role ON customer.Id_role = role.Id_role
-    WHERE account.email = ?
-    `;
+      SELECT account.email, account.password, customer.*, role.*
+      FROM account
+      JOIN customer ON account.Id_account = customer.Id_account
+      JOIN role ON customer.Id_role = role.Id_role
+      WHERE account.email = ?
+      `;
       const [allData] = await query(SQL_allData, [email]);
-
       // Si je n'ai pas de retour de la requete alors je n'ai aucun compte avec ce email (mettre un message de retour neutre)
       if (!allData) {
         consolelog("XX Aucune donnée trouvée pour l'email:", email);
@@ -41,7 +41,6 @@ async function handleLogin(req, res) {
           result: false,
         });
       }
-
       // Remplissage des objets pour utilisations futures.
       account = {
         email: allData.email,
@@ -111,6 +110,7 @@ async function handleLogin(req, res) {
     }
 
     // Si je suis ici c'est que le log sera ok, donc : mise à jour de la last_connection
+    consolelog("?? Tentative de mise à jour de la last_connection")
     try {
       const SQL_update_last_connection = `
       UPDATE customer
@@ -128,6 +128,7 @@ async function handleLogin(req, res) {
         result: false,
       });
     }
+    consolelog("--> last_connection mis à jour avec succès.")
 
     // on prépare un objet avec toutes les données (sauf les sensibles (hashedpassword))
     const data = {
@@ -189,23 +190,55 @@ async function handleLogin(req, res) {
 }
 
 async function handleLogout(req, res) {
+  consolelog("-------------------------------------------------------");
+  consolelog("// Appel de la method handleLogout de loginController //");
   try {
-    // décoder le refresh token pour savoir a qui on a afaire
-    const refreshToken = req.cookies.refreshToken;
-    consolelog("yo refreshToken:", refreshToken);
-    const decodedRefreshToken = jwt.verify(
-      refreshToken,
-      process.env.REFRESH_TOKEN_SECRET
-    );
-    consolelog("yo decodedRefreshToken:", decodedRefreshToken);
-    const userId = decodedRefreshToken.id_account;
-    consolelog("yo userId:", userId);
+    // Vérifie la présence d'une connexion (un refreshToken)
+    const refreshTokenCookie = req.cookies.refreshToken;
+    if (!refreshTokenCookie) {
+      consolelog(
+        "XX Sortie de la method handleLogout car pas de refresh Token."
+      );
+      return res.status(404).json({
+        message:
+          "Il n'y a pas de refreshToken donc pas de déconnection possible.",
+        result: false,
+      });
+    }
+    try {
+      // Décodage du refresh token
+      const decodedRefreshToken = jwt.verify(
+        refreshTokenCookie,
+        process.env.REFRESH_TOKEN_SECRET
+      );
+      consolelog(
+        "?? Décodage du refreshToken avec les informations suivantes :",
+        decodedRefreshToken
+      );
+      // Décodé mais expiré :
+      if (decodedRefreshToken.exp < Date.now() / 1000) {
+        return res.status(401).json({
+          result: false,
+          message: "Le refreshToken est expiré, il faut se re-identifier.",
+        });
+      }
+      // Décodé mais verification KO (message d'erreur neutre) //TODO supprimer le 4 en prod
+      if (!decodedRefreshToken) {
+        return res.status(401).json({
+          data: null,
+          result: false,
+          message: "Erreur lors de l'authentification 4.",
+        });
+      }
+    } catch (error) {
+      console.error(`Error in handleLogout: ${error}`);
+      consolelog(`Error in handleLogout: ${error}`);
+      return res
+        .status(500)
+        .json({ message: "Erreur interne.", result: false });
+    }
 
-    // update le token dans la database
-    // const sql = "UPDATE account SET refresh_token = NULL WHERE id = ?";
-    // await query(sql, [userId]);
-
-    // envoyer un nouveau refreshToken "vide" et expiré
+    // Tout est ok, on renvoi un nouveau refreshToken vide pour annuler le précédent
     res.cookie("refreshToken", "", {
       httpOnly: true,
       expires: new Date(0),
@@ -213,18 +246,14 @@ async function handleLogout(req, res) {
       sameSite: "None",
       secure: true,
     });
-
     return res.status(200).json({
       result: true,
-      message: "Logout successful",
+      message: "Déconnection avec succes.",
     });
   } catch (error) {
     console.error(`Error in handleLogout: ${error}`);
     consolelog(`Error in handleLogout: ${error}`);
-    return res.status(500).json({
-      message: "Internal Server Error",
-      result: false,
-    });
+    return res.status(500).json({ message: "Erreur interne.", result: false });
   }
 }
 

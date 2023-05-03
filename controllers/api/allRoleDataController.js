@@ -4,7 +4,15 @@ const { query } = require("../../services/database.service");
 
 async function selectAll(req, res) {
   consolelog("// Appel de la method selectAll de allRoleDataController //");
-  const sql = `SELECT *  FROM role`;
+  consolelog("!! On vérifie l'identité du demandeur de cette methode !!");
+  if (req.currentUser.role !== "Administrateur") {
+    return res.status(403).json({
+      data: null,
+      result: false,
+      message: `Vous n'avez pas l'autorisation de faire cela !`,
+    });
+  }
+  const sql = `SELECT * FROM role`;
   try {
     const data = await query(sql);
     consolelog(
@@ -16,13 +24,10 @@ async function selectAll(req, res) {
       result: true,
       message: `All rows of table account+customer have been selected`,
     });
-  } catch (err) {
-    consolelog(`++ !!!! Erreur attrapée : (voir le retour).`);
-    res.status(500).json({
-      data: null,
-      result: false,
-      message: err.message,
-    });
+  } catch (error) {
+    console.error(`Erreur dans selectAll de allRoleDataController: ${error}`);
+    consolelog(`Erreur dans selectAll de allRoleDataController: ${error}`);
+    return res.status(500).json({ message: "Erreur interne.", result: false });
   }
 }
 

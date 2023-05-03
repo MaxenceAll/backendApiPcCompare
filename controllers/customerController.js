@@ -3,63 +3,101 @@ const config = require("../config/config");
 const { query } = require("../services/database.service");
 const jwt = require("jsonwebtoken");
 
-async function selectAllCustomer(req, res) {
-  consolelog("// Appel de la method selectAllCustomer //");
-  const sql = `SELECT * FROM customer WHERE deletedBy IS NULL`;
-  try {
-    const data = await query(sql);
-    consolelog(
-      "---> Sortie de la method selectAllCustomer de customerController. //"
-    );
-    // consolelog("yo la data trouvée est :",data)
-    res.status(200).json({
-      data,
-      result: true,
-      message: `All rows of table customer have been selected`,
-    });
-  } catch (err) {
-    consolelog(`++ !!!! Erreur attrapée : (voir le retour).`);
-    res.status(500).json({
-      data: null,
-      result: false,
-      message: err.message,
-    });
-  }
-}
-
 async function selectOneCustomer(req, res) {
-  consolelog("// Appel de la method selectOneCustomer //");
-  const { Id_customer } = req.params;
-  const sql =
-    "SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ?";
   try {
-    const [customer] = await query(sql, [Id_customer]);
-    consolelog("yoyo account c'est:", customer);
+    consolelog("// Appel de la method selectOneCustomer //");
+    const { Id_customer } = req.params;
     consolelog(
-      "---> Sortie de la method selectOneCustomer de customerController. //"
+      "?? Nous tetons de chercher les infos de l'utilisateur avec l'id:",
+      Id_customer
     );
-    const sql2 = "SELECT * FROM account WHERE Id_account = ?";
-    const [account] = await query(sql2, [customer.Id_account]);
-    // TODO: ne pas renvoyer le hashedpassword
-    const data = { ...customer, ...account };
-    consolelog("Yo le data=", data);
+    if (!Id_customer) {
+      consolelog("Aucun Id_customer détecté dans l'url de la requete.");
+      return res.status(404).json({
+        data: null,
+        result: false,
+        message: `Aucun Id_customer détecté dans l'url de la requete.`,
+      });
+    }
 
-    res.status(200).json({
-      data,
+    let account, customer, role;
+    try {
+      // On cherche toutes les informations d'un utilisateur :
+      const SQL_selectOneCustomer = `SELECT customer.*, role.*, account.email
+    FROM customer
+    INNER JOIN role ON customer.Id_role = role.Id_role
+    INNER JOIN account ON customer.Id_account = account.Id_account
+    WHERE customer.Id_customer = ? AND customer.deletedBy IS NULL;
+    `;
+      const [userFound] = await query(SQL_selectOneCustomer, [Id_customer]);
+      if (!userFound) {
+        consolelog(
+          `XX Erreur lors de la recherche de donnée de customer avec l'id ${Id_customer}.`
+        );
+        return res.status(401).json({
+          message: "Erreur lors de la recherche de donnée de customer.",
+          result: false,
+        });
+      }
+
+      // Remplissage des objets pour utilisations futures.
+      account = {
+        email: userFound.email,
+        password: userFound.password,
+      };
+      customer = {
+        Id_account: userFound.Id_account,
+        Id_customer: userFound.Id_customer,
+        Id_role: userFound.Id_role,
+        pseudo: userFound.pseudo,
+        firstname: userFound.firstname,
+        lastname: userFound.lastname,
+        last_connection: userFound.last_connection,
+        createdBy: userFound.createdBy,
+        createdAt: userFound.createdAt,
+        modifiedBy: userFound.modifiedBy,
+        modifiedAt: userFound.modifiedAt,
+        deletedBy: userFound.deletedBy,
+        deletedAt: userFound.deletedAt,
+      };
+      role = {
+        title: userFound.title,
+      };
+    } catch (error) {
+      consolelog(
+        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        error
+      );
+      return res.status(500).json({
+        message: "Erreur lors de la recherche des données de l'utilisateur",
+        result: false,
+      });
+    }
+
+    const result = {
+      account: account,
+      customer: customer,
+      role: role,
+    };
+    // Tout est ok, on fait le retour des données de l'utilisateur trouvé.
+    consolelog(
+      `?? Nous avons trouvé l'utilisateur avec l'id ${Id_customer}: ses infos :`,
+      result
+    );
+    return res.status(200).json({
+      data: result,
       result: true,
-      message: `All rows of table customer with id: ${Id_customer} have been selected and all rows of table account with id: ${customer.Id_account}`,
+      message: `Voici les données de l'utilisateur avec l'id : ${Id_customer}`,
     });
-  } catch (err) {
-    consolelog(`++ !!!! Erreur attrapée : (voir le retour).`);
-    res.status(500).json({
-      data: null,
-      result: false,
-      message: err.message,
-    });
+  } catch (error) {
+    console.error(`Error in handleLogout: ${error}`);
+    consolelog(`Error in handleLogout: ${error}`);
+    return res.status(500).json({ message: "Erreur interne.", result: false });
   }
 }
 
 async function modifyCustomer(req, res) {
+  // TODO !!!! pas besoin d'aller chercher le refreshtoken y'a un middleware!
   const foundAccessToken = req.cookies.accessToken;
   consolelog(
     "modifyCustomer called check le accessToken received(httponly):",
@@ -150,4 +188,4 @@ async function modifyCustomer(req, res) {
   }
 }
 
-module.exports = { selectAllCustomer, modifyCustomer, selectOneCustomer };
+module.exports = { modifyCustomer, selectOneCustomer };

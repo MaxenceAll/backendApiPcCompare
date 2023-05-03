@@ -46,11 +46,11 @@ app.use('/refresh', require('./routes/refresh'));
 app.use('/auth', require('./routes/auth'));
 
 
-const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
 // Debut des routes protégées :
+const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
 // app.use('/account', require('./routes/account'));
-app.use('/alluserdata',verifyRefreshToken, require('./routes/api/allUsersData'));
-app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData'));
+app.use('/alluserdata',verifyRefreshToken, require('./routes/api/allUsersData')); //TODO à refaire
+app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData')); //TODO à refaire
 app.use('/customer',verifyRefreshToken, require('./routes/customer'));
 app.use('/account',verifyRefreshToken, require('./routes/account'));
 
