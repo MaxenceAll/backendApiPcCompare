@@ -29,12 +29,10 @@ async function sendVerifMail(req, res) {
     const retourMailer = await mailer.send(emailOptions);
     consolelog(`Verification email sent to ${email}`);
     consolelog("le retourMailer est = à:", retourMailer);
-    res
-      .status(200)
-      .json({
-        result: true,
-        message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.`,
-      });
+    res.status(200).json({
+      result: true,
+      message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.`,
+    });
   } catch (error) {
     consolelog(`Error sending verification email to ${email}: ${error}`);
     res.status(500).json({ message: "Error sending verification email." });
@@ -71,12 +69,10 @@ async function verifySentMail(req, res) {
     consolelog(`Customer ${pseudo} added to database customer`);
 
     // Return a success message
-    res
-      .status(200)
-      .json({
-        result: "success",
-        message: `Verification email for ${email} has been successfully processed and account of ${pseudo} created successfully.`,
-      });
+    res.status(200).json({
+      result: "success",
+      message: `Verification email for ${email} has been successfully processed and account of ${pseudo} created successfully.`,
+    });
   } catch (error) {
     consolelog(`Error while inserting user data: ${error}`);
     res.status(500).json({
@@ -87,16 +83,21 @@ async function verifySentMail(req, res) {
 }
 
 async function verifyPseudoAvailable(req, res) {
+  consolelog("// Appel de la function verifyPseudoAvailable");
   const pseudoToTest = req.body.pseudo;
-
-  consolelog("yo il faut test le pseudo: ", pseudoToTest);
+  consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
   const sql = `SELECT * FROM customer WHERE pseudo = ?`;
   const response = await query(sql, [pseudoToTest]);
-  consolelog("hello la réponse est ", response);
   if (response.length > 0) {
-    res.status(200).json( {result: false, message:"Ce pseudo n'est pas disponible."});
+    consolelog("++ Le pseudo est disponible !");
+    res
+      .status(200)
+      .json({ result: false, message: "Ce pseudo n'est pas disponible." });
   } else {
-    res.status(200).json({ result: true, message:"Ce pseudo est disponible."});
+    consolelog("XX Le pseudo n'est pas disponible");
+    res
+      .status(200)
+      .json({ result: true, message: "Ce pseudo est disponible." });
   }
 }
 

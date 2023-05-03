@@ -1,87 +1,184 @@
-const jwt = require('jsonwebtoken');
-const consolelog = require('../Tools/consolelog');
-const { query } = require('../services/database.service');
-const config = require('../config/config');
-const bcrypt = require('bcrypt');
+const jwt = require("jsonwebtoken");
+const consolelog = require("../Tools/consolelog");
+const { query } = require("../services/database.service");
+const config = require("../config/config");
+const bcrypt = require("bcrypt");
+const durationToMilliseconds = require("../Tools/durationToMilliseconds");
 
 async function handleRefreshToken(req, res) {
-  consolelog("// Appel de la fonction refreshToken");
-  consolelog("test de req.cookies?.refreshToken",req.cookies?.refreshToken)
-  if (req.cookies?.refreshToken) {
-    consolelog("Réception du cookie suivant :", req.cookies?.refreshToken);
-    // Destructuring refreshToken from cookie
-    const refreshToken = req.cookies.refreshToken;
+  const refreshTokenCookie = req?.cookies?.refreshToken;
+  consolelog("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
+  consolelog(
+    "// Appel de la method handleRefreshToken de refreshTokenController //"
+  );
+  consolelog(
+    "?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken :",
+    refreshTokenCookie
+  );
+  try {
+    // Je test en premier si j'ai reçu un cookie 'refreshToken'
+    if (!refreshTokenCookie) {
+      consolelog("XX Pas de cookie refreshToken reçu.");
+      // Http status 204 est bonne pratique d'un retour APIrest sans contenu, juste informationnel
+      return res.status(204).json({
+        data: null,
+        result: false,
+        message: "Pas de cookie refreshToken reçu.",
+      });
+    }
 
+    // Décodage du refresh token
+    const decodedRefreshToken = jwt.verify(
+      refreshTokenCookie,
+      process.env.REFRESH_TOKEN_SECRET
+    );
+    consolelog(
+      "?? Décodage du refreshToken avec les informations suivantes :",
+      decodedRefreshToken
+    );
+    if (!decodedRefreshToken) {
+      return res.status(401).json({
+        result: false,
+        message: "Erreur lors de l'authentification 4.",
+      });
+    }
+
+    // Le jwt est vérifié, on peut continuer !
+
+    // Verification de l'état du compte en question (en utilisant l'adresse mail)
+    let account, customer, role;
     try {
-      // Verify refresh token
-      const decoded = jwt.verify(
-        refreshToken,
-        process.env.REFRESH_TOKEN_SECRET
+      // Query pour aller chercher toutes les données utilisateur (account/customer/role) en fonction du mail reçu:
+      const SQL_allData = `        
+      SELECT account.email, account.password, customer.*, role.*
+      FROM account
+      JOIN customer ON account.Id_account = customer.Id_account
+      JOIN role ON customer.Id_role = role.Id_role
+      WHERE account.email = ?
+      `;
+      const [allData] = await query(SQL_allData, [decodedRefreshToken.account]);
+      // Si je n'ai pas de retour de la requete alors je n'ai aucun compte avec ce email (mettre un message de retour neutre)
+      if (!allData) {
+        consolelog(
+          "XX Aucune donnée trouvée pour l'email:",
+          decodedRefreshToken.account
         );
-        consolelog("yo le decoded refreshToken is :",decoded)
-        if (!decoded.Id_account) {
-        // TODO si la verif est KO il faut un return avec msg d'erreur.
-        throw new Error("Refresh token invalide !");
+        return res.status(401).json({
+          message: "Erreur lors de l'authentification 3.",
+          result: false,
+        });
       }
-      const sql = `SELECT * FROM account WHERE Id_account = ?`;
-      const [user] = await query(sql, [decoded.Id_account]);
-      if (!user) {
-        // TODO return ici pas error
-        throw new Error("User not found");
-      }
-      consolelog("++ L'utilisateur trouvé est :", user);
-      const sql2 = `SELECT * FROM customer WHERE Id_account = ?`;
-      const [customer] = await query(sql2, [user.Id_account]);
-      consolelog("++ Customer trouvé est :", customer);
+      // Remplissage des objets pour utilisations futures.
+      account = {
+        email: allData.email,
+        // Noter qu'on envoit que le mail, pas le hashedpassword
+      };
+      customer = {
+        Id_account: allData.Id_account,
+        Id_customer: allData.Id_customer,
+        Id_role: allData.Id_role,
+        pseudo: allData.pseudo,
+        firstname: allData.firstname,
+        lastname: allData.lastname,
+        last_connection: allData.last_connection,
+        createdBy: allData.createdBy,
+        createdAt: allData.createdAt,
+        modifiedBy: allData.modifiedBy,
+        modifiedAt: allData.modifiedAt,
+        deletedBy: allData.deletedBy,
+        deletedAt: allData.deletedAt,
+      };
+      role = {
+        title: allData.title,
+      };
+      consolelog("?? Last info de account trouvé est:", account);
+      consolelog("?? Last info de customer trouvé est:", customer);
+      consolelog("?? Last info de role trouvé est:", role);
+    } catch (error) {
+      consolelog(
+        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        error
+      );
+      return res.status(500).json({
+        message: "Erreur lors de la recherche des données de l'utilisateur",
+        result: false,
+      });
+    }
 
-      const sql5= `SELECT * FROM role WHERE Id_role = ?`;
-      const [role] = await query(sql5, [customer.Id_role]);
-      consolelog("++ Le customer trouvé est du role:", role);
-  
+    // on prépare un objet avec toutes les données (sauf les sensibles (hashedpassword))
+    const data = {
+      account: account.email,
+      customer: customer,
+      role: role.title,
+    };
+    consolelog(
+      "!! L'objet préparé pour le retour au Front est le suivant :",
+      data
+    );
 
-      // TODO pas envoyer le hashedpassword
-      // Generate new access token
-    const data = { ...user, ...customer , role: role.title};
-      const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
-        expiresIn: "1h",
+    let accessToken;
+    let refreshToken;
+    try {
+      // On crée un JWT avec la clé secrete dans .env
+      accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: process.env.ACCESS_TOKEN_MAXAGE,
+      });
+      // On crée un JWT de refresh  avec la clé secrete dans .env
+      refreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
+        expiresIn: process.env.REFRESH_TOKEN_MAXAGE,
       });
       consolelog(
-        "__ Génération d'un nouveau token d'access grace au token refresh sécurisé !"
+        `?? Pour information, un accessToken a été créé pour ${process.env.ACCESS_TOKEN_MAXAGE} (Depuis la route refreshToken !) :`,
+        accessToken
       );
-
-      // Generate new refresh token
-      const newRefreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
-        expiresIn: "10d",
-      });
-
-      //TODO a supprimer.
-      // Update refresh token in database
-      // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-      // await query(sql3, [newRefreshToken, user.id]);
-
-      // Set new refresh token cookie in response
-
-      //TODO var maxAge
-      res.cookie("refreshToken", newRefreshToken, {
-        httpOnly: true,
-        sameSite: "None",
-        secure: true,
-        maxAge: 10 * 24 * 60 * 60 * 1000,
-      });
-
-      // Send new token in response
-      res.status(200).json({
-        result: true,
-        message: "Token refreshed",
-        accessToken,
-      });
+      consolelog(
+        `?? Pour information, un refreshToken a été créé pour ${process.env.REFRESH_TOKEN_MAXAGE} (Depuis la route refreshToken !):`,
+        refreshToken
+      );
     } catch (error) {
-      console.error(`Error in refreshToken: ${error}`);
-      res.status(406).json({ message: "Unauthorized 1 " });
+      consolelog("XX Erreur lors de la création des JsonWebToken:", error);
+      res.status(500).json({
+        message: "Erreur lors de la création des JsonWebToken.",
+        result: false,
+      });
     }
-  } else {
-    return res.json({ data: null, result: false, message: "No refresh token found, you need to login" });
+
+    consolelog(
+      "==> Tout est ok, On peut renvoyer le nouveau refreshToken et le nouveau accessToken actualisé avec les dernières données."
+    );
+    res.cookie("refreshToken", refreshToken, {
+      httpOnly: true,
+      sameSite: "None",
+      secure: true,
+      // Petite method custom pour convertir la valeur dans .env en millisecond (nécessaire ici)
+      maxAge: durationToMilliseconds(process.env.REFRESH_TOKEN_MAXAGE),
+    });
+    return res.status(200).json({
+      data,
+      result: true,
+      message: "Authentification avec refreshToken avec succes.",
+      accessToken,
+    });
+  } catch (error) {
+    if (error.name === "TokenExpiredError") {
+      consolelog("!! Le refreshToken est expiré !", error);
+      // TODO voir si un 401 est adapté ici.
+      return res.status(401).json({
+        data: null,
+        result: false,
+        message: "Le refreshToken est expiré, il faut se re-identifier !",
+      });
+    } else {
+      consolelog(
+        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        error
+      );
+      return res.status(500).json({
+        data: null,
+        message: `Erreur d'authentification 2`,
+        result: false,
+      });
+    }
   }
 }
-
 module.exports = { handleRefreshToken };

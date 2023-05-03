@@ -1,4 +1,5 @@
 const consolelog = require("../Tools/consolelog");
+const durationToMilliseconds = require("../Tools/durationToMilliseconds");
 const config = require("../config/config");
 const { query } = require("../services/database.service");
 const bcrypt = require("bcrypt");
@@ -6,98 +7,184 @@ const jwt = require("jsonwebtoken");
 
 async function handleLogin(req, res) {
   try {
-    consolelog("// Appel de la method handleLogin //");
-    //   On déconstruit req.body
+    consolelog("// Appel de la method handleLogin de loginController //");
+    // On déconstruit req.body
     const { email, password } = req.body;
+    // On test si j'ai réçu des données
     if (!email || !password) {
+      consolelog(
+        "XX Sortie de method handleLogin car pas de email || password."
+      );
       return res.status(400).json({
-        message: "Il faut saisir un email Et un mot de passe.",
-        result: `false`,
+        message: "Il faut saisir un email ET un mot de passe.",
+        result: false,
       });
     }
 
-    // query pour chercher l'utilisateur en fonction du mail reçu
-    const sql = `SELECT * FROM account WHERE email = ?`;
-    const [account] = await query(sql, [email]);
-    consolelog("++ L'utilisateur (account) trouvé est :", account);
-    if (!account) {
-      return res
-        .status(401)
-        .json({ message: "Non autorisé.", result: "false" });
-    }
-
-    // On compare le password reçu avec celui en db.
-    const passwordMatch = await bcrypt.compare(
-      password,
-      config.hash.prefix + account.password
-    );
-    consolelog("Comparons les mots de passe reçus :", passwordMatch);
-    // ca correspond donc on va chercher le customer qui correspond
-    if (!passwordMatch) {
-      // Passwords do not match, reject login attempt
-      return res
-        .status(401)
-        .json({ message: "Non autorisé.", result: "false" });
-    }
-
-    const sql2 = `SELECT * FROM customer WHERE Id_account = ?`;
-    const [customer] = await query(sql2, [account.Id_account]);
-    consolelog("++ Customer trouvé est :", customer);
-
-    const sql5= `SELECT * FROM role WHERE Id_role = ?`;
-    const [role] = await query(sql5, [customer.Id_role]);
-    consolelog("++ Le customer trouvé est du role:", role);
-
-
-    // update après avoir retrouvé la table customer pour avoir la dernière connexion (avant celle-ci)
-    const sql4 = `
-    UPDATE customer
-    SET last_connection = NOW()
-    WHERE Id_customer = ?;
+    let account, customer, role;
+    try {
+      // Query pour aller chercher toutes les données utilisateur (account/customer/role) en fonction du mail reçu:
+      const SQL_allData = `        
+    SELECT account.email, account.password, customer.*, role.*
+    FROM account
+    JOIN customer ON account.Id_account = customer.Id_account
+    JOIN role ON customer.Id_role = role.Id_role
+    WHERE account.email = ?
     `;
-    const resultTest = await query(sql4, [customer.Id_customer]);
-    // consolelog("yo le restultat est:", resultTest);
+      const [allData] = await query(SQL_allData, [email]);
 
-    // on crée un objet avec toutes les données //TODO ne pas intégrer le hashedpassword.
-    const data = { ...account, ...customer , role: role.title};
-    // consolelog("yoyoyo data:", data);
-    // On crée un JWT avec la clé secrete dans .env
-    const accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
-      expiresIn: "1h",
-    });
-    // On crée un JWT de refresh  avec la clé secrete dans .env
-    const refreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
-      expiresIn: "10d",
-    });
+      // Si je n'ai pas de retour de la requete alors je n'ai aucun compte avec ce email (mettre un message de retour neutre)
+      if (!allData) {
+        consolelog("XX Aucune donnée trouvée pour l'email:", email);
+        return res.status(401).json({
+          message: "Erreur lors de l'authentification.",
+          result: false,
+        });
+      }
 
-    // save refresh token to database
-    // TODO NO LONGER USED:
-    // const sql3 = `UPDATE account SET refresh_token = ? WHERE id = ?`;
-    // await query(sql3, [refreshToken, account.id]);
+      // Remplissage des objets pour utilisations futures.
+      account = {
+        email: allData.email,
+        password: allData.password,
+      };
+      customer = {
+        Id_account: allData.Id_account,
+        Id_customer: allData.Id_customer,
+        Id_role: allData.Id_role,
+        pseudo: allData.pseudo,
+        firstname: allData.firstname,
+        lastname: allData.lastname,
+        last_connection: allData.last_connection,
+        createdBy: allData.createdBy,
+        createdAt: allData.createdAt,
+        modifiedBy: allData.modifiedBy,
+        modifiedAt: allData.modifiedAt,
+        deletedBy: allData.deletedBy,
+        deletedAt: allData.deletedAt,
+      };
+      role = {
+        title: allData.title,
+      };
 
-    // TODO ajoute var au max age et vérif que tout est ISO
-    // Assigning refresh token in http-only cookie et envoi en cookie.
+      consolelog("?? L'account trouvé est:", account);
+      consolelog("?? Le customer trouvé est:", customer);
+      consolelog("?? Le role trouvé est:", role);
+    } catch (error) {
+      consolelog(
+        "XX Erreur lors de la recherche des données de l'utilisateur:",
+        error
+      );
+      return res.status(500).json({
+        message: "Erreur lors de la recherche des données de l'utilisateur",
+        result: false,
+      });
+    }
+
+    // Nous avons trouvé toutes les données et tout est stocké, on peut donc comparer le password avec celui en DB.
+    // (comme je supprime le prefix (nombre de salt/rounds), je dois le rajouter manuellement (stocké dans config))
+    try {
+      const isPasswordMatching = await bcrypt.compare(
+        password,
+        config.hash.prefix + account.password
+      );
+      consolelog(
+        "!! Comparons les mots de passe reçus le résultat est :",
+        isPasswordMatching
+      );
+      if (!isPasswordMatching) {
+        // Ici le message de retour de l'api est public donc le msg d'erreur est neutre mais le consolelog est précis.
+        consolelog(
+          "XX Erreur lors de la comparaison des mots de passe, ils ne correspondent pas !"
+        );
+        return res.status(401).json({
+          message: "Erreur lors de l'authentification.",
+          result: false,
+        });
+      }
+    } catch (error) {
+      // Ici le message de retour de l'api est public donc le msg d'erreur est neutre mais le consolelog est précis.
+      consolelog("XX Erreur lors de la comparaison des mots de passe: ", error);
+      return res.status(500).json({
+        message: "Erreur lors de l'authentification.",
+        result: false,
+      });
+    }
+
+    // Si je suis ici c'est que le log sera ok, donc : mise à jour de la last_connection
+    try {
+      const SQL_update_last_connection = `
+      UPDATE customer
+      SET last_connection = NOW()
+      WHERE Id_customer = ?;
+      `;
+      await query(SQL_update_last_connection, [customer.Id_customer]);
+    } catch (error) {
+      consolelog(
+        "XX Erreur lors de la mise à jour de la last_connection :",
+        error
+      );
+      res.status(500).json({
+        message: "Erreur lors de la mise à jour de la last_connection.",
+        result: false,
+      });
+    }
+
+    // on prépare un objet avec toutes les données (sauf les sensibles (hashedpassword))
+    const data = {
+      account: account.email,
+      customer: customer,
+      role: role.title,
+    };
+    consolelog(
+      "!! L'objet préparé pour le retour au Front est le suivant :",
+      data
+    );
+    let accessToken;
+    let refreshToken;
+    try {
+      // On crée un JWT avec la clé secrete dans .env
+      accessToken = jwt.sign(data, process.env.ACCESS_TOKEN_SECRET, {
+        expiresIn: process.env.ACCESS_TOKEN_MAXAGE,
+      });
+      // On crée un JWT de refresh  avec la clé secrete dans .env
+      refreshToken = jwt.sign(data, process.env.REFRESH_TOKEN_SECRET, {
+        expiresIn: process.env.REFRESH_TOKEN_MAXAGE,
+      });
+      consolelog(
+        `?? Pour information, un accessToken a été créé pour ${process.env.ACCESS_TOKEN_MAXAGE} :`,
+        accessToken
+      );
+      consolelog(
+        `?? Pour information, un refreshToken a été créé pour ${process.env.REFRESH_TOKEN_MAXAGE} :`,
+        refreshToken
+      );
+    } catch (error) {
+      consolelog("XX Erreur lors de la création des JsonWebToken:", error);
+      res.status(500).json({
+        message: "Erreur lors de la création des JsonWebToken.",
+        result: false,
+      });
+    }
+    consolelog(
+      "==> Login avec succes ! Envoi du refreshToken en cookie, envoi des données + envoi du accessToken."
+    );
     res.cookie("refreshToken", refreshToken, {
       httpOnly: true,
       sameSite: "None",
       secure: true,
-      maxAge: 10 * 24 * 60 * 60 * 1000,
+      // Petite method custom pour convertir la valeur dans .env en millisecond (nécessaire ici)
+      maxAge: durationToMilliseconds(process.env.REFRESH_TOKEN_MAXAGE),
     });
-    consolelog("Login successful ! sending token and refreshToken (httpOnly)");
     return res.status(200).json({
-      data: {
-        data,
-        result: true,
-        message: "Authentification avec succes.",
-        accessToken,
-      },
+      data,
+      result: true,
+      message: "Authentification avec succes.",
+      accessToken,
     });
   } catch (error) {
     console.error(`Error in handleLogin: ${error}`);
     consolelog(`Error in handleLogin: ${error}`);
-    return res
-      .status(500)
-      .json({ message: "Erreur interne.", result: "false" });
+    return res.status(500).json({ message: "Erreur interne.", result: false });
   }
 }
 

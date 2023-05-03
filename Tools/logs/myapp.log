@@ -1,1587 +1,64 @@
-02/05/23 12:55:56 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:55:56 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:55:56 :: modifyCustomer called check le accessToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4MzAzNTUyOX0.fcAwrfYEANVHOx1iezMm9KDYpc11TrCwg8JOZnJg-II 
-02/05/23 12:55:56 :: yo yoyoyo le user est : {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683035529
-} 
-02/05/23 12:55:56 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutorr' } 
-02/05/23 12:55:56 :: modifyCustomer, with Id_customer =  6 
-02/05/23 12:55:56 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutorr' ] ] 
-02/05/23 12:55:56 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutorr', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:55:56 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutorr', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:55:56 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 12:55:56 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:55:56 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:55:56 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorr',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:55:56.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:55:56 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: hihihih data= [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutorr',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T12:50:14.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T12:55:56.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 12:55:56 :: this error: TypeError: Assignment to constant variable.
-    at Object.modifyCustomer (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\controllers\customerController.js:110:10)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\routes\customer.js:14:3 
-02/05/23 12:55:56 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:55:56 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:55:56 :: // Appel de la method selectOneCustomer // 
-02/05/23 12:55:56 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 12:55:56 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorr',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:55:56.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:55:56 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutorr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:55:56.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 12:55:56 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 12:55:56 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 12:55:56 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutorr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:55:56.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 12:55:56 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:55:56 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 12:57:26 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:57:26 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:57:26 :: modifyCustomer called check le accessToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4MzAzNTUyOX0.fcAwrfYEANVHOx1iezMm9KDYpc11TrCwg8JOZnJg-II 
-02/05/23 12:57:26 :: yo yoyoyo le user est : {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683035529
-} 
-02/05/23 12:57:26 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutorrrrr' } 
-02/05/23 12:57:26 :: modifyCustomer, with Id_customer =  6 
-02/05/23 12:57:26 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutorrrrr' ] ] 
-02/05/23 12:57:26 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutorrrrr', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:57:26 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutorrrrr', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:57:27 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 12:57:27 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:57:27 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:57:27 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorrrrr',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:57:27 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: hihihih data= [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutorrrrr',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T12:50:14.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T12:57:27.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 12:57:27 :: this error: TypeError: Assignment to constant variable.
-    at Object.modifyCustomer (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\controllers\customerController.js:110:10)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\routes\customer.js:14:3 
-02/05/23 12:57:27 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:57:27 :: // Appel de la method selectOneCustomer // 
-02/05/23 12:57:27 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:57:27 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 12:57:27 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorrrrr',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:57:27 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutorrrrr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 12:57:27 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 12:57:27 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:57:27 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 12:57:27 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 12:57:27 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutorrrrr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 12:57:27 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:37 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 12:59:39 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 12:59:45 :: handle Auth route taken, there is accessToken found eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4MzAzNTUyOX0.fcAwrfYEANVHOx1iezMm9KDYpc11TrCwg8JOZnJg-II 
-02/05/23 12:59:45 :: handle Auth route taken, there is accessToken found eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4MzAzNTUyOX0.fcAwrfYEANVHOx1iezMm9KDYpc11TrCwg8JOZnJg-II 
-02/05/23 12:59:47 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:59:47 :: // Appel de la method selectOneCustomer // 
-02/05/23 12:59:47 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:47 :: new connexion made sur la database: pccompare 
-02/05/23 12:59:47 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:59:47 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 12:59:47 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorrrrr',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:59:47 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:47 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutorrrrr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 12:59:47 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 12:59:47 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:47 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 12:59:47 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 12:59:47 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutorrrrr',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 12:59:47 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:59:54 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:59:54 :: modifyCustomer, with Id_customer =  6 
-02/05/23 12:59:54 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutor' } 
-02/05/23 12:59:54 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutor' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:59:54 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutor' ] ] 
-02/05/23 12:59:54 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutor' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:59:54 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 12:59:54 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:59:54 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 12:59:54 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:59:54 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 12:59:54 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 12:59:54 :: // Appel de la method selectOneCustomer // 
-02/05/23 12:59:54 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 12:59:54 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 12:59:54 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 12:59:54 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 12:59:54 :: // Appel de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 12:59:54 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 12:59:54 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 12:59:54 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:00:44 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 13:00:44 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 13:00:44 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutoreee' } 
-02/05/23 13:00:44 :: modifyCustomer, with Id_customer =  6 
-02/05/23 13:00:44 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutoreee' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:00:44 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutoreee' ] ] 
-02/05/23 13:00:44 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutoreee' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:00:45 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 13:00:45 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:00:45 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:00:45 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutoreee',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:00:45 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 13:00:45 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 13:00:45 :: // Appel de la method selectOneCustomer // 
-02/05/23 13:00:45 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 13:00:45 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutoreee',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T12:57:27.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:00:45 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 13:00:45 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutoreee',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:00:45 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 13:00:45 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 13:00:45 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:00:45 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutoreee',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T12:57:27.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:01:11 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:01:28 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:03:06 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 13:03:06 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 13:03:06 :: modifyCustomer called check le accessToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4MzAzNTUyOX0.fcAwrfYEANVHOx1iezMm9KDYpc11TrCwg8JOZnJg-II 
-02/05/23 13:03:06 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutor' } 
-02/05/23 13:03:06 :: yo yoyoyo le user est : {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683035529
-} 
-02/05/23 13:03:06 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutor' ] ] 
-02/05/23 13:03:06 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutor', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:03:06 :: modifyCustomer, with Id_customer =  6 
-02/05/23 13:03:06 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:03:06 :: new connexion made sur la database: pccompare 
-02/05/23 13:03:07 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutor', modifiedBy='Secu', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:03:07 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 13:03:07 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:03:07 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:03:07 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:03:07 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: hihihih data= [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T12:50:14.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 13:03:07 :: this error: TypeError: Assignment to constant variable.
-    at Object.modifyCustomer (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\controllers\customerController.js:109:10)
-    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
-    at async C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\routes\customer.js:14:3 
-02/05/23 13:03:07 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 13:03:07 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 13:03:07 :: // Appel de la method selectOneCustomer // 
-02/05/23 13:03:07 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 13:03:07 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:03:07 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:03:07 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 13:03:07 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:03:07 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 13:03:07 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 13:03:07 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:03:23 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:03:24 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:04:02 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:04:15 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:04:18 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:30:50 :: yo refreshToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdXRvciIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEyOjQ5OjU2LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzE5MjksImV4cCI6MTY4Mzg5NTkyOX0.tGWhd0Qp3eupA5nLm3MAVbBPTVodwVtc6T6f_Zj7ouU 
-02/05/23 13:30:50 :: yo decodedRefreshToken: {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secutor',
-  modifiedAt: '2023-05-02T12:49:56.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683031929,
-  exp: 1683895929
-} 
-02/05/23 13:30:50 :: yo userId: undefined 
-02/05/23 13:31:01 :: // Appel de la method handleLogin // 
-02/05/23 13:31:01 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: new connexion made sur la database: pccompare 
-02/05/23 13:31:01 :: => Requete appelée: SELECT * FROM account WHERE email = ? 
-02/05/23 13:31:01 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 13:31:01 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: ++ L'utilisateur (account) trouvé est : {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:31:01 :: Comparons les mots de passe reçus : true 
-02/05/23 13:31:01 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: => Requete appelée: SELECT * FROM customer WHERE Id_account = ? 
-02/05/23 13:31:01 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T12:50:14.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:31:01 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: ++ Customer trouvé est : {
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T12:50:14.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:31:01 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: => Requete appelée: SELECT * FROM role WHERE Id_role = ? 
-02/05/23 13:31:01 :: ==>Retour de la requete: [ [ { Id_role: 3, title: 'Administrateur' } ] ] 
-02/05/23 13:31:01 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: ++ Le customer trouvé est du role: { Id_role: 3, title: 'Administrateur' } 
-02/05/23 13:31:01 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: => Requete appelée: 
-    UPDATE customer
-    SET last_connection = NOW()
-    WHERE Id_customer = ?;
+02/05/23 23:35:17 :: // Appel de la method handleLogin de loginController // 
+02/05/23 23:35:17 :: // Appel de la method QUERY de database.service. // 
+02/05/23 23:35:17 :: new connexion made sur la database: pccompare 
+02/05/23 23:35:17 :: => Requete appelée:         
+    SELECT account.email, account.password, customer.*, role.*
+    FROM account
+    JOIN customer ON account.Id_account = customer.Id_account
+    JOIN role ON customer.Id_role = role.Id_role
+    WHERE account.email = ?
      
-02/05/23 13:31:01 :: Login successful ! sending token and refreshToken (httpOnly) 
-02/05/23 13:31:01 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:01 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 13:31:12 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:12 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:31:12 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Secutorzzzzzzzzzzz' } 
-02/05/23 13:31:12 :: modifyCustomer, with Id_customer =  6 
-02/05/23 13:31:12 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secutorzzzzzzzzzzz' ] ] 
-02/05/23 13:31:12 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secutorzzzzzzzzzzz' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secutorzzzzzzzzzzz' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:12 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 13:31:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: ==>Retour de la requete: [
+02/05/23 23:35:17 :: ==>Retour de la requete: [
   [
     {
-      Id_customer: 6,
-      pseudo: 'Secutorzzzzzzzzzzz',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:31:12 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: // Appel de la method selectOneCustomer // 
-02/05/23 13:31:12 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:31:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:12 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 13:31:12 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutorzzzzzzzzzzz',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:31:12 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 13:31:12 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Secutorzzzzzzzzzzz',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:31:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 13:31:12 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
       email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutore1234567',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-02T23:25:38.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore12345',
+      modifiedAt: 2023-05-01T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
     }
   ]
 ] 
-02/05/23 13:31:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:12 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Secutorzzzzzzzzzzz',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3,
+02/05/23 23:35:17 :: ---> Sortie de la method QUERY de database.service. // 
+02/05/23 23:35:17 :: ?? L'account trouvé est: {
   email: 'maxoa59@gmail.com',
   password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
 } 
-02/05/23 13:31:28 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:28 :: verifyRefrestToken called, decoded= {
+02/05/23 23:35:17 :: ?? Le customer trouvé est: {
   Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
   Id_customer: 6,
-  pseudo: 'Secutor',
+  Id_role: 3,
+  pseudo: 'Secutore1234567',
   firstname: 'Maxence',
   lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
+  last_connection: 2023-05-02T23:25:38.000Z,
   createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  modifiedBy: 'Secutore12345',
+  modifiedAt: 2023-05-01T22:00:00.000Z,
   deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
+  deletedAt: null
 } 
-02/05/23 13:31:28 :: // Appel de la method selectAll de allUsersDataController // 
-02/05/23 13:31:28 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:28 :: => Requete appelée: SELECT *
-  FROM account
-  INNER JOIN customer ON account.Id_account = customer.Id_account;
-   
-02/05/23 13:31:28 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 6,
-      pseudo: 'Secutorzzzzzzzzzzz',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_role: 3
-    },
-    {
-      Id_account: 7,
-      email: 'test_email_1@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 7,
-      pseudo: 'TestPseudo_100',
-      firstname: 'TestNom_100',
-      lastname: 'TestPrenom_100',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secutor',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 1
-    },
-    {
-      Id_account: 8,
-      email: 'test_email_2@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 8,
-      pseudo: 'TestPseudo_2',
-      firstname: 'TestNom_2',
-      lastname: 'TestPrenom_2',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secutor',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 1
-    },
-    {
-      Id_account: 9,
-      email: 'test_email_3@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 9,
-      pseudo: 'TestPseudo_3',
-      firstname: 'TestNom_3',
-      lastname: 'TestPrenom_3',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'site',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 2
-    },
-    {
-      Id_account: 10,
-      email: 'test_email_4@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 10,
-      pseudo: 'TestPseudo_4',
-      firstname: 'TestNom_4',
-      lastname: 'TestPrenom_4',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'site',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 2
-    },
-    {
-      Id_account: 11,
-      email: 'test_email_5@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 11,
-      pseudo: 'TestPseudo_5',
-      firstname: 'TestNom_5',
-      lastname: 'TestPrenom_5',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secutor',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 3
-    },
-    {
-      Id_account: 12,
-      email: 'test_email_6@test.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-      Id_customer: 12,
-      pseudo: 'TestPseudo_12',
-      firstname: 'TestNom_12',
-      lastname: 'TestPrenom_12',
-      last_connection: 2023-04-29T21:55:15.000Z,
-      createdBy: 'site',
-      createdAt: 2023-03-31T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'site',
-      modifiedAt: 2023-04-28T22:00:00.000Z,
-      Id_role: 4
-    }
-  ]
-] 
-02/05/23 13:31:28 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:28 :: ---> Sortie de la method selectAll de allUsersDataController. // 
-02/05/23 13:31:28 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:28 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:31:28 :: // Appel de la method selectAll de allRoleDataController // 
-02/05/23 13:31:28 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:28 :: => Requete appelée: SELECT *  FROM role 
-02/05/23 13:31:28 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:28 :: ---> Sortie de la method selectAll de allRoleDataController. // 
-02/05/23 13:31:28 :: ==>Retour de la requete: [
-  [
-    { Id_role: 1, title: 'Utilisateur' },
-    { Id_role: 2, title: 'Modérateur' },
-    { Id_role: 3, title: 'Administrateur' },
-    { Id_role: 4, title: 'Banni' }
-  ]
-] 
-02/05/23 13:31:33 :: // Appel de la method selectAll de carouselController// 
-02/05/23 13:31:33 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:33 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
-02/05/23 13:31:33 :: ==>Retour de la requete: [
-  [
-    {
-      id: 1,
-      img_src: 'https://picsum.photos/id/1/800/300',
-      img_alt: 'lien vers builder',
-      description: 'Venez découvrir le builder !',
-      button_text: 'Découvrir içi',
-      createdAt: 2023-04-23T17:03:47.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:03:47.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'builder',
-      long_description: "Le builder est un outil qui permet de constuire sa config, il permet d'assurer la compatibilité entre les composants.\r\n" +
-        "Et combiné avec le comparateur, c'est le meilleur moyen de faire une config au meilleur prix !"
-    },
-    {
-      id: 2,
-      img_src: 'https://picsum.photos/id/2/850/400',
-      img_alt: 'lien vers page about',
-      description: 'Venez découvrir qui nous-sommes !',
-      button_text: 'Cliquez ici',
-      createdAt: 2023-04-23T17:27:05.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:27:05.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'about',
-      long_description: ''
-    },
-    {
-      id: 3,
-      img_src: 'https://picsum.photos/id/3/850/500',
-      img_alt: 'lien vers compare',
-      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
-      button_text: 'Trouver les meilleurs prix',
-      createdAt: 2023-04-23T17:28:04.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:28:04.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'compare',
-      long_description: ''
-    },
-    {
-      id: 4,
-      img_src: 'https://picsum.photos/id/4/850/600',
-      img_alt: 'lien vers test',
-      description: 'hello world',
-      button_text: 'hello',
-      createdAt: 2023-04-23T17:29:09.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:29:09.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'themes',
-      long_description: ''
-    }
-  ]
-] 
-02/05/23 13:31:33 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:33 :: ---> Sortie de la method selectAll de carouselController // 
-02/05/23 13:31:33 :: // Appel de la method selectAll de carouselController// 
-02/05/23 13:31:33 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:33 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
-02/05/23 13:31:33 :: ==>Retour de la requete: [
-  [
-    {
-      id: 1,
-      img_src: 'https://picsum.photos/id/1/800/300',
-      img_alt: 'lien vers builder',
-      description: 'Venez découvrir le builder !',
-      button_text: 'Découvrir içi',
-      createdAt: 2023-04-23T17:03:47.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:03:47.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'builder',
-      long_description: "Le builder est un outil qui permet de constuire sa config, il permet d'assurer la compatibilité entre les composants.\r\n" +
-        "Et combiné avec le comparateur, c'est le meilleur moyen de faire une config au meilleur prix !"
-    },
-    {
-      id: 2,
-      img_src: 'https://picsum.photos/id/2/850/400',
-      img_alt: 'lien vers page about',
-      description: 'Venez découvrir qui nous-sommes !',
-      button_text: 'Cliquez ici',
-      createdAt: 2023-04-23T17:27:05.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:27:05.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'about',
-      long_description: ''
-    },
-    {
-      id: 3,
-      img_src: 'https://picsum.photos/id/3/850/500',
-      img_alt: 'lien vers compare',
-      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
-      button_text: 'Trouver les meilleurs prix',
-      createdAt: 2023-04-23T17:28:04.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:28:04.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'compare',
-      long_description: ''
-    },
-    {
-      id: 4,
-      img_src: 'https://picsum.photos/id/4/850/600',
-      img_alt: 'lien vers test',
-      description: 'hello world',
-      button_text: 'hello',
-      createdAt: 2023-04-23T17:29:09.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:29:09.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'themes',
-      long_description: ''
-    }
-  ]
-] 
-02/05/23 13:31:33 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:33 :: ---> Sortie de la method selectAll de carouselController // 
-02/05/23 13:31:46 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:46 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:31:46 :: modifyCustomer, with Id_customer =  6 
-02/05/23 13:31:46 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'tttttttttttttt' ] ] 
-02/05/23 13:31:46 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'tttttttttttttt' } 
-02/05/23 13:31:46 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='tttttttttttttt' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:46 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='tttttttttttttt' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:46 :: ==>Retour de la requete: [
+02/05/23 23:35:17 :: ?? Le role trouvé est: { title: 'Administrateur' } 
+02/05/23 23:35:17 :: !! Comparons les mots de passe reçus le résultat est : true 
+02/05/23 23:35:17 :: // Appel de la method QUERY de database.service. // 
+02/05/23 23:35:17 :: => Requete appelée: 
+      UPDATE customer
+      SET last_connection = NOW()
+      WHERE Id_customer = ?;
+       
+02/05/23 23:35:17 :: ==>Retour de la requete: [
   ResultSetHeader {
     fieldCount: 0,
     affectedRows: 1,
@@ -1591,1475 +68,491 @@
     warningStatus: 0
   }
 ] 
-02/05/23 13:31:46 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:46 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'tttttttttttttt',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:31:46 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:31:46 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:31:46 :: // Appel de la method selectOneCustomer // 
-02/05/23 13:31:46 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:31:46 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 13:31:46 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'tttttttttttttt',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:31:46 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'tttttttttttttt',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:31:46 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 13:31:46 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 13:31:46 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 13:31:46 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:31:46 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'tttttttttttttt',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:32:18 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:32:18 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:32:18 :: modifyCustomer.put called with this req.body { Id_customer: 6, pseudo: 'Scuu' } 
-02/05/23 13:32:18 :: modifyCustomer, with Id_customer =  6 
-02/05/23 13:32:18 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Scuu' ] ] 
-02/05/23 13:32:18 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Scuu' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:32:18 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Scuu' WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:32:18 :: ==>Retour de la requete: [
-  ResultSetHeader {
-    fieldCount: 0,
-    affectedRows: 1,
-    insertId: 0,
-    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
-    serverStatus: 2,
-    warningStatus: 0
-  }
-] 
-02/05/23 13:32:18 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: le sqlSelect après l'update est : SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:32:18 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = 6 
-02/05/23 13:32:18 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Scuu',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:32:18 :: verifyRefrestToken called refrestToken received(httponly): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:32:18 :: verifyRefrestToken called, decoded= {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:32:18 :: // Appel de la method selectOneCustomer // 
-02/05/23 13:32:18 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Scuu',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:32:18 :: => Requete appelée: SELECT * FROM customer WHERE deletedBy IS NULL AND Id_customer = ? 
-02/05/23 13:32:18 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: yoyo account c'est: {
-  Id_customer: 6,
-  pseudo: 'Scuu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3
-} 
-02/05/23 13:32:18 :: ---> Sortie de la method selectOneCustomer de customerController. // 
-02/05/23 13:32:18 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: => Requete appelée: SELECT * FROM account WHERE Id_account = ? 
-02/05/23 13:32:18 :: ==>Retour de la requete: [
-  [
-    {
-      Id_account: 6,
-      email: 'maxoa59@gmail.com',
-      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-    }
-  ]
-] 
-02/05/23 13:32:18 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:18 :: Yo le data= {
-  Id_customer: 6,
-  pseudo: 'Scuu',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: 2023-05-02T13:31:01.000Z,
-  createdBy: 'site',
-  createdAt: 2023-04-26T22:00:00.000Z,
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: 2023-05-02T13:03:07.000Z,
-  Id_account: 6,
-  Id_role: 3,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.'
-} 
-02/05/23 13:32:25 :: yo refreshToken: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJJZF9hY2NvdW50Ijo2LCJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwicGFzc3dvcmQiOiIvSE1FVzRPR3JGNEtUaHJLbmo5bGZ1V2tXTFZ6S2lPZVJJeFpVMDhHZmNvZlZqb3pKWGxyLiIsIklkX2N1c3RvbWVyIjo2LCJwc2V1ZG8iOiJTZWN1dG9yIiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQxMjo1MDoxNC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsLCJtb2RpZmllZEJ5IjoiU2VjdSIsIm1vZGlmaWVkQXQiOiIyMDIzLTA1LTAyVDEzOjAzOjA3LjAwMFoiLCJJZF9yb2xlIjozLCJyb2xlIjoiQWRtaW5pc3RyYXRldXIiLCJpYXQiOjE2ODMwMzQyNjEsImV4cCI6MTY4Mzg5ODI2MX0.RbV71YYGflvQZObT-59o44ahNf01fozWLeCfUcpbp60 
-02/05/23 13:32:25 :: yo userId: undefined 
-02/05/23 13:32:25 :: yo decodedRefreshToken: {
-  Id_account: 6,
-  email: 'maxoa59@gmail.com',
-  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
-  Id_customer: 6,
-  pseudo: 'Secutor',
-  firstname: 'Maxence',
-  lastname: 'ALLART',
-  last_connection: '2023-05-02T12:50:14.000Z',
-  createdBy: 'site',
-  createdAt: '2023-04-26T22:00:00.000Z',
-  deletedBy: null,
-  deletedAt: null,
-  modifiedBy: 'Secu',
-  modifiedAt: '2023-05-02T13:03:07.000Z',
-  Id_role: 3,
-  role: 'Administrateur',
-  iat: 1683034261,
-  exp: 1683898261
-} 
-02/05/23 13:32:26 :: // Appel de la method selectAll de carouselController// 
-02/05/23 13:32:26 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:26 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
-02/05/23 13:32:26 :: ==>Retour de la requete: [
-  [
-    {
-      id: 1,
-      img_src: 'https://picsum.photos/id/1/800/300',
-      img_alt: 'lien vers builder',
-      description: 'Venez découvrir le builder !',
-      button_text: 'Découvrir içi',
-      createdAt: 2023-04-23T17:03:47.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:03:47.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'builder',
-      long_description: "Le builder est un outil qui permet de constuire sa config, il permet d'assurer la compatibilité entre les composants.\r\n" +
-        "Et combiné avec le comparateur, c'est le meilleur moyen de faire une config au meilleur prix !"
-    },
-    {
-      id: 2,
-      img_src: 'https://picsum.photos/id/2/850/400',
-      img_alt: 'lien vers page about',
-      description: 'Venez découvrir qui nous-sommes !',
-      button_text: 'Cliquez ici',
-      createdAt: 2023-04-23T17:27:05.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:27:05.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'about',
-      long_description: ''
-    },
-    {
-      id: 3,
-      img_src: 'https://picsum.photos/id/3/850/500',
-      img_alt: 'lien vers compare',
-      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
-      button_text: 'Trouver les meilleurs prix',
-      createdAt: 2023-04-23T17:28:04.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:28:04.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'compare',
-      long_description: ''
-    },
-    {
-      id: 4,
-      img_src: 'https://picsum.photos/id/4/850/600',
-      img_alt: 'lien vers test',
-      description: 'hello world',
-      button_text: 'hello',
-      createdAt: 2023-04-23T17:29:09.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:29:09.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'themes',
-      long_description: ''
-    }
-  ]
-] 
-02/05/23 13:32:26 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:26 :: ---> Sortie de la method selectAll de carouselController // 
-02/05/23 13:32:26 :: // Appel de la method selectAll de carouselController// 
-02/05/23 13:32:26 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:32:26 :: => Requete appelée: SELECT * FROM carousel WHERE deletedBy = 0 
-02/05/23 13:32:26 :: ==>Retour de la requete: [
-  [
-    {
-      id: 1,
-      img_src: 'https://picsum.photos/id/1/800/300',
-      img_alt: 'lien vers builder',
-      description: 'Venez découvrir le builder !',
-      button_text: 'Découvrir içi',
-      createdAt: 2023-04-23T17:03:47.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:03:47.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'builder',
-      long_description: "Le builder est un outil qui permet de constuire sa config, il permet d'assurer la compatibilité entre les composants.\r\n" +
-        "Et combiné avec le comparateur, c'est le meilleur moyen de faire une config au meilleur prix !"
-    },
-    {
-      id: 2,
-      img_src: 'https://picsum.photos/id/2/850/400',
-      img_alt: 'lien vers page about',
-      description: 'Venez découvrir qui nous-sommes !',
-      button_text: 'Cliquez ici',
-      createdAt: 2023-04-23T17:27:05.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:27:05.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'about',
-      long_description: ''
-    },
-    {
-      id: 3,
-      img_src: 'https://picsum.photos/id/3/850/500',
-      img_alt: 'lien vers compare',
-      description: 'Venez découvrir le comparateur ! Trouvez les meilleurs prix ',
-      button_text: 'Trouver les meilleurs prix',
-      createdAt: 2023-04-23T17:28:04.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:28:04.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'compare',
-      long_description: ''
-    },
-    {
-      id: 4,
-      img_src: 'https://picsum.photos/id/4/850/600',
-      img_alt: 'lien vers test',
-      description: 'hello world',
-      button_text: 'hello',
-      createdAt: 2023-04-23T17:29:09.000Z,
-      createdBy: 'site',
-      deletedAt: null,
-      deletedBy: '0',
-      modifiedAt: 2023-04-23T17:29:09.000Z,
-      modifiedBy: 'site',
-      navigate_to: 'themes',
-      long_description: ''
-    }
-  ]
-] 
-02/05/23 13:32:26 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:32:26 :: ---> Sortie de la method selectAll de carouselController // 
-02/05/23 13:38:15 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:38:17 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:38:21 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:38:29 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:39:55 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:40:02 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:40:03 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:40:08 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:40:10 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:41:04 :: handle Auth route taken, there is accessToken found undefined 
-02/05/23 13:41:38 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:43:21 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:43:26 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:43:41 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:43:46 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:44:35 :: handle Auth route taken, there is accessToken found undefined 
-02/05/23 13:44:35 :: handle Auth route taken, there is accessToken found undefined 
-02/05/23 13:44:36 :: // Appel de la fonction refreshToken 
-02/05/23 13:44:36 :: test de req.cookies?.refreshToken undefined 
-02/05/23 13:44:36 :: test de req.cookies?.refreshToken undefined 
-02/05/23 13:44:36 :: // Appel de la fonction refreshToken 
-02/05/23 13:45:27 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:45:49 :: yo il faut test le pseudo:  undefined 
-02/05/23 13:46:18 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:46:20 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:46:25 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:46:29 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:46:59 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:47:01 :: yo il faut test le pseudo:  undefined 
-02/05/23 13:47:01 :: yo il faut test le req.body:  {
-  firstname: 'testpreno',
-  lastname: 'testnom',
-  pseudo: 'tototata',
-  email: 'maxoa59@gmail.comm',
-  password: '1234',
-  password2: '1234'
-} 
-02/05/23 13:47:06 :: yo il faut test le pseudo:  undefined 
-02/05/23 13:47:06 :: yo il faut test le req.body:  {
-  firstname: 'testpreno',
-  lastname: 'testnom',
-  pseudo: 'tototata',
-  email: 'maxoa59@gmail.comm',
-  password: '1234',
-  password2: '1234'
-} 
-02/05/23 13:47:25 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:47:39 :: yo il faut test le pseudo:  undefined 
-02/05/23 13:47:39 :: yo il faut test le req.body:  {
-  firstname: 'testpreno',
-  lastname: 'testnom',
-  pseudo: 'tototata',
-  email: 'maxoa59@gmail.comm',
-  password: '1234',
-  password2: '1234'
-} 
-02/05/23 13:48:01 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:08 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:12 :: yo il faut test le pseudo:  undefined 
-02/05/23 13:48:12 :: yo il faut test le req.body:  tototata 
-02/05/23 13:48:22 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:22 :: yo il faut test le pseudo:  tototata 
-02/05/23 13:48:22 :: yo il faut test le req.body:  tototata 
-02/05/23 13:48:30 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:38 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:40 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:46 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:53 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:48:56 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:01 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:04 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:21 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:24 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:30 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:36 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:37 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:44 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:53 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:49:55 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:50:03 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:50:06 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:50:08 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:50:09 :: yo il faut test le pseudo:  tototata 
-02/05/23 13:50:09 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:50:09 :: new connexion made sur la database: pccompare 
-02/05/23 13:50:09 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:50:09 :: ==>Retour de la requete: [ [] ] 
-02/05/23 13:50:09 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:50:09 :: hello la réponse est  [] 
-02/05/23 13:50:10 :: yo il faut test le pseudo:  tototata 
-02/05/23 13:50:10 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:50:10 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:50:10 :: ==>Retour de la requete: [ [] ] 
-02/05/23 13:50:10 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:50:10 :: hello la réponse est  [] 
-02/05/23 13:54:23 :: yo il faut test le pseudo:  tototata 
-02/05/23 13:54:23 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:54:23 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:54:23 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:54:23 :: hello la réponse est  [] 
-02/05/23 13:54:23 :: ==>Retour de la requete: [ [] ] 
-02/05/23 13:54:28 :: yo il faut test le pseudo:  Secutor 
-02/05/23 13:54:28 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:54:28 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:54:28 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:54:28 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:54:28 :: hello la réponse est  [
-  {
+02/05/23 23:35:17 :: !! L'objet préparé pour le retour au Front est le suivant : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
     Id_customer: 6,
-    pseudo: 'Secutor',
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
     firstname: 'Maxence',
     lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
+    last_connection: 2023-05-02T23:25:38.000Z,
     createdBy: 'site',
     createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutore12345',
+    modifiedAt: 2023-05-01T22:00:00.000Z,
     deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 13:58:49 :: yo il faut test le pseudo:  SecutoR 
-02/05/23 13:58:49 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:58:49 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:58:49 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:58:49 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:58:49 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 13:59:06 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:59:28 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 13:59:31 :: yo il faut test le pseudo:  secutor 
-02/05/23 13:59:31 :: // Appel de la method QUERY de database.service. // 
-02/05/23 13:59:31 :: new connexion made sur la database: pccompare 
-02/05/23 13:59:31 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 13:59:31 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 13:59:31 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 13:59:31 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:00:01 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:00:04 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:00:04 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:00:04 :: new connexion made sur la database: pccompare 
-02/05/23 14:00:04 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = LOWER(?) 
-02/05/23 14:00:04 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:00:04 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:00:04 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:00:38 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:00:38 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:00:38 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:00:38 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:00:38 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = LOWER(?) 
-02/05/23 14:00:38 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:00:50 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:00:55 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:00:55 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:00:55 :: new connexion made sur la database: pccompare 
-02/05/23 14:00:56 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = (?) 
-02/05/23 14:00:56 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:00:56 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:00:56 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:01:10 :: yo il faut test le pseudo:  secuto 
-02/05/23 14:01:10 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:01:10 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = (?) 
-02/05/23 14:01:10 :: hello la réponse est  [] 
-02/05/23 14:01:10 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:01:10 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:01:20 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:01:20 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:01:20 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = (?) 
-02/05/23 14:01:20 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:01:20 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:01:20 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:01:42 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:01:56 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:01:58 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:01:58 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:01:58 :: new connexion made sur la database: pccompare 
-02/05/23 14:01:58 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:01:58 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:01:58 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:01:58 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:02:04 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:02:04 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:02:04 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:02:04 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:02:04 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:02:04 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:02:19 :: yo il faut test le pseudo:  secutor 
-02/05/23 14:02:19 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:02:19 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:02:19 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:02:19 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:02:19 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:02:28 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:02:30 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:02:30 :: yo il faut test le pseudo:  SeCutoR 
-02/05/23 14:02:30 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:02:30 :: new connexion made sur la database: pccompare 
-02/05/23 14:02:30 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:02:30 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:02:30 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:02:30 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:02:45 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:02:54 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:02:59 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:03:03 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:03:06 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:03:08 :: yo il faut test le pseudo:  SeCutoR 
-02/05/23 14:03:08 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:03:08 :: new connexion made sur la database: pccompare 
-02/05/23 14:03:08 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:03:08 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:03:08 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:03:08 :: yo c'est ok ! 
-02/05/23 14:03:08 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:03:15 :: yo il faut test le pseudo:  SeCutoRee 
-02/05/23 14:03:15 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:03:15 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:03:15 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:03:15 :: hello la réponse est  [] 
-02/05/23 14:03:15 :: yo c'est ok ! 
-02/05/23 14:03:15 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:03:18 :: yo il faut test le pseudo:  SeCutoR 
-02/05/23 14:03:18 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:03:18 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:03:18 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:03:18 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:03:18 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:03:18 :: yo c'est ok ! 
-02/05/23 14:03:19 :: yo il faut test le pseudo:  SeCutoR 
-02/05/23 14:03:19 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:03:19 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:03:19 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:03:19 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:03:19 :: yo c'est ok ! 
-02/05/23 14:03:19 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:03:45 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:03:45 :: yo il faut test le pseudo:  tatata 
-02/05/23 14:03:45 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:03:45 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:03:45 :: hello la réponse est  [] 
-02/05/23 14:03:45 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:03:45 :: yo c'est ok ! 
-02/05/23 14:04:03 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:04:05 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:11:29 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:11:32 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:11:46 :: yo il faut test le pseudo:  tatata 
-02/05/23 14:11:46 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:11:46 :: new connexion made sur la database: pccompare 
-02/05/23 14:11:46 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:11:46 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:11:46 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:11:46 :: hello la réponse est  [] 
-02/05/23 14:12:00 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:04 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:06 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:12 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:16 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:21 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:27 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:33 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:42 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:50 :: Ouverture d'un port d'écoute sur : 5050 
-02/05/23 14:12:55 :: yo il faut test le pseudo:  tatata 
-02/05/23 14:12:55 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:12:55 :: new connexion made sur la database: pccompare 
-02/05/23 14:12:55 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:12:55 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:12:55 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:12:55 :: hello la réponse est  [] 
-02/05/23 14:13:01 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:13:01 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:13:01 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:13:01 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:13:01 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:13:01 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:22:09 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:22:09 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:22:09 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:22:09 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:22:09 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:22:09 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:22:12 :: yo il faut test le pseudo:  Secutore 
-02/05/23 14:22:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:22:12 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:22:12 :: ==>Retour de la requete: [ [] ] 
-02/05/23 14:22:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:22:12 :: hello la réponse est  [] 
-02/05/23 14:22:53 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:22:53 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:22:53 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:22:53 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:22:53 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:22:53 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:24:12 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:24:12 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:24:12 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:24:12 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:24:12 :: hello la réponse est  [
-  {
-    Id_customer: 6,
-    pseudo: 'Secutor',
-    firstname: 'Maxence',
-    lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
-    createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
-    deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:24:12 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:24:12 :: // Appel de la function sendVerifMail 
-02/05/23 14:24:12 :: => avec les données suivantes :  {
-  firstname: 'testpreno',
-  lastname: 'testnom',
-  pseudo: 'Secutor',
-  email: 'maxoa59@gmail.comm',
-  password: '1234',
-  password2: '1234'
-} 
-02/05/23 14:24:13 :: // Tentative d'envoi de mail : // 
-02/05/23 14:24:14 :: Verification email sent to maxoa59@gmail.comm 
-02/05/23 14:24:14 :: le retourMailer est = à: {
-  data: {
-    accepted: [ 'maxoa59@gmail.comm' ],
-    rejected: [],
-    ehlo: [
-      'SIZE 35882577',
-      '8BITMIME',
-      'AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH',
-      'ENHANCEDSTATUSCODES',
-      'PIPELINING',
-      'CHUNKING',
-      'SMTPUTF8'
-    ],
-    envelopeTime: 465,
-    messageTime: 633,
-    messageSize: 766,
-    response: '250 2.0.0 OK  1683037453 x2-20020a5d60c2000000b002de9a0b0a20sm30866828wrt.113 - gsmtp',
-    envelope: { from: '', to: [ 'maxoa59@gmail.comm' ] },
-    messageId: '<2dea498f-7a95-0faa-e12b-b7fa28f51910@localhost>'
+    deletedAt: null
   },
-  result: true,
-  message: 'email sent'
+  role: 'Administrateur'
 } 
-02/05/23 14:24:14 :: §§ MAIL :  Envoyé 
-02/05/23 14:24:48 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:24:48 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:24:48 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:24:48 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:24:48 :: hello la réponse est  [
-  {
+02/05/23 23:35:17 :: ?? Pour information, un accessToken a été créé pour 1h : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODMwNzQxMTd9.-58BTRs4Fck3cMps5oyIxA5i9fpkR2oiE-y8jmtxaSc 
+02/05/23 23:35:17 :: ?? Pour information, un refreshToken a été créé pour 10d : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+02/05/23 23:35:17 :: ---> Sortie de la method QUERY de database.service. // 
+02/05/23 23:35:17 :: ==> Login avec succes ! Envoi du refreshToken en cookie, envoi des données + envoi du accessToken. 
+02/05/23 23:35:34 :: // Appel de la method handleAuth de authController // 
+02/05/23 23:35:34 :: ===================================================== 
+02/05/23 23:35:34 :: ?? Vérification de la réception en cookie, on a reçu en req.cookie.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODMwNzQxMTd9.-58BTRs4Fck3cMps5oyIxA5i9fpkR2oiE-y8jmtxaSc 
+02/05/23 23:35:34 :: ==> Comparaison du accessTokenCookie avec la secret phrase en .env : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
     Id_customer: 6,
-    pseudo: 'Secutor',
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
     firstname: 'Maxence',
     lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
+    last_connection: '2023-05-02T23:25:38.000Z',
     createdBy: 'site',
-    createdAt: 2023-04-26T22:00:00.000Z,
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
     deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
-    Id_account: 6,
-    Id_role: 3
-  }
-] 
-02/05/23 14:24:48 :: ==>Retour de la requete: [
-  [
-    {
-      Id_customer: 6,
-      pseudo: 'Secutor',
-      firstname: 'Maxence',
-      lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
-      createdBy: 'site',
-      createdAt: 2023-04-26T22:00:00.000Z,
-      deletedBy: null,
-      deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
-      Id_account: 6,
-      Id_role: 3
-    }
-  ]
-] 
-02/05/23 14:24:48 :: // Appel de la function sendVerifMail 
-02/05/23 14:24:48 :: => avec les données suivantes :  {
-  firstname: 'prenom',
-  lastname: 'nom',
-  pseudo: 'Secutor',
-  email: 'maxoa59@gmail.comm',
-  password: '1234',
-  password2: '1234'
-} 
-02/05/23 14:24:48 :: // Tentative d'envoi de mail : // 
-02/05/23 14:24:50 :: §§ MAIL :  Envoyé 
-02/05/23 14:24:50 :: Verification email sent to maxoa59@gmail.comm 
-02/05/23 14:24:50 :: le retourMailer est = à: {
-  data: {
-    accepted: [ 'maxoa59@gmail.comm' ],
-    rejected: [],
-    ehlo: [
-      'SIZE 35882577',
-      '8BITMIME',
-      'AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH',
-      'ENHANCEDSTATUSCODES',
-      'PIPELINING',
-      'CHUNKING',
-      'SMTPUTF8'
-    ],
-    envelopeTime: 449,
-    messageTime: 380,
-    messageSize: 757,
-    response: '250 2.0.0 OK  1683037489 q16-20020a7bce90000000b003f09d7b6e20sm35806724wmj.2 - gsmtp',
-    envelope: { from: '', to: [ 'maxoa59@gmail.comm' ] },
-    messageId: '<4a11f18c-e42f-8e86-9530-6a76433e2c46@localhost>'
+    deletedAt: null
   },
-  result: true,
-  message: 'email sent'
+  role: 'Administrateur',
+  iat: 1683070517,
+  exp: 1683074117
 } 
-02/05/23 14:25:42 :: yo il faut test le pseudo:  Secutor 
-02/05/23 14:25:42 :: // Appel de la method QUERY de database.service. // 
-02/05/23 14:25:42 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
-02/05/23 14:25:42 :: ---> Sortie de la method QUERY de database.service. // 
-02/05/23 14:25:42 :: ==>Retour de la requete: [
+02/05/23 23:35:56 :: ===================================================== 
+02/05/23 23:35:56 :: // Appel de la method handleAuth de authController // 
+02/05/23 23:35:56 :: ?? Vérification de la réception en cookie, on a reçu en req.cookie.accessToken : undefined 
+02/05/23 23:35:56 :: XX Pas de cookie accessToken reçu. 
+02/05/23 23:35:56 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+02/05/23 23:35:56 :: ?? Vérification de la réception de req?.cookie?.refresh, on a reçu : undefined 
+02/05/23 23:35:56 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+02/05/23 23:37:39 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:37:59 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:38:19 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:38:22 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:38:24 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:11 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:16 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:34 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:36 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:51 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:39:56 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:40:06 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:40:15 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:40:24 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:40:28 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:19 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:28 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:30 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:39 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:41 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:46 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:41:51 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:44:19 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:44:22 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:44:26 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:44:55 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:44:58 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:13 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:14 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:21 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:26 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:39 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:46:42 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:47:05 :: ===================================================== 
+02/05/23 23:47:05 :: // Appel de la method handleAuth de authController // 
+02/05/23 23:47:05 :: XX Pas de cookie accessToken reçu. 
+02/05/23 23:47:05 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : undefined 
+02/05/23 23:47:05 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+02/05/23 23:47:05 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+02/05/23 23:47:05 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+02/05/23 23:47:05 :: XX Pas de cookie accessToken reçu. 
+02/05/23 23:47:59 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:48:01 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:48:06 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:48:12 :: ===================================================== 
+02/05/23 23:48:12 :: // Appel de la method handleAuth de authController // 
+02/05/23 23:48:12 :: XX Pas de cookie accessToken reçu. 
+02/05/23 23:48:12 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : undefined 
+02/05/23 23:48:12 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+02/05/23 23:48:12 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+02/05/23 23:48:12 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+02/05/23 23:48:12 :: XX Erreur lors de la recherche des données de l'utilisateur: Error: Refresh token invalide !
+    at handleRefreshToken (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\refreshTokenController.js:37:13)
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:284:15
+    at Function.process_params (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:346:12)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:280:10)
+    at Function.handle (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:175:3)
+    at router (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:47:12) 
+02/05/23 23:48:12 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-02T23:25:38.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683070517,
+  exp: 1683934517
+} 
+02/05/23 23:49:18 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:49:22 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:51:35 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:51:38 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:54:35 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:54:37 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:54:44 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:54:47 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:54:49 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : undefined 
+02/05/23 23:54:49 :: ===================================================== 
+02/05/23 23:54:49 :: XX Pas de cookie accessToken reçu. 
+02/05/23 23:54:49 :: // Appel de la method handleAuth de authController // 
+02/05/23 23:54:50 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+02/05/23 23:54:50 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+02/05/23 23:54:50 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+02/05/23 23:54:50 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-02T23:25:38.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683070517,
+  exp: 1683934517
+} 
+02/05/23 23:54:50 :: // Appel de la method QUERY de database.service. // 
+02/05/23 23:54:50 :: new connexion made sur la database: pccompare 
+02/05/23 23:54:50 :: => Requete appelée:         
+    SELECT account.email, account.password, customer.*, role.*
+    FROM account
+    JOIN customer ON account.Id_account = customer.Id_account
+    JOIN role ON customer.Id_role = role.Id_role
+    WHERE account.email = ?
+     
+02/05/23 23:54:50 :: ==>Retour de la requete: [
   [
     {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
       Id_customer: 6,
-      pseudo: 'Secutor',
+      pseudo: 'Secutore1234567',
       firstname: 'Maxence',
       lastname: 'ALLART',
-      last_connection: 2023-05-02T13:31:01.000Z,
+      last_connection: 2023-05-02T23:35:17.000Z,
       createdBy: 'site',
       createdAt: 2023-04-26T22:00:00.000Z,
       deletedBy: null,
       deletedAt: null,
-      modifiedBy: 'Secu',
-      modifiedAt: 2023-05-02T13:03:07.000Z,
+      modifiedBy: 'Secutore12345',
+      modifiedAt: 2023-05-01T22:00:00.000Z,
       Id_account: 6,
-      Id_role: 3
+      Id_role: 3,
+      title: 'Administrateur'
     }
   ]
 ] 
-02/05/23 14:25:42 :: hello la réponse est  [
-  {
+02/05/23 23:54:50 :: ---> Sortie de la method QUERY de database.service. // 
+02/05/23 23:54:50 :: ?? Après le décodage, mise à jour des dernières infos du compte en question:  {
+  email: 'maxoa59@gmail.com',
+  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+  Id_customer: 6,
+  pseudo: 'Secutore1234567',
+  firstname: 'Maxence',
+  lastname: 'ALLART',
+  last_connection: 2023-05-02T23:35:17.000Z,
+  createdBy: 'site',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  deletedBy: null,
+  deletedAt: null,
+  modifiedBy: 'Secutore12345',
+  modifiedAt: 2023-05-01T22:00:00.000Z,
+  Id_account: 6,
+  Id_role: 3,
+  title: 'Administrateur'
+} 
+02/05/23 23:56:25 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:25 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+02/05/23 23:56:25 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+02/05/23 23:56:25 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+02/05/23 23:56:25 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
     Id_customer: 6,
-    pseudo: 'Secutor',
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
     firstname: 'Maxence',
     lastname: 'ALLART',
-    last_connection: 2023-05-02T13:31:01.000Z,
+    last_connection: '2023-05-02T23:25:38.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683070517,
+  exp: 1683934517
+} 
+02/05/23 23:56:25 :: // Appel de la method QUERY de database.service. // 
+02/05/23 23:56:25 :: new connexion made sur la database: pccompare 
+02/05/23 23:56:25 :: => Requete appelée:         
+    SELECT account.email, account.password, customer.*, role.*
+    FROM account
+    JOIN customer ON account.Id_account = customer.Id_account
+    JOIN role ON customer.Id_role = role.Id_role
+    WHERE account.email = ?
+     
+02/05/23 23:56:25 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutore1234567',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-02T23:35:17.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore12345',
+      modifiedAt: 2023-05-01T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
+    }
+  ]
+] 
+02/05/23 23:56:25 :: ---> Sortie de la method QUERY de database.service. // 
+02/05/23 23:56:25 :: ?? Après le décodage, mise à jour des dernières infos du compte en question:  {
+  email: 'maxoa59@gmail.com',
+  password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+  Id_customer: 6,
+  pseudo: 'Secutore1234567',
+  firstname: 'Maxence',
+  lastname: 'ALLART',
+  last_connection: 2023-05-02T23:35:17.000Z,
+  createdBy: 'site',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  deletedBy: null,
+  deletedAt: null,
+  modifiedBy: 'Secutore12345',
+  modifiedAt: 2023-05-01T22:00:00.000Z,
+  Id_account: 6,
+  Id_role: 3,
+  title: 'Administrateur'
+} 
+02/05/23 23:56:31 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:34 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:49 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:52 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:57 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:56:59 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:57:41 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:05 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:09 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:23 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:26 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:32 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:34 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:39 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:40 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:42 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:43 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:47 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:51 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:58:53 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:34 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:46 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:48 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:49 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:51 :: Ouverture d'un port d'écoute sur : 5050 
+02/05/23 23:59:53 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:00:07 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:00:08 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:00:45 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:00:48 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:00:50 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:01:07 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:01:57 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:01:58 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:02:00 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:02:03 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:02:41 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:03:01 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:03:05 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:03:27 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:03:31 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:03:34 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:04:03 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:04:13 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:04:24 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:04:35 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:04:38 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:02 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:13 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:16 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:23 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:29 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:34 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:05:35 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:06:26 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:06:42 :: ===================================================== 
+03/05/23 00:06:42 :: // Appel de la method handleAuth de authController // 
+03/05/23 00:06:42 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : undefined 
+03/05/23 00:06:42 :: XX Pas de cookie accessToken reçu. 
+03/05/23 00:06:42 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+03/05/23 00:06:42 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+03/05/23 00:06:42 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzoyNTozOC4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcwNTE3LCJleHAiOjE2ODM5MzQ1MTd9.tAJNwSkCPePq4TQFXlOm8lAG9lAwMSNIrTfNOmFbCus 
+03/05/23 00:06:42 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-02T23:25:38.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683070517,
+  exp: 1683934517
+} 
+03/05/23 00:06:42 :: new connexion made sur la database: pccompare 
+03/05/23 00:06:42 :: // Appel de la method QUERY de database.service. // 
+03/05/23 00:06:42 :: => Requete appelée:         
+      SELECT account.email, account.password, customer.*, role.*
+      FROM account
+      JOIN customer ON account.Id_account = customer.Id_account
+      JOIN role ON customer.Id_role = role.Id_role
+      WHERE account.email = ?
+       
+03/05/23 00:06:42 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutore1234567',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-02T23:35:17.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore12345',
+      modifiedAt: 2023-05-01T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
+    }
+  ]
+] 
+03/05/23 00:06:42 :: ?? Last info de account trouvé est: { email: 'maxoa59@gmail.com' } 
+03/05/23 00:06:42 :: ?? Last info de customer trouvé est: {
+  Id_account: 6,
+  Id_customer: 6,
+  Id_role: 3,
+  pseudo: 'Secutore1234567',
+  firstname: 'Maxence',
+  lastname: 'ALLART',
+  last_connection: 2023-05-02T23:35:17.000Z,
+  createdBy: 'site',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  modifiedBy: 'Secutore12345',
+  modifiedAt: 2023-05-01T22:00:00.000Z,
+  deletedBy: null,
+  deletedAt: null
+} 
+03/05/23 00:06:42 :: !! L'objet préparé pour le retour au Front est le suivant : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-02T23:35:17.000Z,
     createdBy: 'site',
     createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutore12345',
+    modifiedAt: 2023-05-01T22:00:00.000Z,
     deletedBy: null,
-    deletedAt: null,
-    modifiedBy: 'Secu',
-    modifiedAt: 2023-05-02T13:03:07.000Z,
+    deletedAt: null
+  },
+  role: 'Administrateur'
+} 
+03/05/23 00:06:42 :: ?? Last info de role trouvé est: { title: 'Administrateur' } 
+03/05/23 00:06:42 :: ---> Sortie de la method QUERY de database.service. // 
+03/05/23 00:06:42 :: ?? Pour information, un accessToken a été créé pour 1h (Depuis la route refreshToken !) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzozNToxNy4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcyNDAyLCJleHAiOjE2ODMwNzYwMDJ9.34Mt9jMfLQhxDAejdfPyLsa-ak1aTeL9zC6NnX6eMnA 
+03/05/23 00:06:42 :: ?? Pour information, un refreshToken a été créé pour 10d (Depuis la route refreshToken !): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzozNToxNy4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcyNDAyLCJleHAiOjE2ODM5MzY0MDJ9.BVAsp204Etn6lJhWzMdN4GHjnGnKjOq1kqKpNjVftDY 
+03/05/23 00:06:42 :: ==> Tout est ok, On peut renvoyer le nouveau refreshToken et le nouveau accessToken actualisé avec les dernières données. 
+03/05/23 00:06:42 :: ===================================================== 
+03/05/23 00:06:42 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUxMjM0NTY3IiwiZmlyc3RuYW1lIjoiTWF4ZW5jZSIsImxhc3RuYW1lIjoiQUxMQVJUIiwibGFzdF9jb25uZWN0aW9uIjoiMjAyMy0wNS0wMlQyMzozNToxNy4wMDBaIiwiY3JlYXRlZEJ5Ijoic2l0ZSIsImNyZWF0ZWRBdCI6IjIwMjMtMDQtMjZUMjI6MDA6MDAuMDAwWiIsIm1vZGlmaWVkQnkiOiJTZWN1dG9yZTEyMzQ1IiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDFUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMDcyNDAyLCJleHAiOjE2ODMwNzYwMDJ9.34Mt9jMfLQhxDAejdfPyLsa-ak1aTeL9zC6NnX6eMnA 
+03/05/23 00:06:42 :: ==> Comparaison du accessTokenCookie avec la secret phrase en .env : {
+  account: 'maxoa59@gmail.com',
+  customer: {
     Id_account: 6,
-    Id_role: 3
-  }
-] 
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore1234567',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-02T23:35:17.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutore12345',
+    modifiedAt: '2023-05-01T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683072402,
+  exp: 1683076002
+} 
+03/05/23 00:06:42 :: // Appel de la method handleAuth de authController // 
+03/05/23 00:11:37 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:43 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:50 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:52 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:53 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:56 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:11:58 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:12:05 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:16:19 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:16:27 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:17:06 :: Ouverture d'un port d'écoute sur : 5050 
+03/05/23 00:17:53 :: Ouverture d'un port d'écoute sur : 5050 
