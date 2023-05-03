@@ -36,8 +36,17 @@ async function handleRefreshToken(req, res) {
       "?? Décodage du refreshToken avec les informations suivantes :",
       decodedRefreshToken
     );
+    // Décodé mais expiré :
+    if (decodedRefreshToken.exp < Date.now() / 1000) {
+      return res.status(401).json({
+        result: false,
+        message: "Le refreshToken est expiré, il faut se re-identifier.",
+      });
+    }
+    // Décodé mais verification KO (message d'erreur neutre)
     if (!decodedRefreshToken) {
       return res.status(401).json({
+        data: null,
         result: false,
         message: "Erreur lors de l'authentification 4.",
       });
