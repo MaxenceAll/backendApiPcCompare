@@ -74,12 +74,12 @@ async function handleRefreshToken(req, res) {
       JOIN role ON customer.Id_role = role.Id_role
       WHERE account.email = ?
       `;
-      const [allData] = await query(SQL_allData, [decodedRefreshToken.email]);
+      const [allData] = await query(SQL_allData, [decodedRefreshToken.account]);
       // Si je n'ai pas de retour de la requete alors je n'ai aucun compte avec ce email (mettre un message de retour neutre)
       if (!allData) {
         consolelog(
           "XX Aucune donnée trouvée pour l'email:",
-          decodedRefreshToken.email
+          decodedRefreshToken.account
         );
         return res.status(401).json({
           message: "Erreur lors de l'authentification 3.",
