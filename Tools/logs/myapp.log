@@ -1,0 +1,485 @@
+04/05/23 10:16:07 :: ===================================================== 
+04/05/23 10:16:07 :: // Appel de la method handleAuth de authController // 
+04/05/23 10:16:07 :: !! Le accessToken est expiré ! TokenExpiredError: jwt expired
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:101:10)
+    at Object.handleAuth (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\authController.js:26:22)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\routes\auth.js:6:24
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:284:15 {
+  expiredAt: 2023-05-04T01:45:12.000Z
+} 
+04/05/23 10:16:07 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODMxNjQ3MTJ9.xzAHDTmTm6BvaZrptQftQFzsL8SUnZ15evu_2hiYV7Y 
+04/05/23 10:16:07 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+04/05/23 10:16:07 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+04/05/23 10:16:07 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODQwMjUxMTJ9.CNbyLVgRK4EwQtGrr75udpTJVse6GFjjemIOCSp5GE4 
+04/05/23 10:16:07 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:16:07 :: Oops une erreur lors de la tentative de Query: Error: Can't add new command when connection is in closed state
+    at PromiseConnection.execute (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\mysql2\promise.js:111:22)
+    at query (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\services\database.service.js:35:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async handleRefreshToken (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\refreshTokenController.js:77:25) {
+  code: undefined,
+  errno: undefined,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+} 
+04/05/23 10:16:07 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:43:52.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683161112,
+  exp: 1684025112
+} 
+04/05/23 10:16:07 :: XX Erreur lors de la recherche des données de l'utilisateur 3: TypeError: (intermediate value) is not iterable
+    at handleRefreshToken (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\refreshTokenController.js:77:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+04/05/23 10:16:30 :: ===================================================== 
+04/05/23 10:16:30 :: // Appel de la method handleAuth de authController // 
+04/05/23 10:16:30 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODMxNjQ3MTJ9.xzAHDTmTm6BvaZrptQftQFzsL8SUnZ15evu_2hiYV7Y 
+04/05/23 10:16:30 :: !! Le accessToken est expiré ! TokenExpiredError: jwt expired
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:101:10)
+    at Object.handleAuth (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\authController.js:26:22)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\routes\auth.js:6:24
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:284:15 {
+  expiredAt: 2023-05-04T01:45:12.000Z
+} 
+04/05/23 10:16:30 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+04/05/23 10:16:30 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+04/05/23 10:16:30 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODQwMjUxMTJ9.CNbyLVgRK4EwQtGrr75udpTJVse6GFjjemIOCSp5GE4 
+04/05/23 10:16:30 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:43:52.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683161112,
+  exp: 1684025112
+} 
+04/05/23 10:16:30 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:16:30 :: Oops une erreur lors de la tentative de Query: Error: Can't add new command when connection is in closed state
+    at PromiseConnection.execute (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\mysql2\promise.js:111:22)
+    at query (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\services\database.service.js:35:37)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async handleRefreshToken (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\refreshTokenController.js:77:25) {
+  code: undefined,
+  errno: undefined,
+  sql: undefined,
+  sqlState: undefined,
+  sqlMessage: undefined
+} 
+04/05/23 10:16:30 :: XX Erreur lors de la recherche des données de l'utilisateur 3: TypeError: (intermediate value) is not iterable
+    at handleRefreshToken (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\refreshTokenController.js:77:25)
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5) 
+04/05/23 10:17:24 :: Ouverture d'un port d'écoute sur : 5050 
+04/05/23 10:17:29 :: ===================================================== 
+04/05/23 10:17:29 :: // Appel de la method handleAuth de authController // 
+04/05/23 10:17:29 :: !! Le accessToken est expiré ! TokenExpiredError: jwt expired
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:190:21
+    at getSecret (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:97:14)
+    at module.exports [as verify] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\jsonwebtoken\verify.js:101:10)
+    at Object.handleAuth (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\authController.js:26:22)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\routes\auth.js:6:24
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\index.js:284:15 {
+  expiredAt: 2023-05-04T01:45:12.000Z
+} 
+04/05/23 10:17:29 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODMxNjQ3MTJ9.xzAHDTmTm6BvaZrptQftQFzsL8SUnZ15evu_2hiYV7Y 
+04/05/23 10:17:29 :: ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ 
+04/05/23 10:17:29 :: // Appel de la method handleRefreshToken de refreshTokenController // 
+04/05/23 10:17:29 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:43:52.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683161112,
+  exp: 1684025112
+} 
+04/05/23 10:17:29 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:17:29 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDM6NTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTYxMTEyLCJleHAiOjE2ODQwMjUxMTJ9.CNbyLVgRK4EwQtGrr75udpTJVse6GFjjemIOCSp5GE4 
+04/05/23 10:17:29 :: new connexion made sur la database: pccompare 
+04/05/23 10:17:29 :: => Requete appelée:         
+      SELECT account.email, account.password, customer.*, role.*
+      FROM account
+      JOIN customer ON account.Id_account = customer.Id_account
+      JOIN role ON customer.Id_role = role.Id_role
+      WHERE account.email = ?
+       
+04/05/23 10:17:29 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutor',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-04T00:45:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'undefined',
+      modifiedAt: 2023-05-02T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
+    }
+  ]
+] 
+04/05/23 10:17:29 :: ---> Sortie de la method QUERY de database.service. // 
+04/05/23 10:17:29 :: ?? Last info de customer trouvé est: {
+  Id_account: 6,
+  Id_customer: 6,
+  Id_role: 3,
+  pseudo: 'Secutor',
+  firstname: 'Maxence',
+  lastname: 'ALLART',
+  last_connection: 2023-05-04T00:45:12.000Z,
+  createdBy: 'site',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  modifiedBy: 'undefined',
+  modifiedAt: 2023-05-02T22:00:00.000Z,
+  deletedBy: null,
+  deletedAt: null
+} 
+04/05/23 10:17:29 :: ?? Last info de account trouvé est: { email: 'maxoa59@gmail.com' } 
+04/05/23 10:17:29 :: ?? Last info de role trouvé est: { title: 'Administrateur' } 
+04/05/23 10:17:29 :: !! L'objet préparé pour le retour au Front est le suivant : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-04T00:45:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'undefined',
+    modifiedAt: 2023-05-02T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur'
+} 
+04/05/23 10:17:29 :: ?? Pour information, un accessToken a été créé pour 1h (Depuis la route refreshToken !) : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODMxOTkwNDl9.XubtYAy--A_S7e3nalOWYskkxykrYv8vhs45ENvsZSc 
+04/05/23 10:17:29 :: ?? Pour information, un refreshToken a été créé pour 10d (Depuis la route refreshToken !): eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODQwNTk0NDl9.QrLiKCykBICq4A87avSNJ4zpZ2tMFWePq1yV-kjpV2I 
+04/05/23 10:17:29 :: ==> Tout est ok, On peut renvoyer le nouveau refreshToken et le nouveau accessToken actualisé avec les dernières données. 
+04/05/23 10:17:29 :: ===================================================== 
+04/05/23 10:17:29 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODMxOTkwNDl9.XubtYAy--A_S7e3nalOWYskkxykrYv8vhs45ENvsZSc 
+04/05/23 10:17:29 :: ==> Comparaison du accessTokenCookie avec la secret phrase en .env : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:45:12.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683195449,
+  exp: 1683199049
+} 
+04/05/23 10:17:29 :: // Appel de la method handleAuth de authController // 
+04/05/23 10:17:29 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+04/05/23 10:17:29 :: // Rentrée dans le middleware verifyRefreshToken // 
+04/05/23 10:17:29 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODQwNTk0NDl9.QrLiKCykBICq4A87avSNJ4zpZ2tMFWePq1yV-kjpV2I 
+04/05/23 10:17:29 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:45:12.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683195449,
+  exp: 1684059449
+} 
+04/05/23 10:17:29 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:17:29 :: ---> Sortie de la method QUERY de database.service. // 
+04/05/23 10:17:29 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutor","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-04T00:45:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"undefined","modifiedAt":"2023-05-02T22:00:00.000Z","deletedBy":null,"deletedAt":null},"role":"Administrateur"} 
+04/05/23 10:17:29 :: // Appel de la method selectOneCustomer // 
+04/05/23 10:17:29 :: ?? Nous tetons de chercher les infos de l'utilisateur avec l'id: 6 
+04/05/23 10:17:29 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+04/05/23 10:17:29 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutor',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-04T00:45:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'undefined',
+      modifiedAt: 2023-05-02T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
+    }
+  ]
+] 
+04/05/23 10:17:29 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:17:29 :: => Requete appelée: SELECT customer.*, role.*, account.email
+    FROM customer
+    INNER JOIN role ON customer.Id_role = role.Id_role
+    INNER JOIN account ON customer.Id_account = account.Id_account
+    WHERE customer.Id_customer = ? AND customer.deletedBy IS NULL;
+     
+04/05/23 10:17:29 :: ==>Retour de la requete: [
+  [
+    {
+      Id_customer: 6,
+      pseudo: 'Secutor',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-04T00:45:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'undefined',
+      modifiedAt: 2023-05-02T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur',
+      email: 'maxoa59@gmail.com'
+    }
+  ]
+] 
+04/05/23 10:17:29 :: ?? Nous avons trouvé l'utilisateur avec l'id 6: ses infos : {
+  account: { email: 'maxoa59@gmail.com', password: undefined },
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-04T00:45:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'undefined',
+    modifiedAt: 2023-05-02T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: { title: 'Administrateur' }
+} 
+04/05/23 10:17:29 :: ---> Sortie de la method QUERY de database.service. // 
+04/05/23 10:46:29 :: Ouverture d'un port d'écoute sur : 5050 
+04/05/23 10:46:31 :: // Appel de la method handleAuth de authController // 
+04/05/23 10:46:31 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.accessToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODMxOTkwNDl9.XubtYAy--A_S7e3nalOWYskkxykrYv8vhs45ENvsZSc 
+04/05/23 10:46:31 :: ==> Comparaison du accessTokenCookie avec la secret phrase en .env : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:45:12.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683195449,
+  exp: 1683199049
+} 
+04/05/23 10:46:31 :: ===================================================== 
+04/05/23 10:46:31 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+04/05/23 10:46:31 :: // Rentrée dans le middleware verifyRefreshToken // 
+04/05/23 10:46:31 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvciIsImZpcnN0bmFtZSI6Ik1heGVuY2UiLCJsYXN0bmFtZSI6IkFMTEFSVCIsImxhc3RfY29ubmVjdGlvbiI6IjIwMjMtMDUtMDRUMDA6NDU6MTIuMDAwWiIsImNyZWF0ZWRCeSI6InNpdGUiLCJjcmVhdGVkQXQiOiIyMDIzLTA0LTI2VDIyOjAwOjAwLjAwMFoiLCJtb2RpZmllZEJ5IjoidW5kZWZpbmVkIiwibW9kaWZpZWRBdCI6IjIwMjMtMDUtMDJUMjI6MDA6MDAuMDAwWiIsImRlbGV0ZWRCeSI6bnVsbCwiZGVsZXRlZEF0IjpudWxsfSwicm9sZSI6IkFkbWluaXN0cmF0ZXVyIiwiaWF0IjoxNjgzMTk1NDQ5LCJleHAiOjE2ODQwNTk0NDl9.QrLiKCykBICq4A87avSNJ4zpZ2tMFWePq1yV-kjpV2I 
+04/05/23 10:46:31 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-04T00:45:12.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'undefined',
+    modifiedAt: '2023-05-02T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: 'Administrateur',
+  iat: 1683195449,
+  exp: 1684059449
+} 
+04/05/23 10:46:31 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:46:31 :: new connexion made sur la database: pccompare 
+04/05/23 10:46:31 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+04/05/23 10:46:31 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      Id_customer: 6,
+      pseudo: 'Secutor',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-04T00:45:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'undefined',
+      modifiedAt: 2023-05-02T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur'
+    }
+  ]
+] 
+04/05/23 10:46:31 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutor","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-04T00:45:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"undefined","modifiedAt":"2023-05-02T22:00:00.000Z","deletedBy":null,"deletedAt":null},"role":"Administrateur"} 
+04/05/23 10:46:31 :: ?? Nous tetons de chercher les infos de l'utilisateur avec l'id: 6 
+04/05/23 10:46:31 :: // Appel de la method QUERY de database.service. // 
+04/05/23 10:46:31 :: // Appel de la method selectOneCustomer // 
+04/05/23 10:46:31 :: ---> Sortie de la method QUERY de database.service. // 
+04/05/23 10:46:31 :: => Requete appelée: SELECT customer.*, role.*, account.email
+    FROM customer
+    INNER JOIN role ON customer.Id_role = role.Id_role
+    INNER JOIN account ON customer.Id_account = account.Id_account
+    WHERE customer.Id_customer = ? AND customer.deletedBy IS NULL;
+     
+04/05/23 10:46:31 :: ==>Retour de la requete: [
+  [
+    {
+      Id_customer: 6,
+      pseudo: 'Secutor',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-04T00:45:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'undefined',
+      modifiedAt: 2023-05-02T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      title: 'Administrateur',
+      email: 'maxoa59@gmail.com'
+    }
+  ]
+] 
+04/05/23 10:46:31 :: ?? Nous avons trouvé l'utilisateur avec l'id 6: ses infos : {
+  account: { email: 'maxoa59@gmail.com' },
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutor',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-04T00:45:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'undefined',
+    modifiedAt: 2023-05-02T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null
+  },
+  role: { title: 'Administrateur' }
+} 
+04/05/23 10:46:31 :: ---> Sortie de la method QUERY de database.service. // 
+04/05/23 10:48:09 :: Ouverture d'un port d'écoute sur : 5050 

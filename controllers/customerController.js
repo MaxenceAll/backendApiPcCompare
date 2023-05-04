@@ -43,7 +43,7 @@ async function selectOneCustomer(req, res) {
       // Remplissage des objets pour utilisations futures.
       account = {
         email: userFound.email,
-        password: userFound.password,
+        // Noter qu'on envoit que le mail, pas le hashedpassword
       };
       customer = {
         Id_account: userFound.Id_account,

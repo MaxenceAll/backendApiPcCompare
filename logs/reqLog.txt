@@ -3194,3 +3194,15 @@
 04/05/2023	02:57:22	0f0166c7-787c-4edb-9761-1064069877aa	GET	http://localhost:5173	/alluserdata
 04/05/2023	02:57:22	39c2190a-c084-4a07-9c1e-292c486c983b	OPTIONS	http://localhost:5173	/allroledata
 04/05/2023	02:57:22	b088c46d-f32e-4c02-8745-e8459622012b	GET	http://localhost:5173	/allroledata
+04/05/2023	12:16:07	44465982-0131-417e-a28f-55bafc844c71	GET	http://localhost:5173	/auth
+04/05/2023	12:16:07	4d7ae63f-f125-4b64-b531-4c9c2eff5997	GET	http://localhost:5173	/refresh
+04/05/2023	12:16:30	1a3c73d4-7f21-4841-970d-8dc66c092655	GET	http://localhost:5173	/auth
+04/05/2023	12:16:30	85fe2e35-bb4a-46ae-8df7-0ed10c91f045	GET	http://localhost:5173	/refresh
+04/05/2023	12:17:29	2a529e1a-77a8-444f-8121-05aced096e6b	GET	http://localhost:5173	/auth
+04/05/2023	12:17:29	f725ffbe-9695-4081-841d-70e859e1c497	GET	http://localhost:5173	/refresh
+04/05/2023	12:17:29	ca7ae7dc-434d-405e-abad-e8df951bada3	GET	http://localhost:5173	/auth
+04/05/2023	12:17:29	f380bb32-a779-4849-a5ff-63f549acf28e	OPTIONS	http://localhost:5173	/customer/6
+04/05/2023	12:17:29	0e5bf588-a204-4e22-96eb-6bef576b1f62	GET	http://localhost:5173	/customer/6
+04/05/2023	12:46:31	0274e89f-4b91-45ed-9904-67a70e227793	GET	http://localhost:5173	/auth
+04/05/2023	12:46:31	739ac61f-3422-4645-a971-99104cb1e9ee	OPTIONS	http://localhost:5173	/customer/6
+04/05/2023	12:46:31	1879e85e-9039-4a5d-990f-98ed7e39ea42	GET	http://localhost:5173	/customer/6
