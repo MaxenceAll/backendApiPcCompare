@@ -133,7 +133,6 @@ async function handleRefreshToken(req, res) {
       "!! L'objet préparé pour le retour au Front est le suivant :",
       data
     );
-
     let accessToken;
     let refreshToken;
     try {
