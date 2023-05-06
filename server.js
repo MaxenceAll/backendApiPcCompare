@@ -54,6 +54,10 @@ app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData'));
 app.use('/customer',verifyRefreshToken, require('./routes/customer'));
 app.use('/account',verifyRefreshToken, require('./routes/account'));
 
+const uploadRouter = require('./routers/upload.router');
+app.use(verifyRefreshToken,uploadRouter);
+
+
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
     res.status(404);

@@ -36,6 +36,7 @@ async function getAllCustomerDataById(Id_customer) {
       modifiedAt: userFound.modifiedAt,
       deletedBy: userFound.deletedBy,
       deletedAt: userFound.deletedAt,
+      img_src: userFound.img_src,
     };
     role = {
       title: userFound.title,
@@ -85,6 +86,7 @@ async function getAllCustomerDataByEmail(email) {
       modifiedAt: allData.modifiedAt,
       deletedBy: allData.deletedBy,
       deletedAt: allData.deletedAt,
+      img_src: allData.img_src,
     };
     const role = {
       title: allData.title,

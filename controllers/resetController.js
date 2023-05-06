@@ -35,7 +35,7 @@ async function resetPassword(req, res) {
       } else {
         // TODO fix this, needs a res.json .res.status
         throw new Error(
-          "Error while trying to get your password back (either mail is wrong or doesnt exists)"
+          "Error while gettin new pw"
         );
       }
     })

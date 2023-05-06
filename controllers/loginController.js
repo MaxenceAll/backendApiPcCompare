@@ -60,6 +60,7 @@ async function handleLogin(req, res) {
         modifiedAt: allData.modifiedAt,
         deletedBy: allData.deletedBy,
         deletedAt: allData.deletedAt,
+        img_src: allData.img_src,
       };
       role = {
         title: allData.title,
