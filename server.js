@@ -38,7 +38,15 @@ app.use(cookieParser());
 // routes
 // Route root, pour l'affichage doc de l'API
 app.use('/', require('./routes/root'));
+// Public routes (public data)
 app.use('/carousel', require('./routes/api/carousel'));
+app.use('/dropdownmenu', require('./routes/api/dropdownmenu'));
+//Provisoires :
+app.use('/compare', require('./routes/api/compare'));
+
+
+
+// Public routes (login system)
 app.use('/register', require('./routes/register'));
 app.use('/reset', require('./routes/reset'));
 app.use('/login', require('./routes/login'));

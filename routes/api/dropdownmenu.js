@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
-const carouselController = require('../../controllers/api/carouselController');
+const dropdownController = require('../../controllers/api/dropdownmenuController');
 
 
 router.get('/', async (req, res) => {
-  await carouselController.selectAll(req, res);
+  await dropdownController.selectAll(req, res);
 });
 
 module.exports = router;
