@@ -170,13 +170,6 @@ async function selectAllram(req, res) {
     });
   }
 }
-
-
-
-
-
-
-
 async function selectAllArticleByCategory(req, res) {
   const categorySelected = req.params.category;
   consolelog("yo les req params sont ",categorySelected)
@@ -221,21 +214,45 @@ async function selectAllArticleByCategory(req, res) {
     });
   }
 }
-
-
-
-
 async function selectOneArticle(req, res) {
   consolelog("// Appel de la method selectOneArticle de compareController//");
   const Id_article_to_find = req.params.Id_article_to_find;
+  let category = req.params.category;
+  const allowedCategories = ['gpu', 'cpu', 'mb', 'ram'];
+  consolelog("Yo la PRE category= ",category)
+  consolelog("Yo le Id_article_to_find a trouver : ",Id_article_to_find)
+  
+  if (!allowedCategories.includes(category)) {
+    category = '';
+  }
+  consolelog("Yo la POST category= ",category)
+  let table;
+  switch (category) {
+    case 'gpu':
+      table = 'gpu';
+      break;
+    case 'cpu':
+      table = 'cpu';
+      break;
+    case 'ram':
+      table = 'ram';
+      break;
+    case 'mb':
+      table = 'mb';
+      break;
+    default:
+      table = '';
+  }
+  consolelog("yo la table sera :",table)
   const sql = `
-  SELECT *
-FROM article
-JOIN model ON article.Id_model = model.Id_model
-JOIN category ON model.Id_category = category.Id_category
-JOIN gpu ON article.Id_article = gpu.Id_article
-WHERE article.Id_article = ?;
-`;
+    SELECT *
+    FROM article
+    JOIN model ON article.Id_model = model.Id_model
+    JOIN category ON model.Id_category = category.Id_category
+    ${table ? `JOIN ${table} ON article.Id_article = ${table}.Id_article` : ''}
+    WHERE article.Id_article = ?;
+  `;
+  consolelog("yo la requete sera :",sql)
   try {
     const data = await query(sql, [Id_article_to_find]);
     consolelog(
@@ -245,7 +262,7 @@ WHERE article.Id_article = ?;
     res.status(200).json({
       data,
       result: true,
-      message: `Voici toutes les infos pour le produit ${Id_article_to_find}`,
+      message: `Voici toutes les infos pour le produit ${Id_article_to_find} étant un ${table}.`,
     });
   } catch (err) {
     consolelog(
