@@ -27,9 +27,11 @@ router.get('/:category', async (req, res) => {
 
 
 
-router.get('/product/:cat/:Id_article_to_find', async (req, res) => {
+router.get('/product/:Category_to_find/:Id_article_to_find', async (req, res) => {
   await compareController.selectOneArticle(req, res);
 });
+
+
 
 
 router.get('/sha/:Id_article_to_find', async (req, res) => {

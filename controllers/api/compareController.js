@@ -217,17 +217,13 @@ async function selectAllArticleByCategory(req, res) {
 async function selectOneArticle(req, res) {
   consolelog("// Appel de la method selectOneArticle de compareController//");
   const Id_article_to_find = req.params.Id_article_to_find;
-  let category = req.params.category;
-  const allowedCategories = ['gpu', 'cpu', 'mb', 'ram'];
-  consolelog("Yo la PRE category= ",category)
-  consolelog("Yo le Id_article_to_find a trouver : ",Id_article_to_find)
-  
-  if (!allowedCategories.includes(category)) {
+  let Category_to_find = req.params.Category_to_find;
+  const allowedCategories = ['gpu', 'cpu', 'mb', 'ram'];  
+  if (!allowedCategories.includes(Category_to_find)) {
     category = '';
   }
-  consolelog("Yo la POST category= ",category)
-  let table;
-  switch (category) {
+   let table;
+  switch (Category_to_find) {
     case 'gpu':
       table = 'gpu';
       break;
@@ -243,7 +239,6 @@ async function selectOneArticle(req, res) {
     default:
       table = '';
   }
-  consolelog("yo la table sera :",table)
   const sql = `
     SELECT *
     FROM article
@@ -252,7 +247,6 @@ async function selectOneArticle(req, res) {
     ${table ? `JOIN ${table} ON article.Id_article = ${table}.Id_article` : ''}
     WHERE article.Id_article = ?;
   `;
-  consolelog("yo la requete sera :",sql)
   try {
     const data = await query(sql, [Id_article_to_find]);
     consolelog(
