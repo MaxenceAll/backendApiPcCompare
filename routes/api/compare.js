@@ -2,24 +2,23 @@ const express = require('express');
 const router = express.Router();
 const compareController = require('../../controllers/api/compareController');
 
-// NO LONGER USED:
+// SHOULD NO LONGER USED:
 router.get('/gpu', async (req, res) => {
   await compareController.selectAllgpu(req, res);
 });
-// NO LONGER USED:
+// SHOULD NO LONGER USED:
 router.get('/cpu', async (req, res) => {
   await compareController.selectAllcpu(req, res);
 });
-// NO LONGER USED:
+// SHOULD NO LONGER USED:
 router.get('/mb', async (req, res) => {
   await compareController.selectAllmb(req, res);
 });
-// NO LONGER USED:
+// SHOULD NO LONGER USED:
 router.get('/ram', async (req, res) => {
   await compareController.selectAllram(req, res);
 });
-
-
+// TODO Ca bug depuis l'ajout des notes en sql :(
 router.get('/:category', async (req, res) => {
   await compareController.selectAllArticleByCategory(req, res);
 });

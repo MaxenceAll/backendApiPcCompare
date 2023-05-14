@@ -10,20 +10,41 @@ async function selectAllgpu(req, res) {
   //   JOIN category ON model.Id_category = category.Id_category
   //   LEFT JOIN gpu ON article.Id_article = gpu.Id_article
   //   WHERE category.code = 'gpu';`;
-  const sql = `
-  SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
-  FROM article a
-  JOIN model m ON a.Id_model = m.Id_model
-  JOIN category c ON m.Id_category = c.Id_category
-  LEFT JOIN gpu g ON a.Id_article = g.Id_article
-  LEFT JOIN (
-    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
-    FROM seller_historique_article s
-    GROUP BY s.Id_article
-  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
-  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
-  WHERE c.code = 'gpu';  
-`;
+//   const sql = `
+//   SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
+//   FROM article a
+//   JOIN model m ON a.Id_model = m.Id_model
+//   JOIN category c ON m.Id_category = c.Id_category
+//   LEFT JOIN gpu g ON a.Id_article = g.Id_article
+//   LEFT JOIN (
+//     SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+//     FROM seller_historique_article s
+//     GROUP BY s.Id_article
+//   ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+//   LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+//   WHERE c.code = 'gpu';  
+// `;
+const sql = `
+SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article) AS nb_note,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 1) AS nb_note_1,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 2) AS nb_note_2,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 3) AS nb_note_3,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 4) AS nb_note_4,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 5) AS nb_note_5
+FROM article a
+JOIN model m ON a.Id_model = m.Id_model
+JOIN category c ON m.Id_category = c.Id_category
+LEFT JOIN gpu g ON a.Id_article = g.Id_article
+LEFT JOIN (
+  SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+  FROM seller_historique_article s
+  GROUP BY s.Id_article
+) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+WHERE c.code = "gpu";
+`
   try {
     const data = await query(sql);
     consolelog("---> Sortie de la method selectAllgpu de compareController //");
@@ -52,20 +73,41 @@ async function selectAllcpu(req, res) {
   //   JOIN category ON model.Id_category = category.Id_category
   //   LEFT JOIN gpu ON article.Id_article = gpu.Id_article
   //   WHERE category.code = 'gpu';`;
-  const sql = `
-  SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
-  FROM article a
-  JOIN model m ON a.Id_model = m.Id_model
-  JOIN category c ON m.Id_category = c.Id_category
-  LEFT JOIN cpu g ON a.Id_article = g.Id_article
-  LEFT JOIN (
-    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
-    FROM seller_historique_article s
-    GROUP BY s.Id_article
-  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
-  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
-  WHERE c.code = 'cpu'; 
-`;
+//   const sql = `
+//   SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
+//   FROM article a
+//   JOIN model m ON a.Id_model = m.Id_model
+//   JOIN category c ON m.Id_category = c.Id_category
+//   LEFT JOIN cpu g ON a.Id_article = g.Id_article
+//   LEFT JOIN (
+//     SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+//     FROM seller_historique_article s
+//     GROUP BY s.Id_article
+//   ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+//   LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+//   WHERE c.code = 'cpu'; 
+// `;
+const sql = `
+SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article) AS nb_note,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 1) AS nb_note_1,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 2) AS nb_note_2,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 3) AS nb_note_3,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 4) AS nb_note_4,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 5) AS nb_note_5
+FROM article a
+JOIN model m ON a.Id_model = m.Id_model
+JOIN category c ON m.Id_category = c.Id_category
+LEFT JOIN cpu g ON a.Id_article = g.Id_article
+LEFT JOIN (
+  SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+  FROM seller_historique_article s
+  GROUP BY s.Id_article
+) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+WHERE c.code = "cpu";
+`
   try {
     const data = await query(sql);
     consolelog("---> Sortie de la method selectAllcpu de compareController //");
@@ -94,20 +136,41 @@ async function selectAllmb(req, res) {
   //   JOIN category ON model.Id_category = category.Id_category
   //   LEFT JOIN gpu ON article.Id_article = gpu.Id_article
   //   WHERE category.code = 'gpu';`;
-  const sql = `
-  SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
-  FROM article a
-  JOIN model m ON a.Id_model = m.Id_model
-  JOIN category c ON m.Id_category = c.Id_category
-  LEFT JOIN mb g ON a.Id_article = g.Id_article
-  LEFT JOIN (
-    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
-    FROM seller_historique_article s
-    GROUP BY s.Id_article
-  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
-  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
-  WHERE c.code = 'mb'; 
-`;
+//   const sql = `
+//   SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
+//   FROM article a
+//   JOIN model m ON a.Id_model = m.Id_model
+//   JOIN category c ON m.Id_category = c.Id_category
+//   LEFT JOIN mb g ON a.Id_article = g.Id_article
+//   LEFT JOIN (
+//     SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+//     FROM seller_historique_article s
+//     GROUP BY s.Id_article
+//   ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+//   LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+//   WHERE c.code = 'mb'; 
+// `;
+const sql = `
+SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article) AS nb_note,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 1) AS nb_note_1,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 2) AS nb_note_2,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 3) AS nb_note_3,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 4) AS nb_note_4,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 5) AS nb_note_5
+FROM article a
+JOIN model m ON a.Id_model = m.Id_model
+JOIN category c ON m.Id_category = c.Id_category
+LEFT JOIN mb g ON a.Id_article = g.Id_article
+LEFT JOIN (
+  SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+  FROM seller_historique_article s
+  GROUP BY s.Id_article
+) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+WHERE c.code = "mb";
+`
   try {
     const data = await query(sql);
     consolelog("---> Sortie de la method selectAllmb de compareController //");
@@ -136,20 +199,41 @@ async function selectAllram(req, res) {
   //   JOIN category ON model.Id_category = category.Id_category
   //   LEFT JOIN gpu ON article.Id_article = gpu.Id_article
   //   WHERE category.code = 'gpu';`;
-  const sql = `
-  SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
-  FROM article a
-  JOIN model m ON a.Id_model = m.Id_model
-  JOIN category c ON m.Id_category = c.Id_category
-  LEFT JOIN ram g ON a.Id_article = g.Id_article
-  LEFT JOIN (
-    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
-    FROM seller_historique_article s
-    GROUP BY s.Id_article
-  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
-  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
-  WHERE c.code = 'ram'; 
-`;
+//   const sql = `
+//   SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
+//   FROM article a
+//   JOIN model m ON a.Id_model = m.Id_model
+//   JOIN category c ON m.Id_category = c.Id_category
+//   LEFT JOIN ram g ON a.Id_article = g.Id_article
+//   LEFT JOIN (
+//     SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+//     FROM seller_historique_article s
+//     GROUP BY s.Id_article
+//   ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+//   LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+//   WHERE c.code = 'ram'; 
+// `;
+const sql = `
+SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article) AS nb_note,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 1) AS nb_note_1,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 2) AS nb_note_2,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 3) AS nb_note_3,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 4) AS nb_note_4,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 5) AS nb_note_5
+FROM article a
+JOIN model m ON a.Id_model = m.Id_model
+JOIN category c ON m.Id_category = c.Id_category
+LEFT JOIN ram g ON a.Id_article = g.Id_article
+LEFT JOIN (
+  SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+  FROM seller_historique_article s
+  GROUP BY s.Id_article
+) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+WHERE c.code = "ram";
+`
   try {
     const data = await query(sql);
     consolelog("---> Sortie de la method selectAllram de compareController //");
@@ -180,20 +264,41 @@ async function selectAllArticleByCategory(req, res) {
   //   JOIN category ON model.Id_category = category.Id_category
   //   LEFT JOIN gpu ON article.Id_article = gpu.Id_article
   //   WHERE category.code = 'gpu';`;
-  const sql = `
-  SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
-  FROM article a
-  JOIN model m ON a.Id_model = m.Id_model
-  JOIN category c ON m.Id_category = c.Id_category
-  LEFT JOIN ? g ON a.Id_article = g.Id_article
-  LEFT JOIN (
-    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
-    FROM seller_historique_article s
-    GROUP BY s.Id_article
-  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
-  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
-  WHERE c.code = "?"; 
-`;
+//   const sql = `
+//   SELECT a.*, m.*, c.*, g.*, h.price AS latest_price
+//   FROM article a
+//   JOIN model m ON a.Id_model = m.Id_model
+//   JOIN category c ON m.Id_category = c.Id_category
+//   LEFT JOIN ? g ON a.Id_article = g.Id_article
+//   LEFT JOIN (
+//     SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+//     FROM seller_historique_article s
+//     GROUP BY s.Id_article
+//   ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+//   LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+//   WHERE c.code = "?"; 
+// `;
+const sql = `
+SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article) AS nb_note,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 1) AS nb_note_1,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 2) AS nb_note_2,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 3) AS nb_note_3,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 4) AS nb_note_4,
+  (SELECT COUNT(*) FROM comment WHERE Id_article = a.Id_article AND note = 5) AS nb_note_5
+FROM article a
+JOIN model m ON a.Id_model = m.Id_model
+JOIN category c ON m.Id_category = c.Id_category
+LEFT JOIN ? g ON a.Id_article = g.Id_article
+LEFT JOIN (
+  SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+  FROM seller_historique_article s
+  GROUP BY s.Id_article
+) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+WHERE c.code = "?";
+`
   try {
     const data = await query(sql, [categorySelected,categorySelected]);
     consolelog("---> Sortie de la method selectAllArticleByCategory de compareController //");
