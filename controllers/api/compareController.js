@@ -344,16 +344,42 @@ async function selectOneArticle(req, res) {
     default:
       table = '';
   }
+  // const sql = `
+  //   SELECT *
+  //   FROM article
+  //   JOIN model ON article.Id_model = model.Id_model
+  //   JOIN category ON model.Id_category = category.Id_category
+  //   ${table ? `JOIN ${table} ON article.Id_article = ${table}.Id_article` : ''}
+  //   WHERE article.Id_article = ?;
+  // `;
   const sql = `
-    SELECT *
-    FROM article
-    JOIN model ON article.Id_model = model.Id_model
-    JOIN category ON model.Id_category = category.Id_category
-    ${table ? `JOIN ${table} ON article.Id_article = ${table}.Id_article` : ''}
-    WHERE article.Id_article = ?;
-  `;
+  SELECT 
+  a.*, m.*, c.*, g.*, h.price AS latest_price,
+  COUNT(*) AS nb_note,
+  CAST(SUM(CASE WHEN co.note = 1 THEN 1 ELSE 0 END) AS SIGNED) AS nb_note_1,
+  CAST(SUM(CASE WHEN co.note = 2 THEN 1 ELSE 0 END) AS SIGNED) AS nb_note_2,
+  CAST(SUM(CASE WHEN co.note = 3 THEN 1 ELSE 0 END) AS SIGNED) AS nb_note_3,
+  CAST(SUM(CASE WHEN co.note = 4 THEN 1 ELSE 0 END) AS SIGNED) AS nb_note_4,
+  CAST(SUM(CASE WHEN co.note = 5 THEN 1 ELSE 0 END) AS SIGNED) AS nb_note_5
+  FROM article a
+  JOIN model m ON a.Id_model = m.Id_model
+  JOIN category c ON m.Id_category = c.Id_category
+  LEFT JOIN gpu g ON a.Id_article = g.Id_article
+  LEFT JOIN (
+    SELECT Id_article, note
+    FROM comment
+    WHERE Id_article = ?
+  ) co ON a.Id_article = co.Id_article
+  LEFT JOIN (
+    SELECT s.Id_article, MAX(s.Id_historique_prix) AS max_historique_prix
+    FROM seller_historique_article s
+    GROUP BY s.Id_article
+  ) latest_seller_historique_article ON a.Id_article = latest_seller_historique_article.Id_article
+  LEFT JOIN historique_prix h ON latest_seller_historique_article.max_historique_prix = h.Id_historique_prix
+  WHERE a.Id_article = ?
+  `
   try {
-    const data = await query(sql, [Id_article_to_find]);
+    const data = await query(sql, [Id_article_to_find,Id_article_to_find]);
     consolelog(
       "---> Sortie de la method selectOneArticle de compareController //"
     );
