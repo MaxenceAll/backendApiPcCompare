@@ -61,6 +61,8 @@ app.use('/alluserdata',verifyRefreshToken, require('./routes/api/allUsersData'))
 app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData')); //TODO à refaire
 app.use('/customer',verifyRefreshToken, require('./routes/customer'));
 app.use('/account',verifyRefreshToken, require('./routes/account'));
+app.use('/favorite',verifyRefreshToken, require('./routes/api/favorite'));
+
 
 const uploadRouter = require('./routers/upload.router');
 app.use(verifyRefreshToken,uploadRouter);
