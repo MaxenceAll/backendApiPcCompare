@@ -77,29 +77,29 @@ async function removeFavoriteByIdCustomer(req, res) {
   const Id_customer_to_find = req.params.Id_customer_to_find;
   const Id_article_to_find = req.body.Id_article_to_find;
   const currentUser = req.currentUser;
-
+    //TODO ajouter une sécurite verif que l'id trouvé correspônd azu req.currentUser
   try {
     const sql = `
     DELETE FROM customer_article
     WHERE Id_customer = ?
     AND Id_article = ?;
     `;
-    const data = await query(sql, [Id_customer_to_find,Id_article_to_find]);
+    const data = await query(sql, [Id_customer_to_find, Id_article_to_find]);
     consolelog(
       "---> Sortie de la method removeFavoriteByIdCustomer de favoriteController //"
     );
-    if (data?.affectedRows=== 1){
-        res.status(200).json({
-            data,
-            result: true,
-            message: `Suppression de l'article ${Id_article_to_find} des favoris de l'utilisateur : ${Id_customer_to_find}`,
-          });
-    }else{
-        res.status(400).json({
-            data,
-            result: false,
-            message: `Erreur lors de la suppression de l'article ${Id_article_to_find} des favoris de l'utilisateur : ${Id_customer_to_find}.`,
-          });
+    if (data?.affectedRows === 1) {
+      res.status(200).json({
+        data,
+        result: true,
+        message: `Suppression de l'article ${Id_article_to_find} des favoris de l'utilisateur : ${Id_customer_to_find}`,
+      });
+    } else {
+      res.status(400).json({
+        data,
+        result: false,
+        message: `Erreur lors de la suppression de l'article ${Id_article_to_find} des favoris de l'utilisateur : ${Id_customer_to_find}.`,
+      });
     }
   } catch (err) {
     consolelog(
@@ -113,8 +113,51 @@ async function removeFavoriteByIdCustomer(req, res) {
   }
 }
 
+async function addFavoriteByIdCustomer(req, res) {
+  consolelog(
+    "// Appel de la method addFavoriteByIdCustomer de favoriteController//"
+  );
+  const Id_customer_to_find = req.params.Id_customer_to_find;
+  const Id_article_to_find = req.body.Id_article_to_find;
+  const currentUser = req.currentUser;
+    //TODO ajouter une sécurite verif que l'id trouvé correspônd azu req.currentUser
+  try {
+    const sql = `
+    INSERT INTO customer_article (Id_customer, Id_article) 
+    VALUES (?, ?);
+    `;
+    const data = await query(sql, [Id_customer_to_find, Id_article_to_find]);
+    consolelog(
+      "---> Sortie de la method addFavoriteByIdCustomer de favoriteController //"
+    );
+    if (data?.affectedRows === 1) {
+      res.status(200).json({
+        data,
+        result: true,
+        message: `Ajout de l'article ${Id_article_to_find} des favoris pour l'utilisateur : ${Id_customer_to_find}`,
+      });
+    } else {
+      res.status(400).json({
+        data,
+        result: false,
+        message: `Erreur lors de l'ajout de l'article ${Id_article_to_find} des favoris de l'utilisateur : ${Id_customer_to_find}.`,
+      });
+    }
+  } catch (err) {
+    consolelog(
+      `++ !!!! Erreur attrapée dans method addFavoriteByIdCustomer de favoriteController: ${err}.`
+    );
+    res.status(500).json({
+      data: null,
+      result: false,
+      message: err.message,
+    });
+  }
+}
+
 module.exports = {
   isFavorited,
   getAllFavoriteByIdCustomer,
   removeFavoriteByIdCustomer,
+  addFavoriteByIdCustomer,
 };

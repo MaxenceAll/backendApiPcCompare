@@ -1,3 +1,5 @@
+// NO LONGER USED
+
 const express = require("express");
 const accesMiddleware = express.Router();
 const config = require("../config/config");

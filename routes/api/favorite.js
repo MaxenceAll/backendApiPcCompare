@@ -14,6 +14,9 @@ router.delete('/:Id_customer_to_find', async (req, res) => {
   await favoriteController.removeFavoriteByIdCustomer(req, res);
 });
 
+router.put('/:Id_customer_to_find', async (req, res) => {
+  await favoriteController.addFavoriteByIdCustomer(req, res);
+});
 
 
 

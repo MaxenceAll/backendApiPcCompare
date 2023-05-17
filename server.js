@@ -23,7 +23,7 @@ app.use(cors(corsOptions));
 app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
 app.use(express.json());
-//serve static files
+// serve static files
 app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());

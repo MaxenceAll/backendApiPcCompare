@@ -16,7 +16,7 @@ let db;
 async function connect() {
   if (!db) {
     const { host, port, database, user, password } = config.db;
-    consolelog(`new connexion made sur la database: ${database}`);
+    consolelog(`Nouvelle connection sur la database: ${database}`);
     db = await mysql.createConnection({
       host,
       port,
