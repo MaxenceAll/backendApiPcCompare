@@ -31,7 +31,7 @@ app.use(cookieParser());
 // const accesMiddleware = require('./middleware/acces.middleware');
 // app.use(accesMiddleware);
 
-// Custom middleware for limiter le nb de requests
+// Custom middleware for limiter le nb de requests Anti timing attack + brute force
 const limiter = require('./Tools/rateLimiter');
 
 // Route root, pour l'affichage doc de l'API

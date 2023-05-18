@@ -4,6 +4,8 @@ const config = require("../../../config/config");
 const { query } = require("../../../services/database.service");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
+// Import de crypto pour le constant time comparaison
+const { timingSafeEqual } = require('crypto');
 
 async function handleLogin(req, res) {
   try {

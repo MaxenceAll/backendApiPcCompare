@@ -1,11 +1,914 @@
-18/05/23 19:22:42 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:22:48 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:22:52 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:23:02 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:23:28 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:23:33 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:23:40 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:23:43 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:27:32 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:27:33 :: Ouverture d'un port d'écoute sur : 5050 
-18/05/23 19:27:35 :: Ouverture d'un port d'écoute sur : 5050 
+18/05/23 20:01:00 :: Ouverture d'un port d'écoute sur : 5050 
+18/05/23 20:01:03 :: Ouverture d'un port d'écoute sur : 5050 
+18/05/23 20:01:06 :: Ouverture d'un port d'écoute sur : 5050 
+18/05/23 20:01:07 :: Ouverture d'un port d'écoute sur : 5050 
+18/05/23 20:01:12 :: +++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+18/05/23 20:01:12 :: // Appel de la method handleLogin de loginController // 
+18/05/23 20:01:12 :: Nouvelle connection sur la database: pccompare 
+18/05/23 20:01:12 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: => Requete appelée:         
+      SELECT account.email, account.password, customer.*, role.*
+      FROM account
+      JOIN customer ON account.Id_account = customer.Id_account
+      JOIN role ON customer.Id_role = role.Id_role
+      WHERE account.email = ?
+       
+18/05/23 20:01:12 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T17:18:39.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:12 :: ?? L'account trouvé est: {
+  email: 'maxoa59@gmail.com',
+  password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi'
+} 
+18/05/23 20:01:12 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: ?? Le customer trouvé est: {
+  Id_account: 6,
+  Id_customer: 6,
+  Id_role: 3,
+  pseudo: 'Secutore',
+  firstname: 'Maxence',
+  lastname: 'ALLART',
+  last_connection: 2023-05-18T17:18:39.000Z,
+  createdBy: 'site',
+  createdAt: 2023-04-26T22:00:00.000Z,
+  modifiedBy: 'Secutor',
+  modifiedAt: 2023-05-17T22:00:00.000Z,
+  deletedBy: null,
+  deletedAt: null,
+  img_src: '1683332486541-IMG_20211210_160121.jpg'
+} 
+18/05/23 20:01:12 :: ?? Le role trouvé est: { title: 'Administrateur' } 
+18/05/23 20:01:12 :: !! Comparons les mots de passe reçus le résultat est : true 
+18/05/23 20:01:12 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: ?? Tentative de mise à jour de la last_connection 
+18/05/23 20:01:12 :: => Requete appelée: 
+      UPDATE customer
+      SET last_connection = NOW()
+      WHERE Id_customer = ?;
+       
+18/05/23 20:01:12 :: ==>Retour de la requete: [
+  ResultSetHeader {
+    fieldCount: 0,
+    affectedRows: 1,
+    insertId: 0,
+    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 0',
+    serverStatus: 2,
+    warningStatus: 0
+  }
+] 
+18/05/23 20:01:12 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: !! L'objet préparé pour le retour au Front est le suivant : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-18T17:18:39.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutor',
+    modifiedAt: 2023-05-17T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur'
+} 
+18/05/23 20:01:12 :: --> last_connection mis à jour avec succès. 
+18/05/23 20:01:12 :: ?? Pour information, un accessToken a été créé pour 1h : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg0NDM2NDcyfQ.cfhn-akmbux2ChY0_AovJedKd1wO4qO-MzGvpbyavEI 
+18/05/23 20:01:12 :: ?? Pour information, un refreshToken a été créé pour 10d : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:12 :: ==> Login avec succes ! Envoi du refreshToken en cookie, envoi des données + envoi du accessToken. 
+18/05/23 20:01:12 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:12 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:12 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:12 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:12 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:12 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:12 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:12 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:16 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:16 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:16 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:16 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:16 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:16 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:16 :: // Appel de la method selectOneCustomer // 
+18/05/23 20:01:16 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:16 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: ?? Nous tetons de chercher les infos de l'utilisateur avec l'id: 6 
+18/05/23 20:01:16 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: ==>Retour de la requete: [
+  [
+    {
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur',
+      email: 'maxoa59@gmail.com'
+    }
+  ]
+] 
+18/05/23 20:01:16 :: ?? Nous avons trouvé l'utilisateur avec l'id 6: ses infos : {
+  account: { email: 'maxoa59@gmail.com' },
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-18T18:01:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutor',
+    modifiedAt: 2023-05-17T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: { title: 'Administrateur' }
+} 
+18/05/23 20:01:16 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: => Requete appelée: SELECT customer.*, role.*, account.email
+  FROM customer
+  INNER JOIN role ON customer.Id_role = role.Id_role
+  INNER JOIN account ON customer.Id_account = account.Id_account
+  WHERE customer.Id_customer = ? AND customer.deletedBy IS NULL;
+   
+18/05/23 20:01:16 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:16 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:16 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:16 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:16 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:16 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:16 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:16 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:17 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:17 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:17 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:17 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:17 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:17 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:17 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:17 :: // Appel de la method selectAll de allUsersDataController // 
+18/05/23 20:01:17 :: !! On vérifie l'identité du demandeur de cette methode !! 
+18/05/23 20:01:17 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: => Requete appelée: SELECT *
+  FROM account
+  INNER JOIN customer ON account.Id_account = customer.Id_account;
+   
+18/05/23 20:01:17 :: ==>Retour de la requete: [
+  [
+    {
+      Id_account: 6,
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg'
+    },
+    {
+      Id_account: 7,
+      email: 'test_email_1@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_customer: 7,
+      pseudo: 'TestPseudo_100',
+      firstname: 'TestNom_100',
+      lastname: 'TestPrenom_100',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 1,
+      img_src: null
+    },
+    {
+      Id_account: 8,
+      email: 'test_email_2@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-04-28T22:00:00.000Z,
+      Id_customer: 8,
+      pseudo: 'TestPseudo_2',
+      firstname: 'TestNom_2',
+      lastname: 'TestPrenom_2',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 1,
+      img_src: null
+    },
+    {
+      Id_account: 9,
+      email: 'test_email_3@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'site',
+      modifiedAt: 2023-04-28T22:00:00.000Z,
+      Id_customer: 9,
+      pseudo: 'TestPseudo_3',
+      firstname: 'TestNom_3',
+      lastname: 'TestPrenom_3',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 2,
+      img_src: null
+    },
+    {
+      Id_account: 10,
+      email: 'test_email_4@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'site',
+      modifiedAt: 2023-04-28T22:00:00.000Z,
+      Id_customer: 10,
+      pseudo: 'TestPseudo_4',
+      firstname: 'TestNom_4',
+      lastname: 'TestPrenom_4',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 2,
+      img_src: null
+    },
+    {
+      Id_account: 11,
+      email: 'test_email_5@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-04-28T22:00:00.000Z,
+      Id_customer: 11,
+      pseudo: 'TestPseudo_5',
+      firstname: 'TestNom_5',
+      lastname: 'TestPrenom_5',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 3,
+      img_src: null
+    },
+    {
+      Id_account: 12,
+      email: 'test_email_6@test.com',
+      password: '/HMEW4OGrF4KThrKnj9lfuWkWLVzKiOeRIxZU08GfcofVjozJXlr.',
+      createdBy: 'site',
+      createdAt: 2023-03-31T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'site',
+      modifiedAt: 2023-04-28T22:00:00.000Z,
+      Id_customer: 12,
+      pseudo: 'TestPseudo_12',
+      firstname: 'TestNom_12',
+      lastname: 'TestPrenom_12',
+      last_connection: 2023-04-29T21:55:15.000Z,
+      Id_role: 4,
+      img_src: null
+    }
+  ]
+] 
+18/05/23 20:01:17 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ---> Sortie de la method selectAll de allUsersDataController. // 
+18/05/23 20:01:17 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:17 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:17 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:17 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:17 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:17 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:17 :: // Appel de la method selectAll de allRoleDataController // 
+18/05/23 20:01:17 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:17 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: !! On vérifie l'identité du demandeur de cette methode !! 
+18/05/23 20:01:17 :: ==>Retour de la requete: [
+  [
+    { Id_role: 1, title: 'Utilisateur' },
+    { Id_role: 2, title: 'Modérateur' },
+    { Id_role: 3, title: 'Administrateur' },
+    { Id_role: 4, title: 'Banni' }
+  ]
+] 
+18/05/23 20:01:17 :: => Requete appelée: SELECT * FROM role 
+18/05/23 20:01:17 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ---> Sortie de la method selectAll de allRoleDataController. // 
+18/05/23 20:01:17 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:17 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:17 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:17 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:17 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:17 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:17 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:17 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:24 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:24 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:24 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:24 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:24 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:24 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:24 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secutore","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutor","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:24 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secutore',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutor',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:24 :: reqcurrentUser is : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-18T18:01:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutor',
+    modifiedAt: 2023-05-17T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur'
+} 
+18/05/23 20:01:24 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:24 :: currentUser is : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-18T18:01:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutor',
+    modifiedAt: 2023-05-17T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur'
+} 
+18/05/23 20:01:24 :: reqbody is : { Id_customer: 6, pseudo: 'Secu' } 
+18/05/23 20:01:24 :: Id_customer is : 6 
+18/05/23 20:01:24 :: trying this sql to update: UPDATE customer SET Id_customer='6',pseudo='Secu', modifiedBy='Secutore', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
+18/05/23 20:01:24 :: values are: Id_customer='6',pseudo='Secu' 
+18/05/23 20:01:24 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:24 :: entries are : [ [ 'Id_customer', 6 ], [ 'pseudo', 'Secu' ] ] 
+18/05/23 20:01:24 :: => Requete appelée: UPDATE customer SET Id_customer='6',pseudo='Secu', modifiedBy='Secutore', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = 6 
+18/05/23 20:01:24 :: ==>Retour de la requete: [
+  ResultSetHeader {
+    fieldCount: 0,
+    affectedRows: 1,
+    insertId: 0,
+    info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 1',
+    serverStatus: 2,
+    warningStatus: 1
+  }
+] 
+18/05/23 20:01:24 :: yo le retour de la sqlupdate (data) is : ResultSetHeader {
+  fieldCount: 0,
+  affectedRows: 1,
+  insertId: 0,
+  info: 'Enregistrements correspondants: 1  Modifiés: 1  Warnings: 1',
+  serverStatus: 2,
+  warningStatus: 1
+} 
+18/05/23 20:01:24 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:24 :: !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! 
+18/05/23 20:01:24 :: // Rentrée dans le middleware verifyRefreshToken // 
+18/05/23 20:01:24 :: ?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken : eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJhY2NvdW50IjoibWF4b2E1OUBnbWFpbC5jb20iLCJjdXN0b21lciI6eyJJZF9hY2NvdW50Ijo2LCJJZF9jdXN0b21lciI6NiwiSWRfcm9sZSI6MywicHNldWRvIjoiU2VjdXRvcmUiLCJmaXJzdG5hbWUiOiJNYXhlbmNlIiwibGFzdG5hbWUiOiJBTExBUlQiLCJsYXN0X2Nvbm5lY3Rpb24iOiIyMDIzLTA1LTE4VDE3OjE4OjM5LjAwMFoiLCJjcmVhdGVkQnkiOiJzaXRlIiwiY3JlYXRlZEF0IjoiMjAyMy0wNC0yNlQyMjowMDowMC4wMDBaIiwibW9kaWZpZWRCeSI6IlNlY3V0b3IiLCJtb2RpZmllZEF0IjoiMjAyMy0wNS0xN1QyMjowMDowMC4wMDBaIiwiZGVsZXRlZEJ5IjpudWxsLCJkZWxldGVkQXQiOm51bGwsImltZ19zcmMiOiIxNjgzMzMyNDg2NTQxLUlNR18yMDIxMTIxMF8xNjAxMjEuanBnIn0sInJvbGUiOiJBZG1pbmlzdHJhdGV1ciIsImlhdCI6MTY4NDQzMjg3MiwiZXhwIjoxNjg1Mjk2ODcyfQ.CVqNqPwuw3EOi9vde0UQs6-XLbPDXW449AHqkn3KQO4 
+18/05/23 20:01:24 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
+18/05/23 20:01:24 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:25 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:25 :: => Requete appelée:         
+          SELECT account.email, account.password, customer.*, role.*
+          FROM account
+          JOIN customer ON account.Id_account = customer.Id_account
+          JOIN role ON customer.Id_role = role.Id_role
+          WHERE account.email = ?
+           
+18/05/23 20:01:25 :: ==>Retour de la requete: [
+  [
+    {
+      email: 'maxoa59@gmail.com',
+      password: '9heb0dBHj.Ap7bnlnbJeguCP/4hXKxfvXGTlznhPFXZlOwjjemXqi',
+      Id_customer: 6,
+      pseudo: 'Secu',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur'
+    }
+  ]
+] 
+18/05/23 20:01:25 :: ?? On rajoute au REQ pour utilisation futures : {"account":"maxoa59@gmail.com","customer":{"Id_account":6,"Id_customer":6,"Id_role":3,"pseudo":"Secu","firstname":"Maxence","lastname":"ALLART","last_connection":"2023-05-18T18:01:12.000Z","createdBy":"site","createdAt":"2023-04-26T22:00:00.000Z","modifiedBy":"Secutore","modifiedAt":"2023-05-17T22:00:00.000Z","deletedBy":null,"deletedAt":null,"img_src":"1683332486541-IMG_20211210_160121.jpg"},"role":"Administrateur"} 
+18/05/23 20:01:25 :: // Appel de la method QUERY de database.service. // 
+18/05/23 20:01:25 :: ?? Nous tetons de chercher les infos de l'utilisateur avec l'id: 6 
+18/05/23 20:01:25 :: // Appel de la method selectOneCustomer // 
+18/05/23 20:01:25 :: => Requete appelée: SELECT customer.*, role.*, account.email
+  FROM customer
+  INNER JOIN role ON customer.Id_role = role.Id_role
+  INNER JOIN account ON customer.Id_account = account.Id_account
+  WHERE customer.Id_customer = ? AND customer.deletedBy IS NULL;
+   
+18/05/23 20:01:25 :: ==>Retour de la requete: [
+  [
+    {
+      Id_customer: 6,
+      pseudo: 'Secu',
+      firstname: 'Maxence',
+      lastname: 'ALLART',
+      last_connection: 2023-05-18T18:01:12.000Z,
+      createdBy: 'site',
+      createdAt: 2023-04-26T22:00:00.000Z,
+      deletedBy: null,
+      deletedAt: null,
+      modifiedBy: 'Secutore',
+      modifiedAt: 2023-05-17T22:00:00.000Z,
+      Id_account: 6,
+      Id_role: 3,
+      img_src: '1683332486541-IMG_20211210_160121.jpg',
+      title: 'Administrateur',
+      email: 'maxoa59@gmail.com'
+    }
+  ]
+] 
+18/05/23 20:01:25 :: ?? Nous avons trouvé l'utilisateur avec l'id 6: ses infos : {
+  account: { email: 'maxoa59@gmail.com' },
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secu',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: 2023-05-18T18:01:12.000Z,
+    createdBy: 'site',
+    createdAt: 2023-04-26T22:00:00.000Z,
+    modifiedBy: 'Secutore',
+    modifiedAt: 2023-05-17T22:00:00.000Z,
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: { title: 'Administrateur' }
+} 
+18/05/23 20:01:25 :: ---> Sortie de la method QUERY de database.service. // 
+18/05/23 20:01:31 :: ------------------------------------------------------- 
+18/05/23 20:01:31 :: // Appel de la method handleLogout de loginController // 
+18/05/23 20:01:31 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutore',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-18T17:18:39.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secutor',
+    modifiedAt: '2023-05-17T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '1683332486541-IMG_20211210_160121.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684432872,
+  exp: 1685296872
+} 
