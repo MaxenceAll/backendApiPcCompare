@@ -13,11 +13,11 @@ mailer.send = async (params) => {
     return {
       data: info,
       result,
-      message: result ? "email sent" : "email not sent",
+      message: result ? "Email envoyé" : "Email non envoyé",
     };
   } catch (error) {
     consolelog("!!!! Erreur lors de l'envoi du mail, (voir retour requete).")
-    return { data: error, result: false, message: "No mail sent :(!" };
+    return { data: error, result: false, message: "Aucun mail d'envoyé :(!" };
   }
 };
 

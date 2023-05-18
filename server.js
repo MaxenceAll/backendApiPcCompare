@@ -28,40 +28,33 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());
 
-
 // KO :
 // Middleware pour l'acces à l'api (check le autorization Headers dans une requete pour voir si cela correspond à notre clé d'api):
 // const accesMiddleware = require('./middleware/acces.middleware');
 // app.use(accesMiddleware);
 
-
-// routes
 // Route root, pour l'affichage doc de l'API
-app.use('/', require('./routes/root'));
+app.use('/', require(`./routes/${config.API.VERSION}/root`));
 // Public routes (public data)
-app.use('/carousel', require('./routes/api/carousel'));
-app.use('/dropdownmenu', require('./routes/api/dropdownmenu'));
-//Provisoires :
-app.use('/compare', require('./routes/api/compare'));
-
-
+app.use('/carousel', require(`./routes/${config.API.VERSION}/api/carousel`));
+app.use('/dropdownmenu', require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
+app.use('/compare', require(`./routes/${config.API.VERSION}/api/compare`));
 
 // Public routes (login system)
-app.use('/register', require('./routes/register'));
-app.use('/reset', require('./routes/reset'));
-app.use('/login', require('./routes/login'));
-app.use('/refresh', require('./routes/refresh'));
-app.use('/auth', require('./routes/auth'));
-
+app.use('/register', require(`./routes/${config.API.VERSION}/login/register`));
+app.use('/reset', require(`./routes/${config.API.VERSION}/login/reset`));
+app.use('/login', require(`./routes/${config.API.VERSION}/login/login`));
+app.use('/refresh', require(`./routes/${config.API.VERSION}/login/refresh`));
+app.use('/auth', require(`./routes/${config.API.VERSION}/login/auth`));
 
 // Debut des routes protégées :
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
 // app.use('/account', require('./routes/account'));
-app.use('/alluserdata',verifyRefreshToken, require('./routes/api/allUsersData')); //TODO à refaire
-app.use('/allroledata',verifyRefreshToken, require('./routes/api/allRoleData')); //TODO à refaire
-app.use('/customer',verifyRefreshToken, require('./routes/customer'));
-app.use('/account',verifyRefreshToken, require('./routes/account'));
-app.use('/favorite',verifyRefreshToken, require('./routes/api/favorite'));
+app.use('/alluserdata',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`)); //TODO à refaire
+app.use('/allroledata',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`)); //TODO à refaire
+app.use('/customer',verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));
+app.use('/account',verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
+app.use('/favorite',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
 
 
 const uploadRouter = require('./routers/upload.router');

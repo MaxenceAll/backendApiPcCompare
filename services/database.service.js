@@ -1,6 +1,5 @@
 const mysql = require("mysql2/promise");
 const config = require("../config/config");
-//  IMPORT d'une fonction custom pour log avec timestamp:
 const consolelog = require("../Tools/consolelog");
 
 // const pool = mysql.createPool({

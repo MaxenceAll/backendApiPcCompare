@@ -5,6 +5,7 @@ const config = {
     dev: {
         API: {
             PORT: 5050,
+            VERSION: "v1",
         },
         FRONTEND:{
             URL: "http://localhost:5173/"
