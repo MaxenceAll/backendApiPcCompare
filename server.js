@@ -33,32 +33,55 @@ app.use(cookieParser());
 // const accesMiddleware = require('./middleware/acces.middleware');
 // app.use(accesMiddleware);
 
+// Custom middlewar for limiter le nb de requests
+const rateLimit = require('express-rate-limit');
+const limiter = rateLimit({
+    windowMs: 15 * 60 * 1000, // 15 minutes
+    max: 100,
+    message: 'Trop de requêtes ! Re-essayez un peu plus tard.',
+  });
+
+
 // Route root, pour l'affichage doc de l'API
-app.use('/', require(`./routes/${config.API.VERSION}/root`));
+app.use('/', limiter, require(`./routes/${config.API.VERSION}/root`));
 // Public routes (public data)
-app.use('/carousel', require(`./routes/${config.API.VERSION}/api/carousel`));
-app.use('/dropdownmenu', require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
-app.use('/compare', require(`./routes/${config.API.VERSION}/api/compare`));
+app.use('/carousel', limiter, require(`./routes/${config.API.VERSION}/api/carousel`));
+app.use('/dropdownmenu', limiter, require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
+app.use('/compare', limiter, require(`./routes/${config.API.VERSION}/api/compare`));
 
 // Public routes (login system)
-app.use('/register', require(`./routes/${config.API.VERSION}/login/register`));
-app.use('/reset', require(`./routes/${config.API.VERSION}/login/reset`));
-app.use('/login', require(`./routes/${config.API.VERSION}/login/login`));
-app.use('/refresh', require(`./routes/${config.API.VERSION}/login/refresh`));
-app.use('/auth', require(`./routes/${config.API.VERSION}/login/auth`));
+app.use('/register', limiter, require(`./routes/${config.API.VERSION}/login/register`));
+app.use('/reset', limiter, require(`./routes/${config.API.VERSION}/login/reset`));
+app.use('/login', limiter, require(`./routes/${config.API.VERSION}/login/login`));
+app.use('/refresh', limiter, require(`./routes/${config.API.VERSION}/login/refresh`));
+app.use('/auth', limiter, require(`./routes/${config.API.VERSION}/login/auth`));
 
 // Debut des routes protégées :
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
 // app.use('/account', require('./routes/account'));
-app.use('/alluserdata',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`)); //TODO à refaire
-app.use('/allroledata',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`)); //TODO à refaire
-app.use('/customer',verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));
-app.use('/account',verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
-app.use('/favorite',verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
+app.use('/alluserdata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`)); //TODO à refaire
+app.use('/allroledata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`)); //TODO à refaire
+app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));
+app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
+app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
 
 
 const uploadRouter = require('./routers/upload.router');
 app.use(verifyRefreshToken,uploadRouter);
+
+
+
+
+// Customer error handler si le rate limiter throw une erreur :
+app.use((err, req, res, next) => {
+    if (err instanceof RateLimitError) {
+      // Handle rate limit exceeded error
+      res.status(429).json({ error: 'Trop de requête !' });
+    } else {
+      // Pass other errors to the next error handler
+      next(err);
+    }
+  });
 
 
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)

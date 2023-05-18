@@ -8,7 +8,7 @@ function durationToMilliseconds(durationString) {
   
     const durationArray = durationString.match(/(\d+)([smhd])/);
     if (!durationArray) {
-      throw new Error('Invalid duration string');
+      throw new Error('!! La function durationToMilliseconds a provoqué une erreur : Cela ne ressemble pas à une string de duration !');
     }
     
     const [, value, unit] = durationArray;
