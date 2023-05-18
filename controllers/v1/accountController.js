@@ -1,6 +1,6 @@
-const consolelog = require("../Tools/consolelog");
-const config = require("../config/config");
-const { query } = require("../services/database.service");
+const consolelog = require("../../Tools/consolelog");
+const config = require("../../config/config");
+const { query } = require("../../services/database.service");
 
 async function selectAllAccount(req, res) {
   consolelog("// Appel de la method selectAllAccount //");

@@ -10,7 +10,6 @@ const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const app = express();
 
-
 // custom middleware logger
 app.use(logger);
 // Handle options credentials check - before CORS!
@@ -18,7 +17,6 @@ app.use(logger);
 app.use(credentials);
 // Cross Origin Resource Sharing
 app.use(cors(corsOptions));
-
 // built-in middleware to handle urlencoded form data
 app.use(express.urlencoded({ extended: false }));
 // built-in middleware for json 
@@ -28,19 +26,13 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());
 
-// KO :
+// NO LONGER USED, pas de verif clé api :
 // Middleware pour l'acces à l'api (check le autorization Headers dans une requete pour voir si cela correspond à notre clé d'api):
 // const accesMiddleware = require('./middleware/acces.middleware');
 // app.use(accesMiddleware);
 
-// Custom middlewar for limiter le nb de requests
-const rateLimit = require('express-rate-limit');
-const limiter = rateLimit({
-    windowMs: 15 * 60 * 1000, // 15 minutes
-    max: 100,
-    message: 'Trop de requêtes ! Re-essayez un peu plus tard.',
-  });
-
+// Custom middleware for limiter le nb de requests
+const limiter = require('./Tools/rateLimiter');
 
 // Route root, pour l'affichage doc de l'API
 app.use('/', limiter, require(`./routes/${config.API.VERSION}/root`));
@@ -69,21 +61,6 @@ app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.
 const uploadRouter = require('./routers/upload.router');
 app.use(verifyRefreshToken,uploadRouter);
 
-
-
-
-// Customer error handler si le rate limiter throw une erreur :
-app.use((err, req, res, next) => {
-    if (err instanceof RateLimitError) {
-      // Handle rate limit exceeded error
-      res.status(429).json({ error: 'Trop de requête !' });
-    } else {
-      // Pass other errors to the next error handler
-      next(err);
-    }
-  });
-
-
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
     res.status(404);
@@ -96,6 +73,7 @@ app.all('*', (req, res) => {
     }
 });
 
+// On place le errorHandler à la fin
 app.use(errorHandler);
 
 

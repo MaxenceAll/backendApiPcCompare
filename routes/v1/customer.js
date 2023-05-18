@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const customerController = require('../../controllers/customerController');
+const config = require("../../config/config")
+const customerControllerPath = require.resolve(`../../controllers/${config.API.VERSION}/customerController.js`);
+const customerController = require(customerControllerPath);
 
 // From :root/customer to :
 router.get('/', async (req, res) => {

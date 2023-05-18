@@ -1,8 +1,8 @@
-const consolelog = require("../Tools/consolelog");
-const config = require("../config/config");
-const { query } = require("../services/database.service");
+const consolelog = require("../../Tools/consolelog");
+const config = require("../../config/config");
+const { query } = require("../../services/database.service");
 const jwt = require("jsonwebtoken");
-const { getAllCustomerDataById } = require("../services/getAllCustomerData");
+const { getAllCustomerDataById } = require("../../services/getAllCustomerData");
 
 async function selectOneCustomer(req, res) {
   try {

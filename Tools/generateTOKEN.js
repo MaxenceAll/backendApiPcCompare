@@ -1,3 +1,6 @@
+// NO LONGER USED
+
+
 // Pour créer des clés API : (qui correspondent avec la chaine dans config.js)
 const jwt = require("jsonwebtoken");
 const config = require("./api/config");
