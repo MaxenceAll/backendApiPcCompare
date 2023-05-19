@@ -10,6 +10,10 @@ const cookieParser = require('cookie-parser');
 const credentials = require('./middleware/credentials');
 const app = express();
 
+
+const upload = require("./middleware/multerSetup");
+
+
 // custom middleware logger
 app.use(logger);
 // Handle options credentials check - before CORS!
@@ -36,10 +40,13 @@ const limiter = require('./Tools/rateLimiter');
 
 // Route root, pour l'affichage doc de l'API
 app.use('/', limiter, require(`./routes/${config.API.VERSION}/root`));
+
 // Public routes (public data)
-app.use('/carousel', limiter, require(`./routes/${config.API.VERSION}/api/carousel`));
-app.use('/dropdownmenu', limiter, require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
-app.use('/compare', limiter, require(`./routes/${config.API.VERSION}/api/compare`));
+app.use('/carousel', require(`./routes/${config.API.VERSION}/api/carousel`));
+app.use('/dropdownmenu', require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
+app.use('/compare', require(`./routes/${config.API.VERSION}/api/compare`));
+
+app.use('/avatar', require(`./routes/${config.API.VERSION}/api/avatar`));
 
 // Public routes (login system)
 app.use('/register', limiter, require(`./routes/${config.API.VERSION}/login/register`));
@@ -48,9 +55,8 @@ app.use('/login', limiter, require(`./routes/${config.API.VERSION}/login/login`)
 app.use('/refresh', limiter, require(`./routes/${config.API.VERSION}/login/refresh`));
 app.use('/auth', limiter, require(`./routes/${config.API.VERSION}/login/auth`));
 
-// Debut des routes protégées :
+// Debut des routes protégées avec verifyRefreshToken:
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
-// app.use('/account', require('./routes/account'));
 app.use('/alluserdata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`)); //TODO à refaire
 app.use('/allroledata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`)); //TODO à refaire
 app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));

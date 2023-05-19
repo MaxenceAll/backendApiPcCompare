@@ -6,6 +6,8 @@ const config = {
         API: {
             PORT: 5050,
             VERSION: "v1",
+            MAX_REQUEST: 1000,
+            MAX_REQUEST_WINDOW: "1m",
         },
         FRONTEND:{
             URL: "http://localhost:5173/"

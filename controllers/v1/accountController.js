@@ -24,24 +24,4 @@ async function selectAllAccount(req, res) {
   }
 }
 
-// const Db = require("../models/dataBase");
-// const Customer = require("../models/customer");
-
-// Db.synchronize();
-// async function selectAll(req, res) {
-//   try {
-//     const customer = await Customer.findOne({
-//       where: { Id_customer: 1 },
-//       include: [Db.getModel("Account")],
-//     });
-//     console.log("==============================")
-//     console.log(customer.Account);
-//     console.log("==============================")
-//     res.send("Success!");
-//   } catch (error) {
-//     console.log(error);
-//     res.status(500).send("Something went wrong!");
-//   }
-// }
-
 module.exports = { selectAllAccount };
