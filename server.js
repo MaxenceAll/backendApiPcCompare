@@ -63,10 +63,6 @@ app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.
 app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
 app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
 
-
-const uploadRouter = require('./routers/upload.router');
-app.use(verifyRefreshToken,uploadRouter);
-
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
     res.status(404);

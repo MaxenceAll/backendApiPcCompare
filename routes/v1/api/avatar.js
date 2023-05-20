@@ -7,22 +7,16 @@ const avatarController = require(avatarControllerPath);
 const upload = require("../../../middleware/multerSetup");
 const consolelog = require('../../../Tools/consolelog');
 
-
 // From :root/avatar to :
-// router.get('/', async (req, res) => {
-//   await avatarController.downloadAvatarByIdCustomer(req, res);
-// });
-
 router.post("/upload/:Id_customer", upload.single("avatar"), async(req, res) => {
     await avatarController.uploadAvatarByIdCustomer(req, res);
-  });
-
-  
+  });  
 router.get("/download/:Id_customer", async(req, res) => {
     await avatarController.downloadAvatarByIdCustomer(req, res);
+  });  
+router.delete("/delete/:Id_customer", upload.single("avatar"), async(req, res) => {
+    await avatarController.removeAvatarByIdCustomer(req, res);
   });
-
-
   
 
 module.exports = router;
