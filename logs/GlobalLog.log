@@ -874,3 +874,251 @@
 21/05/23 02:38:08 :: Ouverture d'un port d'écoute sur : 5050 
 21/05/23 02:38:11 :: Ouverture d'un port d'écoute sur : 5050 
 21/05/23 02:38:12 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:23 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:25 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:30 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:43 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:52 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:53 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:40:58 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:41:06 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:41:19 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:41:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:41:31 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:41:51 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:42:30 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:42:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:42:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:42:58 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:43:02 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:43:03 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:43:33 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:43:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:44:00 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:44:11 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:47:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:47:38 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:47:42 :: ------------------------------------------------------- 
+21/05/23 02:47:42 :: // Appel de la method handleLogout de loginController // 
+21/05/23 02:47:42 :: ?? Décodage du refreshToken avec les informations suivantes : {
+  account: 'maxoa59@gmail.com',
+  customer: {
+    Id_account: 6,
+    Id_customer: 6,
+    Id_role: 3,
+    pseudo: 'Secutorz',
+    firstname: 'Maxence',
+    lastname: 'ALLART',
+    last_connection: '2023-05-21T00:00:07.000Z',
+    createdBy: 'site',
+    createdAt: '2023-04-26T22:00:00.000Z',
+    modifiedBy: 'Secu',
+    modifiedAt: '2023-05-19T22:00:00.000Z',
+    deletedBy: null,
+    deletedAt: null,
+    img_src: '2023-05-19T19-58-33.574Z-IMG_20200603_171628.jpg'
+  },
+  role: 'Administrateur',
+  iat: 1684629408,
+  exp: 1685493408
+} 
+21/05/23 02:47:56 :: // Appel de la function verifyPseudoAvailable 
+21/05/23 02:47:56 :: --> Test de la disponibilité du pseudo:  cccccc 
+21/05/23 02:47:56 :: // Appel de la method QUERY de database.service. // 
+21/05/23 02:47:56 :: Nouvelle connection sur la database: pccompare 
+21/05/23 02:47:56 :: => Requete appelée: SELECT * FROM customer WHERE pseudo = ? 
+21/05/23 02:47:56 :: ==>Retour de la requete: [ [] ] 
+21/05/23 02:47:56 :: ---> Sortie de la method QUERY de database.service. // 
+21/05/23 02:47:56 :: XX Le pseudo n'est pas disponible 
+21/05/23 02:47:56 :: +++++++++++++++++++++++++++++++++++++++++++++++++++++++ 
+21/05/23 02:47:56 :: // Appel de la method sendVerifMail de registerController // 
+21/05/23 02:47:56 :: => avec les données suivantes :  {
+  firstname: 'aaaaaaa',
+  lastname: 'bbbbbbb',
+  pseudo: 'cccccc',
+  email: 'maxoa59@gmail.com',
+  password: '1234',
+  password2: '1234'
+} 
+21/05/23 02:47:56 :: // Tentative d'envoi de mail : // 
+21/05/23 02:47:57 :: Verification email sent to maxoa59@gmail.com 
+21/05/23 02:47:57 :: §§ MAIL :  Envoyé 
+21/05/23 02:47:57 :: le retourMailer est = à: {
+  data: {
+    accepted: [ 'maxoa59@gmail.com' ],
+    rejected: [],
+    ehlo: [
+      'SIZE 35882577',
+      '8BITMIME',
+      'AUTH LOGIN PLAIN XOAUTH2 PLAIN-CLIENTTOKEN OAUTHBEARER XOAUTH',
+      'ENHANCEDSTATUSCODES',
+      'PIPELINING',
+      'CHUNKING',
+      'SMTPUTF8'
+    ],
+    envelopeTime: 105,
+    messageTime: 425,
+    messageSize: 760,
+    response: '250 2.0.0 OK  1684630077 g17-20020a7bc4d1000000b003f423a04016sm6878985wmk.18 - gsmtp',
+    envelope: { from: '', to: [ 'maxoa59@gmail.com' ] },
+    messageId: '<c5083cf2-9110-0109-94fa-9cca12aaf286@localhost>'
+  },
+  result: true,
+  message: 'Email envoyé'
+} 
+21/05/23 02:48:36 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:48:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:48:51 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:48:57 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:48:59 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:05 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:22 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:24 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:31 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:49:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:04 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:06 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:15 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:30 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:31 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:34 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:39 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:46 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:50:48 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:13 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:34 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:41 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:47 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:53:53 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:05 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:14 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:20 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:32 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:39 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:54:42 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:55:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:55:39 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:55:41 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:25 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:33 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:36 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:56:54 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:13 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:18 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:24 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:38 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:57:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:58:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:58:33 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:58:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:59:05 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 02:59:08 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:00:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:00:48 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:01:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:01:25 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:02:25 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:02:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:02:48 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:03 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:08 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:32 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:36 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:46 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:03:47 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:00 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:12 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:32 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:38 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:04:53 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:00 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:24 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:38 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:49 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:05:54 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:06:04 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:06:09 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:06:13 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:06:21 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:15 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:17 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:32 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:40 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:08:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:09:41 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:09:45 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:09:49 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:09:53 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:23 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:27 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:41 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:43 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:10:46 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:02 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:13 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:14 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:16 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:17 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:21 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:23 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:24 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:11:47 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:14 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:16 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:19 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:27 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:31 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:49 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:12:59 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:01 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:04 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:07 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:11 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:19 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:22 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:29 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:37 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:41 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:13:45 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:14:26 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:10 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:12 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:16 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:30 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:33 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:35 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:42 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:15:44 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:16:31 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:16:36 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:16:49 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:17:05 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:17:21 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:18:19 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:19:08 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:19:12 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:19:15 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:19:17 :: Ouverture d'un port d'écoute sur : 5050 
+21/05/23 03:19:19 :: Ouverture d'un port d'écoute sur : 5050 

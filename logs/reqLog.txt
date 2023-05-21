@@ -2830,3 +2830,9 @@
 21/05/2023	02:36:48	::1	OPTIONS	http://localhost:5173	/login	Body:[null}	(200)	1ms
 21/05/2023	02:36:48	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}}	(200)	89ms
 21/05/2023	02:36:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
+21/05/2023	02:47:42	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null}	(200)	3ms
+21/05/2023	02:47:42	::1	POST	http://localhost:5173	/logout	Body:[{}}	(200)	21ms
+21/05/2023	02:47:56	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
+21/05/2023	02:47:56	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	36ms
+21/05/2023	02:47:56	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
+21/05/2023	02:47:57	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	839ms

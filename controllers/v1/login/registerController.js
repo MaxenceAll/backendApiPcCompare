@@ -6,98 +6,101 @@ const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
 async function sendVerifMail(req, res) {
-  consolelog("// Appel de la function sendVerifMail");
+  consolelog("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+  consolelog("// Appel de la method sendVerifMail de registerController //");
   consolelog("=> avec les données suivantes : ", req.body);
-  // Get user data from request body
-  const { email, password, pseudo, firstname, lastname, password2 } = req.body;
-  // Hash the password
-  //   const hashedPassword = await bcrypt.hash(password, 10);
-  const hash = bcrypt.hashSync(password, 10);
-  const hashedPassword = hash.replace(config.hash.prefix, "");
-  // Generate JWT with payload
-  const payload = { email, hashedPassword, pseudo, firstname, lastname };
-  const jwtToken = jwt.sign(payload, process.env.JWT_SECRET, {
-    expiresIn: "1h",
-  });
-  // Send email to verify user's email
-  const emailOptions = {
-    to: email,
-    subject: "Vérifiez votre compte PCCompare",
-    html: `Cliquez ici pour valider votre compte : <a href="${config.FRONTEND.URL}verify?t=${jwtToken}">Verifier Email</a>`,
-  };
   try {
-    const retourMailer = await mailer.send(emailOptions);
-    consolelog(`Verification email sent to ${email}`);
-    consolelog("le retourMailer est = à:", retourMailer);
-    res.status(200).json({
-      result: true,
-      message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.`,
+    const { email, password, pseudo, firstname, lastname } = req.body;    
+    const hash = bcrypt.hashSync(password, 10);
+    const hashedPassword = hash.replace(config.hash.prefix, "");
+    const payload = { email, hashedPassword, pseudo, firstname, lastname };
+    const jwtToken = jwt.sign(payload, process.env.JWT_SECRET, {
+      expiresIn: "1h",
     });
+    // On prépare les params pour l'utilisation de notre mailer service.
+    const emailOptions = {
+      to: email,
+      subject: "Vérifiez votre compte PCCompare",
+      html: `Cliquez ici pour valider votre compte : <a href="${config.FRONTEND.URL}verify?t=${jwtToken}">Verifier Email</a>`,
+    };
+    try {
+      const retourMailer = await mailer.send(emailOptions);
+      if (retourMailer.result){
+        consolelog(`Verification email sent to ${email}`);
+        consolelog("le retourMailer est = à:", retourMailer);
+        res.status(200).json({
+          result: true,
+          message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.`,
+        });
+      }else{
+        res.status(500).json({ data: null, message: `XX Erreur lors de l'envoi du mail de vérification.`});
+      }
+    } catch (error) {
+      consolelog(`XX Erreur lors de l'envoi du mail de vérification à ${email}: ${error}`);
+      res.status(500).json({ data: null, message: "XX Erreur lors de l'envoi du mail de vérification." });
+    }
   } catch (error) {
-    consolelog(`Error sending verification email to ${email}: ${error}`);
-    res.status(500).json({ message: "Error sending verification email." });
+    consolelog(`XX Erreur dans sendVerifMail: ${error}`);
+    return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
   }
 }
 
 async function verifySentMail(req, res) {
-  const token = req.url.split("?")[1];
-  consolelog("TOKEN received :", token);
+  consolelog("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
+  consolelog("// Appel de la method verifySentMail de registerController //");
   try {
-    const decodedToken = jwt.verify(token, process.env.JWT_SECRET); // Decode the token using the JWT_SECRET
-    const { email, hashedPassword, pseudo, firstname, lastname } = decodedToken; // Extract the user data from the decoded token
+    const token = req.url.split("?")[1];
+    consolelog("?? on a reçu comme TOKEN :", token);  
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET); 
+    const { email, hashedPassword, pseudo, firstname, lastname } = decodedToken;
     const password = hashedPassword;
-
-    // Validate user data
     if (!email || !password || !pseudo || !firstname || !lastname) {
-      consolelog("User data in token is invalid");
-      return res.status(400).json({ message: "Invalid user data in token" });
+      consolelog("XX Il manque des données dans le token reçu !");
+      return res.status(400).json({ message: "Problème de data dans le token reçu." });
     }
+    try {
+      const SQL_ADD_ACCOUNT =
+      `INSERT INTO account (email, password, createdBy)
+      VALUES (?, ?, ?)
+      `;
+      const result = await query(SQL_ADD_ACCOUNT, [email, password, "site"]);
+      const insertId = result.insertId;
+      consolelog(`!! Ajout de l'account avec succès !`);
 
-    // Insert new user into the database
-    const sql =
-      "INSERT INTO account (email, password, createdBy) VALUES (?, ?, ?)";
-    const params = [email, password, "site"];
-    const result = await query(sql, params);
-    const insertId = result.insertId;
-    consolelog(`User ${email} added to database account`);
-
-    // Insert new user into customer database
-    const sql2 =
-      "INSERT INTO customer (pseudo, firstname, lastname, Id_role, Id_account) VALUES (?, ?, ?, ?, ?)";
-    const params2 = [pseudo, firstname, lastname, "1", insertId];
-    await query(sql2, params2);
-    consolelog(`Customer ${pseudo} added to database customer`);
-
-    // Return a success message
-    res.status(200).json({
-      result: "success",
-      message: `Verification email for ${email} has been successfully processed and account of ${pseudo} created successfully.`,
-    });
+      const SQL_ADD_CUSTOMER =
+      `INSERT INTO customer (pseudo, firstname, lastname, Id_role, Id_account, createdBy)
+      VALUES (?, ?, ?, ?, ? , ? )
+      `;
+      await query(SQL_ADD_CUSTOMER, [pseudo, firstname, lastname, "1", insertId, "site"]);
+      consolelog(`!! Ajout du customer avec succès !`);
+      res.status(200).json({result: true,message: `Création du compte de ${pseudo} effectué avec succès !`});
+    } catch (error) {
+        consolelog(`XX Erreur lors de la requête pour ajouter utilisateur: ${error}`);
+        res.status(500).json({ data: null,message: "Erreur lors de l'ajout d'utilisateur.",error: error.message,});
+    }
   } catch (error) {
-    consolelog(`Error while inserting user data: ${error}`);
-    res.status(500).json({
-      message: "An error occurred while processing your request.",
-      error: error.message,
-    });
+    consolelog(`XX Erreur dans verifySentMail: ${error}`);
+    res.status(500).json({ data: null, result: false, message: "Erreur interne."});
   }
 }
 
 async function verifyPseudoAvailable(req, res) {
   consolelog("// Appel de la function verifyPseudoAvailable");
-  const pseudoToTest = req.body.pseudo;
-  consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
-  const sql = `SELECT * FROM customer WHERE pseudo = ?`;
-  const response = await query(sql, [pseudoToTest]);
-  if (response.length > 0) {
-    consolelog("++ Le pseudo est disponible !");
-    res
-      .status(200)
-      .json({ result: false, message: "Ce pseudo n'est pas disponible." });
-  } else {
-    consolelog("XX Le pseudo n'est pas disponible");
-    res
-      .status(200)
-      .json({ result: true, message: "Ce pseudo est disponible." });
+  try {
+    const pseudoToTest = req.body.pseudo;
+    consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
+    const sql = `SELECT * FROM customer WHERE pseudo = ?`;
+    const response = await query(sql, [pseudoToTest]);
+    if (response.length > 0) {
+      consolelog(`++ Le pseudo ${pseudoToTest} n'est pas disponible.`);
+      res.status(200).json({ result: false, message: `Ce pseudo (${pseudoToTest}) n'est pas disponible.`});
+    } else {
+      consolelog(`XX Le pseudo est disponible.`);
+      res.status(200).json({ result: true, message: `Ce pseudo (${pseudoToTest}) est disponible.`});
+    }
+  } catch (error) {
+    consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
+    return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
   }
 }
 
