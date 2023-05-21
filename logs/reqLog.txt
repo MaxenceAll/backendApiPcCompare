@@ -2819,3 +2819,14 @@
 21/05/2023	02:11:00	::1	GET	http://localhost:5173	/	Body:[{}}	(500)	5ms
 21/05/2023	02:11:34	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	22ms
 21/05/2023	02:11:34	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	48ms
+21/05/2023	02:36:27	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	23ms
+21/05/2023	02:36:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	51ms
+21/05/2023	02:36:35	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
+21/05/2023	02:36:35	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	39ms
+21/05/2023	02:36:35	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	7ms
+21/05/2023	02:36:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
+21/05/2023	02:36:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
+21/05/2023	02:36:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
+21/05/2023	02:36:48	::1	OPTIONS	http://localhost:5173	/login	Body:[null}	(200)	1ms
+21/05/2023	02:36:48	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}}	(200)	89ms
+21/05/2023	02:36:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
