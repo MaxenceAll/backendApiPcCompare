@@ -62,6 +62,11 @@ app.use('/allroledata', limiter,verifyRefreshToken, require(`./routes/${config.A
 app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));
 app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
 app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
+app.use('/comments', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/comments`));
+
+
+
+
 
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
