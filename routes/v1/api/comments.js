@@ -5,11 +5,17 @@ const commentsControllerPath = require.resolve(`../../../controllers/${config.AP
 const commentsController = require(commentsControllerPath);
 
 // From :root/comments to :
-router.put('/add', async (req, res) => {
+router.get('/:Id_customer_to_find', async (req, res) => {
+    await commentsController.getAllCommentsByIdCustomer(req, res);
+  });
+router.put('/', async (req, res) => {
   await commentsController.addComment(req, res);
 });
-router.delete('/remove/:Id_comment_to_find', async (req, res) => {
+router.delete('/:Id_comment_to_find', async (req, res) => {
   await commentsController.deleteComment(req, res);
+});
+router.patch('/:Id_comment_to_find', async (req, res) => {
+  await commentsController.modifyComment(req, res);
 });
 
 module.exports = router;
