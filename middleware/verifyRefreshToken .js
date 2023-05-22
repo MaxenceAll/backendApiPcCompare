@@ -6,10 +6,7 @@ const verifyRefreshToken = async (req, res, next) => {
   const refreshTokenCookie = req?.cookies?.refreshToken;
   consolelog("!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
   consolelog("// Rentrée dans le middleware verifyRefreshToken //");
-  consolelog(
-    "?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken :",
-    refreshTokenCookie
-  );
+  consolelog("?? Vérification de la réception en cookie, on a reçu en req?.cookies?.refreshToken :",refreshTokenCookie);
   try {
     // Je test en premier si j'ai reçu un cookie 'refreshToken'
     if (!refreshTokenCookie) {
@@ -29,10 +26,7 @@ const verifyRefreshToken = async (req, res, next) => {
         refreshTokenCookie,
         process.env.REFRESH_TOKEN_SECRET
       );
-      consolelog(
-        "?? Décodage du refreshToken avec les informations suivantes :",
-        decodedRefreshToken
-      );
+      consolelog("?? Décodage du refreshToken avec les informations suivantes :",decodedRefreshToken      );
       // Décodé mais expiré :
       if (decodedRefreshToken.exp < Date.now() / 1000) {
         return res.status(401).json({
@@ -41,12 +35,12 @@ const verifyRefreshToken = async (req, res, next) => {
           message: "Le refreshToken est expiré, il faut se re-identifier.",
         });
       }
-      // Décodé mais verification KO (message d'erreur neutre) //TODO supprimer le 4 en prod
+      // Décodé mais verification KO (message d'erreur neutre)
       if (!decodedRefreshToken) {
         return res.status(401).json({
           data: null,
           result: false,
-          message: "Erreur lors de l'authentification 4.",
+          message: "Erreur lors de l'authentification.",
         });
       }
     } catch (error) {
@@ -134,10 +128,7 @@ const verifyRefreshToken = async (req, res, next) => {
       customer: customer,
       role: role.title,
     };
-    consolelog(
-      `?? On rajoute au REQ pour utilisation futures : ${JSON.stringify(req.currentUser)}`
-    );
-    
+    consolelog(`?? On rajoute au REQ pour utilisation futures : ${JSON.stringify(req.currentUser)}`);
 
     // On passe au prochain middleware !
     next();

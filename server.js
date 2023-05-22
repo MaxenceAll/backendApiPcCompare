@@ -45,8 +45,8 @@ app.use('/', limiter, require(`./routes/${config.API.VERSION}/root`));
 app.use('/carousel', require(`./routes/${config.API.VERSION}/api/carousel`));
 app.use('/dropdownmenu', require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
 app.use('/compare', require(`./routes/${config.API.VERSION}/api/compare`));
-
 app.use('/avatar', require(`./routes/${config.API.VERSION}/api/avatar`));
+app.use('/test', require(`./routes/${config.API.VERSION}/api/test`));
 
 // Public routes (login system)
 app.use('/register', limiter, require(`./routes/${config.API.VERSION}/login/register`));
@@ -54,6 +54,7 @@ app.use('/reset', limiter, require(`./routes/${config.API.VERSION}/login/reset`)
 app.use('/login', limiter, require(`./routes/${config.API.VERSION}/login/login`));
 app.use('/refresh', limiter, require(`./routes/${config.API.VERSION}/login/refresh`));
 app.use('/auth', limiter, require(`./routes/${config.API.VERSION}/login/auth`));
+
 
 // Debut des routes protégées avec verifyRefreshToken:
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
@@ -63,10 +64,6 @@ app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.
 app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
 app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
 app.use('/comments', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/comments`));
-
-
-
-
 
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
