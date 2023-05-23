@@ -58,23 +58,23 @@ async function modifyCustomer(req, res) {
       return res.status(404).json({ result: false, message: "no req.currentuser" });
     }
 
-    // verifier la dispo du pseudo
-    consolelog("On vérifie si le pseudo est dispo ou pas");
-    try {
-      const pseudoToTest = req.body.pseudo;
-      consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
-      const sql = `SELECT * FROM customer WHERE pseudo = ?`;
-      const response = await query(sql, [pseudoToTest]);
-      if (response.length > 0) {
-        consolelog(`++ Le pseudo ${pseudoToTest} n'est pas disponible.`);
-        return res.status(200).json({ result: false, message: `Ce pseudo (${pseudoToTest}) n'est pas disponible.`});
-      } else {
-        consolelog(`XX Le pseudo ${pseudoToTest} est disponible.`);
-      }
-    } catch (error) {
-      consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
-      return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
-    }
+    // verifier la dispo du pseudo TODO mettre ça ailleurs XD
+    // consolelog("On vérifie si le pseudo est dispo ou pas");
+    // try {
+    //   const pseudoToTest = req.body.pseudo;
+    //   consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
+    //   const sql = `SELECT * FROM customer WHERE pseudo = ?`;
+    //   const response = await query(sql, [pseudoToTest]);
+    //   if (response.length > 0) {
+    //     consolelog(`++ Le pseudo ${pseudoToTest} n'est pas disponible.`);
+    //     return res.status(200).json({ result: false, message: `Ce pseudo (${pseudoToTest}) n'est pas disponible.`});
+    //   } else {
+    //     consolelog(`XX Le pseudo ${pseudoToTest} est disponible.`);
+    //   }
+    // } catch (error) {
+    //   consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
+    //   return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
+    // }
 
 
 
