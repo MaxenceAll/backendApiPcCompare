@@ -30,6 +30,8 @@ app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());
 
+
+
 // NO LONGER USED, pas de verif clé api :
 // Middleware pour l'acces à l'api (check le autorization Headers dans une requete pour voir si cela correspond à notre clé d'api):
 // const accesMiddleware = require('./middleware/acces.middleware');

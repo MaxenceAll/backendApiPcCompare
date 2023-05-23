@@ -55,23 +55,38 @@ async function modifyCustomer(req, res) {
     }
     if (!currentUser) {
       consolelog("Il manque le req.currentuser");
-      return res
-        .status(404)
-        .json({ result: false, message: "no req.currentuser" });
+      return res.status(404).json({ result: false, message: "no req.currentuser" });
     }
 
+    // verifier la dispo du pseudo
+    consolelog("On vérifie si le pseudo est dispo ou pas");
+    try {
+      const pseudoToTest = req.body.pseudo;
+      consolelog("--> Test de la disponibilité du pseudo: ", pseudoToTest);
+      const sql = `SELECT * FROM customer WHERE pseudo = ?`;
+      const response = await query(sql, [pseudoToTest]);
+      if (response.length > 0) {
+        consolelog(`++ Le pseudo ${pseudoToTest} n'est pas disponible.`);
+        return res.status(200).json({ result: false, message: `Ce pseudo (${pseudoToTest}) n'est pas disponible.`});
+      } else {
+        consolelog(`XX Le pseudo ${pseudoToTest} est disponible.`);
+      }
+    } catch (error) {
+      consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
+      return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
+    }
+
+
+
+
+
+
+
+
     if (currentUser.customer.Id_customer !== Id_customer) {
-      consolelog(
-        `Le middleware a détécté l'id : ${currentUser.customer.Id_customer} alors que le formulaire a envoyé l'id: ${Id_customer}!`
-      );
+      consolelog(`Le middleware a détécté l'id : ${currentUser.customer.Id_customer} alors que le formulaire a envoyé l'id: ${Id_customer}!`);
       if (currentUser.role !== "Administrateur") {
-        return res
-          .status(401)
-          .json({
-            result: false,
-            message:
-              "vous tentez de modifier un autre utilisateur sans être admin!!",
-          });
+        return res.status(401).json({result: false,message:"vous tentez de modifier un autre utilisateur sans être admin!!",});
       }
     }
 
@@ -97,34 +112,22 @@ async function modifyCustomer(req, res) {
     consolelog("values are:", values);
 
     const sqlUpdate = `UPDATE customer SET ${values}, modifiedBy='${currentUser.customer.pseudo}', modifiedAt=NOW() WHERE deletedBy IS NULL AND Id_customer = ${Id_customer}`;
-    consolelog("trying this sql to update:", sqlUpdate);
     try {
       const data = await query(sqlUpdate);
       consolelog("yo le retour de la sqlupdate (data) is :", data);
-      res
-        .status(200)
-        .json({
-          data,
-          result: true,
-          message: `Modification de l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`,
-        });
+      if(data){
+        return res.status(200).json({data,result: true,message: `Modification de l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`,});
+      }else {
+        return res.status(401).json({data:null, result: false, message: `Erreur lors de la modification de votre pseudo !`})
+      }
     } catch (error) {
-      consolelog(
-        `Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`
-      );
-      res
-        .status(500)
-        .json({
-          data: null,
-          result: false,
-          message: `Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`,
-        });
+      consolelog(`Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`);
+      return res.status(500).json({data: null,result: false,message: `Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`,});
     }
   } catch (error) {
     console.error(`Error in modifyCustomer: ${error}`);
     consolelog(`Error in modifyCustomer: ${error}`);
     return res.status(500).json({ message: "Erreur interne.", result: false });
-  }
-}
+  }}
 
 module.exports = { modifyCustomer, selectOneCustomer };

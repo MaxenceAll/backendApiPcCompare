@@ -1,6 +1,7 @@
 const consolelog = require("../Tools/consolelog");
 const jwt = require("jsonwebtoken");
 const { query } = require("../services/database.service");
+const durationToMilliseconds = require("../Tools/durationToMilliseconds");
 
 const verifyRefreshToken = async (req, res, next) => {
   const refreshTokenCookie = req?.cookies?.refreshToken;

@@ -5,7 +5,6 @@ const avatarControllerPath = require.resolve(`../../../controllers/${config.API.
 const avatarController = require(avatarControllerPath);
 
 const upload = require("../../../middleware/multerSetup");
-const consolelog = require('../../../Tools/consolelog');
 
 // From :root/avatar to :
 router.post("/upload/:Id_customer", upload.single("avatar"), async(req, res) => {
