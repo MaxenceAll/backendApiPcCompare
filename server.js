@@ -39,11 +39,14 @@ app.use(cookieParser());
 
 // Custom middleware for limiter le nb de requests Anti timing attack + brute force
 const limiter = require('./Tools/rateLimiter');
+// Customer middleware pour limiter le nombre de mail via le formulaire de contact
+const contactLimiter = require('./Tools/contactLimiter')
 
 // Route root, pour l'affichage doc de l'API
 app.use('/', limiter, require(`./routes/${config.API.VERSION}/root`));
 
 // Public routes (public data)
+app.use('/about',contactLimiter , require(`./routes/${config.API.VERSION}/about`));
 app.use('/carousel', require(`./routes/${config.API.VERSION}/api/carousel`));
 app.use('/dropdownmenu', require(`./routes/${config.API.VERSION}/api/dropdownmenu`));
 app.use('/compare', require(`./routes/${config.API.VERSION}/api/compare`));
@@ -67,6 +70,10 @@ app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.V
 app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
 app.use('/comments', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/comments`));
 
+
+// On place le errorHandler à la fin
+app.use(errorHandler);
+
 // Catch all others routes not caught before : (404 envoyé en fonction de accept)
 app.all('*', (req, res) => {
     res.status(404);
@@ -79,8 +86,6 @@ app.all('*', (req, res) => {
     }
 });
 
-// On place le errorHandler à la fin
-app.use(errorHandler);
 
 
 app.listen(config.API.PORT, () => {

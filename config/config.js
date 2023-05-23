@@ -3,12 +3,16 @@ dotenv.config();
 
 const config = {
     dev: {
+        // Config de l'api
         API: {
             PORT: 5050,
+            // Version dealer
             VERSION: "v1",
+            // SETUP limiter
             MAX_REQUEST: 1000,
             MAX_REQUEST_WINDOW: "1m",
         },
+        // Url front (pour l'envoi des mails)
         FRONTEND:{
             URL: "http://localhost:5173/"
         },
@@ -27,6 +31,7 @@ const config = {
                 user: "maxtestnodejs@gmail.com",
                 pass: 'xiwkuvhwjlwjhrtq'
             },
+            privateEmails: ["maxoa59@gmail.com", "maxence.allart@gmail.com"]
         },
         // API ACCESS key :
         authorization:{
