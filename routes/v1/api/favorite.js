@@ -5,17 +5,17 @@ const favoriteControllerPath = require.resolve(`../../../controllers/${config.AP
 const favoriteController = require(favoriteControllerPath);
 
 // From :root/favorite to :
-router.get('/:Id_customer_to_find', async (req, res) => {
-  await favoriteController.getAllFavoriteByIdCustomer(req, res);
+router.get('/:Id_customer_to_find', async (req, res, next) => {
+  await favoriteController.getAllFavoriteByIdCustomer(req, res, next);
 });
-router.get('/:Id_customer_to_find/:Id_article_to_find', async (req, res) => {
-  await favoriteController.isFavorited(req, res);
+router.get('/:Id_customer_to_find/:Id_article_to_find', async (req, res, next) => {
+  await favoriteController.isFavorited(req, res, next);
 });
-router.delete('/:Id_customer_to_find', async (req, res) => {
-  await favoriteController.removeFavoriteByIdCustomer(req, res);
+router.delete('/:Id_customer_to_find', async (req, res, next) => {
+  await favoriteController.removeFavoriteByIdCustomer(req, res, next);
 });
-router.put('/:Id_customer_to_find', async (req, res) => {
-  await favoriteController.addFavoriteByIdCustomer(req, res);
+router.put('/:Id_customer_to_find', async (req, res, next) => {
+  await favoriteController.addFavoriteByIdCustomer(req, res, next);
 });
 
 module.exports = router;

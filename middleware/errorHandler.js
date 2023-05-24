@@ -1,16 +1,24 @@
+const consolelog = require('../Tools/consolelog');
 const { logEvents } = require('./logEvents');
-const { RateLimitError } = require('express-rate-limit');
 
 const errorHandler = (err, req, res, next) => {
-  logEvents(`${err.name}: ${err.message}`, 'errLog.txt');
-  console.error(err.stack);
 
-  if (err instanceof RateLimitError) {
-    // Ajout d'une verif si l'erreur est à cause du RateLimiter
-    res.status(429).json({ error: 'Trop de requête !' });
+  let messageDeRetour;
+  if (res.messageRetour){
+    messageDeRetour = res.messageRetour;
   } else {
+    messageDeRetour = `Erreur interne. (Contactez un administrateur)`
   }
-  res.status(500).send(err.message);
+
+  consolelog("Yo l'erreur attrapée a le nom:",err.name);
+
+  logEvents(`${err.name}: ${err.message} \n${err.stack}`, 'errLog.txt');
+  
+  if (err.name === 'RateLimitError') {
+    return res.status(429).json({message: "Erreur interne. (Contactez un administrateur)", error: 'Stop le spam!'});
+  } else {
+    return res.status(500).json({message: messageDeRetour, error: err.message});
+  }
 };
 
 module.exports = errorHandler;

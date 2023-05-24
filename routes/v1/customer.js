@@ -5,14 +5,14 @@ const customerControllerPath = require.resolve(`../../controllers/${config.API.V
 const customerController = require(customerControllerPath);
 
 // From :root/customer to :
-router.get('/', async (req, res) => {
-  await customerController.selectAllCustomer(req, res);
+router.get('/', async (req, res , next) => {
+  await customerController.selectAllCustomer(req, res , next);
 });
-router.get('/:Id_customer', async (req, res) => {
-  await customerController.selectOneCustomer(req, res);
+router.get('/:Id_customer', async (req, res , next) => {
+  await customerController.selectOneCustomer(req, res , next);
 });
-router.put('/:Id_customer', async (req, res) => {
-  await customerController.modifyCustomer(req, res);
+router.put('/:Id_customer', async (req, res , next) => {
+  await customerController.modifyCustomer(req, res , next);
 });
 
 module.exports = router;

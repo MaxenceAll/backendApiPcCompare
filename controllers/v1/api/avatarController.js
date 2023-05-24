@@ -5,7 +5,7 @@ const path = require("path");
 const fs = require("fs");
 const mime = require("mime-types");
 
-async function uploadAvatarByIdCustomer(req, res) {
+async function uploadAvatarByIdCustomer(req, res, next) {
   consolelog("// Appel de la method uploadAvatarByIdCustomer de avatarController//");
   try {
     const Id_customer = req.params.Id_customer;
@@ -33,13 +33,13 @@ async function uploadAvatarByIdCustomer(req, res) {
       return res.status(500).json({ data: null, result: false, message: err.message});
     }
     res.status(200).json({ result: true, message: `Fichier uploadé sur le server pour le customer ${Id_customer} !`});    
-  } catch (err) {
-    consolelog(`++ !!!! Erreur attrapée dans method uploadAvatarByIdCustomer de avatarController: ${err}.`);
-    res.status(500).json({ data: null, result: false, message: err.message});
+  } catch (error) {
+    consolelog(`++ !!!! Erreur attrapée dans method uploadAvatarByIdCustomer de avatarController: ${error}.`);
+    next(error);
   }
 }
 
-const downloadAvatarByIdCustomer = async (req, res) => {
+const downloadAvatarByIdCustomer = async (req, res , next) => {
   consolelog("// Appel de la méthode downloadAvatarByIdCustomer de avatarController//");
   try {
     const Id_customer = req.params.Id_customer;
@@ -49,7 +49,7 @@ const downloadAvatarByIdCustomer = async (req, res) => {
       data = await query(sql, [Id_customer]);
     } catch (error) {
       consolelog(`Erreur lors de la tentative de retrouver le nom du fichier : ${error}.`);
-      return res.status(500).json({ message: "Internal server error." });
+      next(error);
     }
 
     // Avons-nous un nom de fichier dans la datbase ?
@@ -76,12 +76,12 @@ const downloadAvatarByIdCustomer = async (req, res) => {
     }
   } catch (error) {
     consolelog(`++ !!!! Erreur attrapée dans la méthode downloadAvatarByIdCustomer de avatarController: ${error}.`);
-    res.status(500).json({ data: null, result: false, message: error.message });
+    next(error);
   }
 };
 
 
-const removeAvatarByIdCustomer = async (req, res) => {
+const removeAvatarByIdCustomer = async (req, res , next) => {
   consolelog("// Appel de la méthode removeAvatarByIdCustomer de avatarController//");
   try {
     const Id_customer = req.params.Id_customer;
@@ -91,13 +91,13 @@ const removeAvatarByIdCustomer = async (req, res) => {
       await query(sql, [null, Id_customer]);
     } catch (error) {
       consolelog(`++ !!!! Erreur attrapée lors de la tentative de supprimer le lien de la database: ${error}.`);
-      res.status(500).json({ data: null, result: false, message: error.message });
+      next(error);
     }
    res.status(200).json({ data: null, result: true, message: "Avatar supprimé avec succès !" });
 
   } catch (error) {
     consolelog(`++ !!!! Erreur attrapée dans la méthode removeAvatarByIdCustomer de avatarController: ${error}.`);
-    res.status(500).json({ data: null, result: false, message: error.message });
+    next(error);
   }
 };
 

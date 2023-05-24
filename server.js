@@ -64,6 +64,7 @@ app.all('*', (req, res) => {
         res.type('txt').send("404 Not Found");
     }
 });
+
 // On place le errorHandler à la fin
 app.use(errorHandler);
 

@@ -6,8 +6,8 @@ const aboutControllerPath = require.resolve(`../../controllers/${config.API.VERS
 const aboutController = require(aboutControllerPath);
 
 // From :root/about to :
-router.post('/contactme', contactLimiter ,  async (req, res) => {
-  await aboutController.contactMe(req, res);
+router.post('/contactme', contactLimiter ,  async (req, res, next) => {
+  await aboutController.contactMe(req, res, next);
 });
 
 module.exports = router;

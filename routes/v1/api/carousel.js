@@ -5,8 +5,8 @@ const carouselControllerPath = require.resolve(`../../../controllers/${config.AP
 const carouselController = require(carouselControllerPath);
 
 // From :root/carousel to :
-router.get('/', async (req, res) => {
-  await carouselController.selectAll(req, res);
+router.get('/', async (req, res ,next) => {
+  await carouselController.selectAll(req, res ,next);
 });
 
 module.exports = router;

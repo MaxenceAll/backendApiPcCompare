@@ -5,8 +5,8 @@ const accountControllerPath = require.resolve(`../../controllers/${config.API.VE
 const accountController = require(accountControllerPath);
 
 // From :root/account to :
-router.get('/', async (req, res) => {
-  await accountController.selectAllAccount(req, res);
+router.get('/', async (req, res, next) => {
+  await accountController.selectAllAccount(req, res, next);
 });
 
 module.exports = router;

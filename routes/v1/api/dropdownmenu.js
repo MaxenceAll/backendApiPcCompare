@@ -5,8 +5,8 @@ const dropdownmenuControllerPath = require.resolve(`../../../controllers/${confi
 const dropdownmenuController = require(dropdownmenuControllerPath);
 
 // From :root/dropdownmenu to :
-router.get('/', async (req, res) => {
-  await dropdownmenuController.selectAll(req, res);
+router.get('/', async (req, res , next) => {
+  await dropdownmenuController.selectAll(req, res , next);
 });
 
 module.exports = router;

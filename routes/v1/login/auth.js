@@ -5,8 +5,8 @@ const authControllerPath = require.resolve(`../../../controllers/${config.API.VE
 const authController = require(authControllerPath);
 
 // From :root/auth to :
-router.get('/', async (req, res) => {
-  await authController.handleAuth(req, res);
+router.get('/', async (req, res, next) => {
+  await authController.handleAuth(req, res, next);
 });
 
 module.exports = router;

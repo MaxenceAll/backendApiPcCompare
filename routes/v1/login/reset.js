@@ -5,11 +5,11 @@ const resetControllerPath = require.resolve(`../../../controllers/${config.API.V
 const resetController = require(resetControllerPath);
 
 // From :root/reset to :
-router.post("/", async (req, res) => {
-  await resetController.resetPassword(req, res);
+router.post("/", async (req, res, next) => {
+  await resetController.resetPassword(req, res, next);
 });
-router.post("/newpassword", async (req, res) => {
-  await resetController.newPassword(req, res);
+router.post("/newpassword", async (req, res, next) => {
+  await resetController.newPassword(req, res, next);
 });
 
 module.exports = router;

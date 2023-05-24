@@ -5,11 +5,11 @@ const loginControllerPath = require.resolve(`../../../controllers/${config.API.V
 const loginController = require(loginControllerPath);
 
 // From :root/login to :
-router.post('/', async (req, res) => {
-  await loginController.handleLogin(req, res);
+router.post('/', async (req, res, next) => {
+  await loginController.handleLogin(req, res, next);
 });
-router.post('/logout', async (req, res) => {
-  await loginController.handleLogout(req, res);
+router.post('/logout', async (req, res, next) => {
+  await loginController.handleLogout(req, res, next);
 });
 
 module.exports = router;

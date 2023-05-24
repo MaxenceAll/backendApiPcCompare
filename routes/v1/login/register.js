@@ -5,14 +5,14 @@ const registerControllerPath = require.resolve(`../../../controllers/${config.AP
 const registerController = require(registerControllerPath);
 
 // From :root/register to :
-router.post('/', async (req, res) => {
-    await registerController.sendVerifMail(req,res);
+router.post('/', async (req, res,next) => {
+    await registerController.sendVerifMail(req,res,next);
 })
-router.get('/verify', async (req, res) => {
-    await registerController.verifySentMail(req, res);
+router.get('/verify', async (req, res,next) => {
+    await registerController.verifySentMail(req, res,next);
   });  
-router.post('/pseudo', async (req, res) => {
-    await registerController.verifyPseudoAvailable(req, res);
+router.post('/pseudo', async (req, res,next) => {
+    await registerController.verifyPseudoAvailable(req, res,next);
   });
 
-module.exports = router;
+module.exports = router; 

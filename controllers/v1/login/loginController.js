@@ -5,7 +5,7 @@ const { query } = require("../../../services/database.service");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-async function handleLogin(req, res) {
+async function handleLogin(req, res, next) {
   try {
     consolelog("+++++++++++++++++++++++++++++++++++++++++++++++++++++++");
     consolelog("// Appel de la method handleLogin de loginController //");
@@ -103,11 +103,9 @@ async function handleLogin(req, res) {
       `;
       await query(SQL_update_last_connection, [customer.Id_customer]);
     } catch (error) {
-      consolelog("XX Erreur lors de la mise à jour de la last_connection :",error);
-      res.status(500).json({
-        message: "Erreur lors de la mise à jour de la last_connection.",
-        result: false,
-      });
+      consolelog(`XX Erreur lors de la mise à jour de la last_connection : ${error}`);
+      res.messageRetour = "Erreur lors de la mise à jour de la last_connection.";
+      next(error);
     }
     consolelog("--> last_connection mis à jour avec succès.")
     // on prépare un objet avec toutes les données (sauf les sensibles (hashedpassword))
@@ -131,11 +129,9 @@ async function handleLogin(req, res) {
       consolelog(`?? Pour information, un accessToken a été créé pour ${process.env.ACCESS_TOKEN_MAXAGE} :`,accessToken);
       consolelog(`?? Pour information, un refreshToken a été créé pour ${process.env.REFRESH_TOKEN_MAXAGE} :`,refreshToken);
     } catch (error) {
-      consolelog("XX Erreur lors de la création des JsonWebToken:", error);
-      res.status(500).json({
-        message: "Erreur lors de la création des JsonWebToken.",
-        result: false,
-      });
+      consolelog(`XX Erreur lors de la création des JsonWebToken: ${error}`);
+      res.messageRetour = `Erreur lors de la création des JsonWebToken.`;
+      next(error)
     }
     consolelog("==> Login avec succes ! Envoi du refreshToken en cookie, envoi des données + envoi du accessToken.");
     res.cookie("refreshToken", refreshToken, {
@@ -152,13 +148,12 @@ async function handleLogin(req, res) {
       accessToken,
     });
   } catch (error) {
-    console.error(`Error in handleLogin: ${error}`);
     consolelog(`Error in handleLogin: ${error}`);
-    return res.status(500).json({ message: "Erreur interne.", result: false });
+    next(error)
   }
 }
 
-async function handleLogout(req, res) {
+async function handleLogout(req, res, next) {
   consolelog("-------------------------------------------------------");
   consolelog("// Appel de la method handleLogout de loginController //");
   try {
@@ -191,9 +186,8 @@ async function handleLogout(req, res) {
         });
       }
     } catch (error) {
-      console.error(`Error in handleLogout: ${error}`);
       consolelog(`Error in handleLogout: ${error}`);
-      return res.status(500).json({ message: "Erreur interne.", result: false });
+      next(error);
     }
     // Tout est ok, on renvoi un nouveau refreshToken vide pour annuler le précédent
     res.cookie("refreshToken", "", {
@@ -208,9 +202,8 @@ async function handleLogout(req, res) {
       message: "Déconnection avec succes.",
     });
   } catch (error) {
-    console.error(`Error in handleLogout: ${error}`);
     consolelog(`Error in handleLogout: ${error}`);
-    return res.status(500).json({ message: "Erreur interne.", result: false });
+    next(error);
   }
 }
 

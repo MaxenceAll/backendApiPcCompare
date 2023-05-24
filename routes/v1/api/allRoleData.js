@@ -5,8 +5,8 @@ const allRoleDataControllerPath = require.resolve(`../../../controllers/${config
 const allRoleDataController = require(allRoleDataControllerPath);
 
 // From :root/allroledata to :
-router.get('/', async (req, res) => {
-  await allRoleDataController.selectAll(req, res);
+router.get('/', async (req, res, next) => {
+  await allRoleDataController.selectAll(req, res, next);
 });
 
 module.exports = router;

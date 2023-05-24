@@ -7,7 +7,7 @@ const jwt = require("jsonwebtoken");
 const dotenv = require("dotenv");
 dotenv.config();
 
-async function sendVerifMail(req, res) {
+async function sendVerifMail(req, res, next) {
   consolelog("// Appel de la method sendVerifMail de registerController //");
   consolelog("=> avec les données suivantes : ", req.body);
   try {
@@ -25,7 +25,7 @@ async function sendVerifMail(req, res) {
       });      
     } catch (error) {
       consolelog("XX Erreur lors du cryptage du mot de passe.");
-      return res.status(500).json({message: "Erreur lors du cryptage du mot de passe. (Contactez un administrateur)", error: error.message});
+      next(error);
     }
     // On prépare les params pour l'utilisation de notre mailer service.
     const emailOptions = {
@@ -82,19 +82,19 @@ async function sendVerifMail(req, res) {
         consolelog("?? le retourMailer est = à:", retourMailer);
         res.status(200).json({result: true,message: `Un e-mail à été envoyé à ${email}, rendez-vous sur votre boite mail dans l'heure pour activer votre compte.`});
       } else {
-        res.status(500).json({message: `Erreur lors de l'envoi du mail de vérification. (Contactez un administrateur)`, error: error.message});
+        next(error);
       }
     } catch (error) {
       consolelog(`XX Erreur lors de l'envoi du mail de vérification à ${email}: ${error}`);
-      res.status(500).json({message: "Erreur lors de l'envoi du mail de vérification. (Contactez un administrateur)", error: error.message});
+      next(error);
     }
   } catch (error) {
     consolelog(`XX Erreur dans sendVerifMail: ${error}`);
-    return res.status(500).json({ message: "Erreur interne. (Contactez un administrateur)", error: error.message});
+    next(error);
   }
 }
 
-async function verifySentMail(req, res) {
+async function verifySentMail(req, res, next) {
   consolelog("// Appel de la method verifySentMail de registerController //");
   try {
     const token = req.url.split("?")[1];
@@ -124,7 +124,8 @@ async function verifySentMail(req, res) {
       }
     } catch (error) {
       consolelog(`XX Erreur lors de l'ajout dans la table account.`);
-      return res.status(500).json({message: "Erreur lors de la création de votre compte. (Contactez un administrateur)", error: error.message});
+      res.messageRetour = "Erreur lors de la création de votre compte. (Contactez un administrateur) !"
+      next(error);
     }
     try {
       // On tente d'ajouter en database les données dans customer
@@ -135,19 +136,20 @@ async function verifySentMail(req, res) {
         return res.status(200).json({result: true, message: `Création du compte de votre compte effectué avec succès !`});
       } else {
         consolelog(`XX Refus d'ajout du customer !`);
-        return res.status(406).json({result: false, message: `Erreur lors de la création du compte.`})
+        return res.status(406).json({message: `Erreur lors de la création du compte. (Contactez un administrateur)`})
       }
     } catch (error) {
       consolelog(`XX Erreur lors de l'ajout dans la table customer.`);
-      return res.status(500).json({message: "Erreur lors de la création de votre compte. (Contactez un administrateur)", error: error.message});
+      res.messageRetour = "Erreur lors de la création de votre compte. (Contactez un administrateur) !"
+      next(error);
     }
   } catch (error) {
-    consolelog(`XX Erreur dans verifySentMail: ${error}`);
-    return res.status(500).json({message: "Erreur interne. (Contactez un administrateur)", error: error.message});
+    consolelog(`XX Erreur dans verifySentMail: ${error}`); 
+    next(error);
   }
 }
 
-async function verifyPseudoAvailable(req, res) {
+async function verifyPseudoAvailable(req, res,next) {
   consolelog("// Appel de la function verifyPseudoAvailable de registerController //");
   try {
     const pseudoToTest = req.body.pseudo;
@@ -163,7 +165,7 @@ async function verifyPseudoAvailable(req, res) {
     }
   } catch (error) {
     consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
-    return res.status(500).json({message: "Erreur interne. (Contactez un administrateur)", error: error.message});
+    next(error);
   }
 }
 

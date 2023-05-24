@@ -1,0 +1,9 @@
+25/05/2023	00:02:16	ReferenceError: tata is not defined 
+ReferenceError: tata is not defined
+    at Object.contactMe (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\controllers\v1\aboutController.js:15:7)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\routes\v1\about.js:10:25
+    at Layer.handle [as handle_request] (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express-rate-limit\dist\index.cjs:244:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
+    at async C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express-rate-limit\dist\index.cjs:152:5

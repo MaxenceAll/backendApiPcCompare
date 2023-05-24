@@ -1,7 +1,7 @@
 const consolelog = require("../../../Tools/consolelog");
 const jwt = require("jsonwebtoken");
 
-async function handleAuth(req, res) {
+async function handleAuth(req, res, next) {
   const accessTokenCookie = req?.cookies?.accessToken;
   consolelog("=====================================================");
   consolelog("// Appel de la method handleAuth de authController //");
@@ -10,7 +10,7 @@ async function handleAuth(req, res) {
     if (!accessTokenCookie) {
       consolelog("XX Pas de cookie accessToken reçu.");
       // Http status 204 est bonne pratique d'un retour APIrest sans contenu, juste informationnel
-      return res.status(204).json({data: null,result: false,message: "Pas de cookie accessToken reçu.",});
+      return res.status(204).json({message: "Pas de cookie accessToken reçu."});
     }
     consolelog("==> Comparaison du accessTokenCookie avec la secret phrase en .env");
     jwt.verify(accessTokenCookie, process.env.ACCESS_TOKEN_SECRET, (error, data) => {
@@ -18,10 +18,10 @@ async function handleAuth(req, res) {
         consolelog("XX Erreur dans les données reçues depuis le cookie accessToken :",error);
         if (error.name === "TokenExpiredError") {
           consolelog("!! Le accessToken est expiré !", error);
-          return res.status(204).json({data: null,result: false,message: "Le accessToken est expiré !",});
+          return res.status(204).json({message: "Le accessToken est expiré !",});
         } else {
           consolelog("XX Erreur d'authentification :", error);
-          return res.status(401).json({data: null,result: false,message: "Erreur d'authentification",});
+          return res.status(401).json({message: "Erreur d'authentification",});
         }
       } else {
         // Si token valide, la connexion est secure, on renvoit dans data le contenu du token
@@ -29,8 +29,9 @@ async function handleAuth(req, res) {
       }
     });
   } catch (error) {
-    consolelog("XX Erreur lors de la vérification de connexion.", error);
-    return res.status(500).json({data: null,message: `Erreur d'authentification`,result: false,});
+    consolelog(`XX Erreur lors de la vérification de connexion : ${error}`);
+    res.messageRetour = `Erreur d'authentification`;
+    next(error)
   }
 }
 

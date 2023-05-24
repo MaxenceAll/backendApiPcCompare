@@ -5,7 +5,7 @@ const mailer = require("../../../services/mailer.service");
 const bcrypt = require("bcrypt");
 const jwt = require("jsonwebtoken");
 
-async function resetPassword(req, res) {
+async function resetPassword(req, res, next) {
   consolelog("// Appel de la method resetPassword de resetController //");
   try {
     const { email } = req.body;
@@ -74,22 +74,22 @@ async function resetPassword(req, res) {
       return res.status(200).json({ result: true, message: `Envoi d'un e-mail de récupération de mot passe à votre adresse : ${email} ; vérifiez votre boite mail ! Vous avez 10 minutes pour ré-initialiser votre mot de passe.`});
     }
   } catch (error) {
-    consolelog(`XX Erreur dans resetPassword :`,error)
-    return res.status(500).json({ message: "Erreur lors de la récupération de mot de passe.", error: error.message});
+    consolelog(`XX Erreur dans resetPassword : ${error}`)
+    next(error)
   }
 }
 
 
-async function newPassword(req, res) {
+async function newPassword(req, res, next) {
   consolelog("// Appel de la method newPassword de resetController //");
     const { body } = req;
     try {
       if (!body.token) {
-        return res.status(400).json({ data: null, result: false, message: "Pas de token dans votre url !" });
+        return res.status(400).json({ message: "Pas de token dans votre url !" });
       }
       const data = jwt.verify(body.token, process.env.JWT_SECRET);
       if (!data) {
-        return res.status(401).json({ data: null, result: false, message: "Token invalide ou expiré !" });
+        return res.status(401).json({ message: "Token invalide ou expiré !" });
       }
       const hash = bcrypt.hashSync(body.password1, 10);
       const hashedPassword = hash.replace(config.hash.prefix, "");  
@@ -105,15 +105,15 @@ async function newPassword(req, res) {
         if (result.affectedRows >0){
           return res.status(200).json({ data: result, result: true, message: "Mot de passe changé avec succès !" });
         } else {
-          return res.status(401).json({ data: null, result: false, message: "Erreur lors de la modification de mot de passe !"})
+          return res.status(401).json({ message: "Erreur lors de la modification de mot de passe !"})
         }
       } catch (error) {
         console.error(error);
-        res.status(500).json({ data: null, result: false, message: "Erreur serveur interne." });
+        res.status(500).json({ message: "Erreur serveur interne." });
       }
     } catch (error) {
       consolelog(`XX Erreur dans newPassword :`,error)
-      res.status(500).json({ data: null, result: false, message: "Erreur lors de la modification de mot de passe !" });
+      next(error);
     }
   }
   

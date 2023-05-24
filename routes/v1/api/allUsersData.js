@@ -5,8 +5,8 @@ const allUsersDataControllerPath = require.resolve(`../../../controllers/${confi
 const allUsersDataController = require(allUsersDataControllerPath);
 
 // From :root/alluserdata to :
-router.get('/', async (req, res) => {
-  await allUsersDataController.selectAll(req, res);
+router.get('/', async (req, res , next) => {
+  await allUsersDataController.selectAll(req, res , next);
 });
 
 module.exports = router;

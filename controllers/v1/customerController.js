@@ -4,7 +4,7 @@ const { query } = require("../../services/database.service");
 const jwt = require("jsonwebtoken");
 const { getAllCustomerDataById } = require("../../services/getAllCustomerData");
 
-async function selectOneCustomer(req, res) {
+async function selectOneCustomer(req, res , next) {
   try {
     consolelog("// Appel de la method selectOneCustomer //");
     const { Id_customer } = req.params;
@@ -34,13 +34,12 @@ async function selectOneCustomer(req, res) {
       message: `Voici les données de l'utilisateur avec l'id : ${Id_customer}`,
     });
   } catch (error) {
-    console.error(`Error in handleLogout: ${error}`);
     consolelog(`Error in handleLogout: ${error}`);
-    return res.status(500).json({ message: "Erreur interne.", result: false });
+    next(error);
   }
 }
 
-async function modifyCustomer(req, res) {
+async function modifyCustomer(req, res , next) {
   try {
     // je vérifie la présence d'un utilisateur dans req.currentUser et d'un body
     consolelog("reqcurrentUser is :", req.currentUser);
@@ -75,12 +74,6 @@ async function modifyCustomer(req, res) {
     //   consolelog(`XX Erreur dans verifyPseudoAvailable: ${error}`);
     //   return res.status(500).json({ data: null,message: "Erreur interne.", result: false });
     // }
-
-
-
-
-
-
 
 
     if (currentUser.customer.Id_customer !== Id_customer) {
@@ -122,12 +115,12 @@ async function modifyCustomer(req, res) {
       }
     } catch (error) {
       consolelog(`Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`);
-      return res.status(500).json({data: null,result: false,message: `Erreur lors de la requete pour modifier l'utilisateur avec l'id ${Id_customer} par l'utilisateur : ${currentUser.customer.pseudo}`,});
+      next(error);
     }
   } catch (error) {
     console.error(`Error in modifyCustomer: ${error}`);
     consolelog(`Error in modifyCustomer: ${error}`);
-    return res.status(500).json({ message: "Erreur interne.", result: false });
+    next(error);
   }}
 
 module.exports = { modifyCustomer, selectOneCustomer };

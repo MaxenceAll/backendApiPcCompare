@@ -3,7 +3,7 @@ const consolelog = require("../../../Tools/consolelog");
 const { query } = require("../../../services/database.service");
 const durationToMilliseconds = require("../../../Tools/durationToMilliseconds");
 
-async function handleRefreshToken(req, res) {
+async function handleRefreshToken(req, res , next) {
   const refreshTokenCookie = req.cookies.refreshToken;
   consolelog("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~");
   consolelog("// Appel de la method handleRefreshToken de refreshTokenController //");
@@ -20,7 +20,7 @@ async function handleRefreshToken(req, res) {
       if (decodedRefreshToken.exp < Date.now() / 1000) {
         consolelog("XX Le refreshToken est expiré ! Il faut se re-identifier.")
         return res.status(204).json({data: null,result: false,message: "Le refreshToken est expiré, il faut se re-identifier."});
-      }
+      } 
       // Décodé mais verification KO (message d'erreur neutre)
       if (!decodedRefreshToken) {
         consolelog("XX Erreur lors de l'authentification.")
@@ -76,8 +76,8 @@ async function handleRefreshToken(req, res) {
       consolelog("?? Last info de customer trouvé est:", customer);
       consolelog("?? Last info de role trouvé est:", role);
     } catch (error) {
-      consolelog("XX Erreur lors de la recherche des données de l'utilisateur :",error);
-      return res.status(500).json({data: null,message: "Erreur lors de la recherche des données de l'utilisateur",result: false,});
+      consolelog(`XX Erreur lors de la recherche des données de l'utilisateur : ${error}`);
+      res.messageRetour = `Erreur lors de la recherche des données de l'utilisateur`;
     }
     // on prépare un objet avec toutes les données (sauf les sensibles (hashedpassword))
     const data = {      
@@ -99,8 +99,9 @@ async function handleRefreshToken(req, res) {
       consolelog(`?? Pour information, un accessToken a été créé pour ${process.env.ACCESS_TOKEN_MAXAGE} (Depuis la route refreshToken !) :`,accessToken);
       consolelog(`?? Pour information, un refreshToken a été créé pour ${process.env.REFRESH_TOKEN_MAXAGE} (Depuis la route refreshToken !):`,refreshToken);
     } catch (error) {
-      consolelog("XX Erreur lors de la création des JsonWebToken:", error);
-      return res.status(500).json({message: "Erreur lors de la création des JsonWebToken.",result: false,});
+      consolelog(`XX Erreur lors de la création des JsonWebToken: ${error}`, error);
+      res.messageRetour =`Erreur lors de la création des JsonWebToken.`
+      next(error);
     }
     consolelog("==> Tout est ok, On peut renvoyer le nouveau refreshToken et le nouveau accessToken actualisé avec les dernières données.");
     res.cookie("refreshToken", refreshToken, {
@@ -117,9 +118,8 @@ async function handleRefreshToken(req, res) {
       accessToken,
     });
   } catch (error) {
-    console.error(`XX Erreur dans handleRefreshToken : ${error}`);
     consolelog(`XX Erreur dans handleRefreshToken : ${error}`);
-    return res.status(500).json({ data: null, message: "Erreur interne.", result: false });
+    next(error)
   }
 }
 module.exports = { handleRefreshToken };

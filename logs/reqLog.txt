@@ -1,1042 +1,240 @@
-23/05/2023	21:50:57	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null}	(200)	1ms
-23/05/2023	21:50:57	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	8ms
-23/05/2023	21:52:19	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	24ms
-23/05/2023	21:52:23	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null}	(200)	1ms
-23/05/2023	21:52:23	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	8ms
-23/05/2023	21:52:23	::1	OPTIONS	http://localhost:5173	/compare/gpu	Body:[null}	(200)	1ms
-23/05/2023	21:52:24	::1	GET	http://localhost:5173	/gpu	Body:[{}}	(200)	492ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/12	Body:[null}	(200)	1ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/compare/sha/12	Body:[null}	(200)	1ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/compare/historique/12	Body:[null}	(200)	0ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/compare/seller/12	Body:[null}	(200)	0ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/favorite/undefined/12	Body:[null}	(200)	0ms
-23/05/2023	21:52:30	::1	OPTIONS	http://localhost:5173	/compare/comments/12	Body:[null}	(200)	0ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/undefined/12	Body:[{}}	(401)	8ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/product/gpu/12	Body:[{}}	(200)	28ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/sha/12	Body:[{}}	(200)	31ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/historique/12	Body:[{}}	(200)	36ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/seller/12	Body:[{}}	(200)	41ms
-23/05/2023	21:52:30	::1	GET	http://localhost:5173	/comments/12	Body:[{}}	(200)	46ms
-23/05/2023	21:52:32	::1	OPTIONS	http://localhost:5173	/compare/ram	Body:[null}	(200)	0ms
-23/05/2023	21:52:32	::1	GET	http://localhost:5173	/ram	Body:[{}}	(200)	52ms
-23/05/2023	21:52:38	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-23/05/2023	21:52:38	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-23/05/2023	21:52:44	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-23/05/2023	21:52:44	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-23/05/2023	21:52:49	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	21:52:52	::1	OPTIONS	http://localhost:5173	/login	Body:[null}	(200)	1ms
-23/05/2023	21:52:52	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}}	(200)	86ms
-23/05/2023	21:52:52	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:53:40	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null}	(200)	0ms
-23/05/2023	21:53:40	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	8ms
-23/05/2023	21:53:40	::1	OPTIONS	http://localhost:5173	/compare/gpu	Body:[null}	(200)	1ms
-23/05/2023	21:53:41	::1	GET	http://localhost:5173	/gpu	Body:[{}}	(304)	465ms
-23/05/2023	21:53:42	::1	OPTIONS	http://localhost:5173	/compare/cpu	Body:[null}	(200)	1ms
-23/05/2023	21:53:42	::1	GET	http://localhost:5173	/cpu	Body:[{}}	(200)	77ms
-23/05/2023	21:53:43	::1	OPTIONS	http://localhost:5173	/compare/mb	Body:[null}	(200)	1ms
-23/05/2023	21:53:43	::1	GET	http://localhost:5173	/mb	Body:[{}}	(200)	125ms
-23/05/2023	21:53:45	::1	OPTIONS	http://localhost:5173	/compare/ram	Body:[null}	(200)	1ms
-23/05/2023	21:53:45	::1	GET	http://localhost:5173	/ram	Body:[{}}	(304)	29ms
-23/05/2023	21:56:43	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	21:56:43	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	25ms
-23/05/2023	21:56:43	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	21:56:43	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	21:57:44	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:57:46	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	21:58:34	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:58:39	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:58:41	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	13ms
-23/05/2023	21:58:41	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	21:58:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	10ms
-23/05/2023	21:58:41	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	24ms
-23/05/2023	21:58:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:58:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	26ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	5ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	21:58:51	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	23ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	12ms
-23/05/2023	21:58:51	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:59:01	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	0ms
-23/05/2023	21:59:01	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	30ms
-23/05/2023	21:59:01	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	21:59:01	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	22ms
-23/05/2023	21:59:02	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	10ms
-23/05/2023	21:59:03	::1	OPTIONS	http://localhost:5173	/favorite/6	Body:[null}	(200)	1ms
-23/05/2023	21:59:03	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	28ms
-23/05/2023	21:59:04	::1	OPTIONS	http://localhost:5173	/comments/6	Body:[null}	(200)	1ms
-23/05/2023	21:59:04	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	51ms
-23/05/2023	21:59:26	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	10ms
-23/05/2023	21:59:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	21:59:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	21:59:29	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	21:59:35	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	21:59:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	21:59:35	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	0ms
-23/05/2023	21:59:35	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	25ms
-23/05/2023	21:59:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	14ms
-23/05/2023	21:59:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:59:37	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-23/05/2023	21:59:37	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	28ms
-23/05/2023	21:59:37	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	21:59:37	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	18ms
-23/05/2023	21:59:38	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:59:38	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	21:59:41	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:00:19	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:00:22	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	22:00:22	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:00:22	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	17ms
-23/05/2023	22:00:22	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	30ms
-23/05/2023	22:00:22	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	22:00:22	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:00:23	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	12ms
-23/05/2023	22:01:11	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	0ms
-23/05/2023	22:01:11	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	28ms
-23/05/2023	22:01:11	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	0ms
-23/05/2023	22:01:11	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	19ms
-23/05/2023	22:01:12	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	7ms
-23/05/2023	22:01:12	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:01:12	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:01:12	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	23ms
-23/05/2023	22:01:12	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	11ms
-23/05/2023	22:01:12	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	27ms
-23/05/2023	22:01:14	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:03:14	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	12ms
-23/05/2023	22:03:19	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	22:03:20	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:03:20	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	16ms
-23/05/2023	22:03:20	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	24ms
-23/05/2023	22:03:20	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	22:03:20	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:03:21	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	14ms
-23/05/2023	22:03:22	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	0ms
-23/05/2023	22:03:22	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	29ms
-23/05/2023	22:03:22	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	22:03:22	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	20ms
-23/05/2023	22:03:22	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:04:34	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	22:04:34	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	0ms
-23/05/2023	22:04:34	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	22:04:34	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	24ms
-23/05/2023	22:04:34	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:04:34	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:04:37	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:05:23	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	7ms
-23/05/2023	22:05:23	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	0ms
-23/05/2023	22:05:23	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	18ms
-23/05/2023	22:05:23	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	28ms
-23/05/2023	22:05:23	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	22:05:23	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:05:24	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-23/05/2023	22:05:24	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	29ms
-23/05/2023	22:05:24	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	0ms
-23/05/2023	22:05:24	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	19ms
-23/05/2023	22:05:25	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:07:07	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	7ms
-23/05/2023	22:07:07	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:07:07	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	0ms
-23/05/2023	22:07:07	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	23ms
-23/05/2023	22:07:07	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:07:07	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:08:50	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	22:08:50	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	12ms
-23/05/2023	22:08:51	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:08:51	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	30ms
-23/05/2023	22:08:51	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	5ms
-23/05/2023	22:08:51	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:08:58	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	22:08:58	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:08:58	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	10ms
-23/05/2023	22:08:58	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	23ms
-23/05/2023	22:08:58	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:08:58	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:10:55	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:10:56	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:11:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:11:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:12:14	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-23/05/2023	22:12:14	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	29ms
-23/05/2023	22:12:14	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	22:12:14	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	18ms
-23/05/2023	22:15:16	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:15:16	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:15:16	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:15:35	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	6ms
-23/05/2023	22:15:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:15:35	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:15:35	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	33ms
-23/05/2023	22:15:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:15:35	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:15:37	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-23/05/2023	22:15:37	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	28ms
-23/05/2023	22:15:37	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	22:15:37	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	20ms
-23/05/2023	22:15:41	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	7ms
-23/05/2023	22:15:41	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	22:15:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	15ms
-23/05/2023	22:15:41	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	28ms
-23/05/2023	22:15:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:15:41	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:15:43	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-23/05/2023	22:15:43	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	26ms
-23/05/2023	22:15:43	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-23/05/2023	22:15:43	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	18ms
-23/05/2023	22:19:14	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:19:14	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:19:40	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	11ms
-23/05/2023	22:19:46	::1	OPTIONS	http://localhost:5173	/favorite/6	Body:[null}	(200)	1ms
-23/05/2023	22:19:46	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	37ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null}	(200)	1ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null}	(200)	1ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null}	(200)	0ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null}	(200)	0ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null}	(200)	1ms
-23/05/2023	22:19:48	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null}	(200)	1ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/historique/1	Body:[{}}	(304)	55ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}}	(304)	73ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/sha/1	Body:[{}}	(304)	104ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/6/1	Body:[{}}	(200)	119ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/seller/1	Body:[{}}	(304)	130ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/comments/1	Body:[{}}	(304)	125ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/7	Body:[{}}	(204)	7ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/8	Body:[{}}	(204)	13ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	15ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:19:48	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:20:06	::1	OPTIONS	http://localhost:5173	/compare/gpu	Body:[null}	(200)	0ms
-23/05/2023	22:20:07	::1	GET	http://localhost:5173	/gpu	Body:[{}}	(304)	451ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/favorite/6/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/compare/sha/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/compare/historique/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/compare/seller/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:24	::1	OPTIONS	http://localhost:5173	/compare/comments/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	29ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(200)	23ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(200)	27ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(200)	31ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/6/132	Body:[{}}	(200)	49ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	51ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:20:24	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:20:28	::1	OPTIONS	http://localhost:5173	/comments/34	Body:[null}	(200)	0ms
-23/05/2023	22:20:28	::1	DELETE	http://localhost:5173	/34	Body:[{}}	(200)	22ms
-23/05/2023	22:20:28	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	12ms
-23/05/2023	22:20:28	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	20ms
-23/05/2023	22:20:28	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(304)	23ms
-23/05/2023	22:20:28	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(304)	27ms
-23/05/2023	22:20:28	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(304)	31ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/comments/	Body:[null}	(200)	0ms
-23/05/2023	22:20:33	::1	PUT	http://localhost:5173	/	Body:[{"Id_article":"132","Id_customer":6,"content":"tata","note":1}}	(200)	17ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/compare/comments/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/compare/sha/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/compare/historique/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:33	::1	OPTIONS	http://localhost:5173	/compare/seller/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	17ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	26ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(304)	29ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(304)	29ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(304)	32ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-23/05/2023	22:20:33	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/comments/38	Body:[null}	(200)	0ms
-23/05/2023	22:20:40	::1	PATCH	http://localhost:5173	/38	Body:[{"Id_customer":6,"content":"toto","note":5}}	(200)	17ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/compare/comments/132	Body:[null}	(200)	1ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/compare/historique/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/compare/sha/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:40	::1	OPTIONS	http://localhost:5173	/compare/seller/132	Body:[null}	(200)	0ms
-23/05/2023	22:20:40	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	11ms
-23/05/2023	22:20:40	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(304)	13ms
-23/05/2023	22:20:40	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	23ms
-23/05/2023	22:20:40	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(304)	30ms
-23/05/2023	22:20:40	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(304)	26ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/comments/38	Body:[null}	(200)	0ms
-23/05/2023	22:21:04	::1	DELETE	http://localhost:5173	/38	Body:[{}}	(200)	16ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/compare/comments/132	Body:[null}	(200)	0ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/compare/historique/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/compare/sha/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:04	::1	OPTIONS	http://localhost:5173	/compare/seller/132	Body:[null}	(200)	0ms
-23/05/2023	22:21:04	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	12ms
-23/05/2023	22:21:04	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(304)	15ms
-23/05/2023	22:21:04	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(304)	16ms
-23/05/2023	22:21:04	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	21ms
-23/05/2023	22:21:04	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(304)	27ms
-23/05/2023	22:21:09	::1	OPTIONS	http://localhost:5173	/comments/	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	PUT	http://localhost:5173	/	Body:[{"Id_article":"132","Id_customer":6,"content":"tata","note":5}}	(200)	17ms
-23/05/2023	22:21:10	::1	OPTIONS	http://localhost:5173	/compare/comments/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	OPTIONS	http://localhost:5173	/compare/historique/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	OPTIONS	http://localhost:5173	/compare/seller/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	OPTIONS	http://localhost:5173	/compare/sha/132	Body:[null}	(200)	1ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/comments/132	Body:[{}}	(200)	14ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/historique/132	Body:[{}}	(304)	19ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/seller/132	Body:[{}}	(304)	22ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/product/gpu/132	Body:[{}}	(200)	27ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/sha/132	Body:[{}}	(304)	27ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-23/05/2023	22:21:10	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-23/05/2023	22:21:12	::1	OPTIONS	http://localhost:5173	/favorite/6	Body:[null}	(200)	1ms
-23/05/2023	22:21:12	::1	DELETE	http://localhost:5173	/6	Body:[{"Id_article_to_find":"132"}}	(200)	18ms
-23/05/2023	22:21:12	::1	OPTIONS	http://localhost:5173	/favorite/6/132	Body:[null}	(200)	0ms
-23/05/2023	22:21:12	::1	GET	http://localhost:5173	/6/132	Body:[{}}	(204)	28ms
-23/05/2023	22:21:13	::1	PUT	http://localhost:5173	/6	Body:[{"Id_article_to_find":"132"}}	(200)	19ms
-23/05/2023	22:21:13	::1	GET	http://localhost:5173	/6/132	Body:[{}}	(200)	21ms
-23/05/2023	22:21:25	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null}	(200)	0ms
-23/05/2023	22:21:25	::1	GET	http://localhost:5173	/	Body:[{}}	(304)	7ms
-23/05/2023	22:38:25	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	3ms
-23/05/2023	22:38:25	::1	POST	http://localhost:5173	/about/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(404)	24ms
-23/05/2023	22:39:37	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	5ms
-23/05/2023	22:39:37	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(200)	25ms
-23/05/2023	22:42:55	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	5ms
-23/05/2023	22:42:55	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(500)	23ms
-23/05/2023	22:43:07	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	3ms
-23/05/2023	22:43:08	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(200)	1558ms
-23/05/2023	22:45:20	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	3ms
-23/05/2023	22:45:21	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(200)	657ms
-23/05/2023	22:46:44	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:46:45	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"nom","email":"maxoa59@gmail.com","subject":"sujet","message":"lol"}}	(200)	659ms
-23/05/2023	22:47:25	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:47:25	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	2ms
-23/05/2023	22:48:41	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	4ms
-23/05/2023	22:48:42	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(200)	764ms
-23/05/2023	22:48:57	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:48:58	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(200)	724ms
-23/05/2023	22:48:59	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	1ms
-23/05/2023	22:49:00	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	1ms
-23/05/2023	22:49:58	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	4ms
-23/05/2023	22:49:59	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(200)	749ms
-23/05/2023	22:51:28	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	3ms
-23/05/2023	22:51:29	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(200)	624ms
-23/05/2023	22:51:30	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	2ms
-23/05/2023	22:51:34	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:51:34	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	2ms
-23/05/2023	22:51:37	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	2ms
-23/05/2023	22:51:39	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:51:39	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	1ms
-23/05/2023	22:51:41	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	1ms
-23/05/2023	22:53:13	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	1ms
-23/05/2023	22:53:13	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(429)	2ms
-23/05/2023	22:54:59	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	5ms
-23/05/2023	22:54:59	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Mon name","email":"maxoa59@gmail.com","subject":"sujet ici","message":"totototmonmessage ici !"}}	(200)	674ms
-23/05/2023	23:06:24	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null}	(200)	5ms
-23/05/2023	23:06:25	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"Bobby","email":"fakeemail@fake.fr","subject":"Le sujet est le for...","message":"C'est naze !"}}	(200)	679ms
-23/05/2023	23:12:33	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	47ms
-23/05/2023	23:13:49	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-23/05/2023	23:14:49	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	15ms
-23/05/2023	23:15:01	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	12ms
-23/05/2023	23:16:54	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-23/05/2023	23:16:54	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	43ms
-23/05/2023	23:16:54	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	10ms
-23/05/2023	23:16:54	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-24/05/2023	12:21:08	::1	OPTIONS	http://localhost:5173	/login	Body:[null}	(200)	3ms
-24/05/2023	12:21:09	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}}	(200)	204ms
-24/05/2023	12:21:09	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	14ms
-24/05/2023	12:22:01	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	31ms
-24/05/2023	12:22:03	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-24/05/2023	12:22:03	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	35ms
-24/05/2023	12:22:03	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	9ms
-24/05/2023	12:22:03	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	15ms
-24/05/2023	16:09:24	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	5ms
-24/05/2023	16:09:24	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	49ms
-24/05/2023	16:09:24	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-24/05/2023	16:09:24	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	22ms
-24/05/2023	16:09:26	::1	OPTIONS	http://localhost:5173	/comments/6	Body:[null}	(200)	1ms
-24/05/2023	16:09:27	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	91ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null}	(200)	1ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null}	(200)	1ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null}	(200)	1ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null}	(200)	0ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null}	(200)	0ms
-24/05/2023	16:09:28	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null}	(200)	1ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}}	(200)	83ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/seller/1	Body:[{}}	(200)	93ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/sha/1	Body:[{}}	(200)	91ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/historique/1	Body:[{}}	(200)	157ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/comments/1	Body:[{}}	(200)	172ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/6/1	Body:[{}}	(200)	236ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	11ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/7	Body:[{}}	(204)	13ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/8	Body:[{}}	(204)	17ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	11ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-24/05/2023	16:09:28	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	16:14:22	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	6ms
-24/05/2023	16:14:23	::1	GET	http://localhost:5173	/6	Body:[{}}	(304)	87ms
-24/05/2023	16:14:23	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	10ms
-24/05/2023	16:14:23	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-24/05/2023	16:14:27	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null}	(200)	1ms
-24/05/2023	16:14:27	::1	POST	http://localhost:5173	/logout	Body:[{}}	(200)	26ms
-24/05/2023	16:14:41	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	2ms
-24/05/2023	16:14:41	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	9ms
-24/05/2023	16:14:41	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:14:41	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	71ms
-24/05/2023	16:16:09	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	3ms
-24/05/2023	16:16:09	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	40ms
-24/05/2023	16:16:09	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:16:09	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	67ms
-24/05/2023	16:16:51	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:16:51	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	6ms
-24/05/2023	16:16:51	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	2ms
-24/05/2023	16:16:51	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	67ms
-24/05/2023	16:17:25	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:17:25	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	6ms
-24/05/2023	16:17:25	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:17:25	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	69ms
-24/05/2023	16:17:33	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:17:33	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	16:17:33	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:17:33	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	64ms
-24/05/2023	16:17:55	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:17:55	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	6ms
-24/05/2023	16:17:55	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:17:55	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	64ms
-24/05/2023	16:18:41	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	0ms
-24/05/2023	16:18:41	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	16:18:41	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:18:41	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	65ms
-24/05/2023	16:19:37	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:19:37	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	16:19:37	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:19:37	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	62ms
-24/05/2023	16:31:48	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	3ms
-24/05/2023	16:31:48	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	45ms
-24/05/2023	16:31:48	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:31:48	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	72ms
-24/05/2023	16:33:54	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:33:54	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	41ms
-24/05/2023	16:33:54	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:33:54	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	69ms
-24/05/2023	16:34:17	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	3ms
-24/05/2023	16:34:17	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	43ms
-24/05/2023	16:34:17	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:34:17	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	69ms
-24/05/2023	16:34:24	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:34:24	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	50ms
-24/05/2023	16:34:24	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:34:24	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	71ms
-24/05/2023	16:34:32	::ffff:127.0.0.1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:34:32	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	16:34:32	::ffff:127.0.0.1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:34:32	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	65ms
-24/05/2023	16:36:46	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	16:36:47	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	45ms
-24/05/2023	16:36:47	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:36:47	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	68ms
-24/05/2023	16:36:58	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:36:58	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	47ms
-24/05/2023	16:36:58	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:36:58	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	70ms
-24/05/2023	16:37:20	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:37:20	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	16:37:20	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:37:20	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	69ms
-24/05/2023	16:37:30	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	16:37:30	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	55ms
-24/05/2023	16:37:30	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:37:30	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	74ms
-24/05/2023	16:37:40	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	3ms
-24/05/2023	16:37:40	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	43ms
-24/05/2023	16:37:40	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:37:41	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	71ms
-24/05/2023	16:37:53	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:37:53	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	48ms
-24/05/2023	16:37:53	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:37:53	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	76ms
-24/05/2023	16:38:00	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	16:38:00	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	45ms
-24/05/2023	16:38:00	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	0ms
-24/05/2023	16:38:00	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(500)	68ms
-24/05/2023	16:39:09	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:39:09	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	43ms
-24/05/2023	16:39:09	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:39:10	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	1154ms
-24/05/2023	16:40:03	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	16:40:03	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	41ms
-24/05/2023	16:40:03	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:40:04	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	593ms
-24/05/2023	16:46:51	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	16:46:51	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	45ms
-24/05/2023	16:46:51	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:46:52	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	853ms
-24/05/2023	16:47:17	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	3ms
-24/05/2023	16:47:17	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	59ms
-24/05/2023	16:47:17	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:47:17	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	637ms
-24/05/2023	16:49:41	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:49:41	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	49ms
-24/05/2023	16:49:41	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:49:42	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	642ms
-24/05/2023	16:50:13	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	7ms
-24/05/2023	16:50:13	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	55ms
-24/05/2023	16:50:13	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:50:13	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	541ms
-24/05/2023	16:52:12	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:52:12	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	69ms
-24/05/2023	16:52:12	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:52:12	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	549ms
-24/05/2023	16:52:24	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	16:52:24	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	8ms
-24/05/2023	16:52:24	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:52:25	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	666ms
-24/05/2023	16:54:40	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	16:54:40	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	44ms
-24/05/2023	16:54:40	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	16:54:41	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	657ms
-24/05/2023	17:01:04	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	4ms
-24/05/2023	17:01:04	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	59ms
-24/05/2023	17:01:04	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	17:01:05	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	715ms
-24/05/2023	17:05:15	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	5ms
-24/05/2023	17:05:15	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	53ms
-24/05/2023	17:05:15	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	17:05:16	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	733ms
-24/05/2023	17:05:27	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null}	(200)	1ms
-24/05/2023	17:05:27	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	7ms
-24/05/2023	17:05:27	::1	OPTIONS	http://localhost:5173	/register	Body:[null}	(200)	1ms
-24/05/2023	17:05:28	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbb","pseudo":"cccccc","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}}	(200)	486ms
-24/05/2023	18:48:21	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	15ms
-24/05/2023	18:48:22	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	7ms
-24/05/2023	18:48:27	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(500)	8ms
-24/05/2023	18:52:51	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	12ms
-24/05/2023	18:53:49	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	18:55:21	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	18:55:47	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-24/05/2023	18:55:47	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	18:55:47	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	18:55:47	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	18:55:55	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	12ms
-24/05/2023	18:56:20	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	6ms
-24/05/2023	18:56:32	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	18:56:43	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	4ms
-24/05/2023	18:57:25	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	18:57:40	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	18:58:28	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	11ms
-24/05/2023	18:58:41	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	6ms
-24/05/2023	18:59:27	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	13ms
-24/05/2023	19:00:52	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	8ms
-24/05/2023	19:00:52	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-24/05/2023	19:02:27	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	17ms
-24/05/2023	19:02:27	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-24/05/2023	19:02:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:02:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:02:48	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:02:48	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:02:50	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	8ms
-24/05/2023	19:02:55	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:03:09	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	7ms
-24/05/2023	19:03:09	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:03:10	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:03:10	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:03:11	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	4ms
-24/05/2023	19:03:16	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	4ms
-24/05/2023	19:03:19	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:04:44	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	8ms
-24/05/2023	19:04:44	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:04:44	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:04:45	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:04:46	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	4ms
-24/05/2023	19:05:32	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:05:32	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:05:33	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:05:33	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	7ms
-24/05/2023	19:05:33	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:06:10	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:06:12	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:12	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:06:13	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:13	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:15	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:06:28	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:28	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	3ms
-24/05/2023	19:06:29	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:06:29	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:29	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:06:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:06:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-24/05/2023	19:06:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:06:43	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	3ms
-24/05/2023	19:06:44	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	5ms
-24/05/2023	19:07:34	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	3ms
-24/05/2023	19:07:34	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	5ms
-24/05/2023	19:07:34	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	6ms
-24/05/2023	19:07:34	::1	GET	http://localhost:5173	/	Body:[{}}	(204)	4ms
-24/05/2023	19:07:35	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}}	(401)	4ms
-24/05/2023	19:08:14	::1	OPTIONS	http://localhost:5173	/login	Body:[null}	(200)	3ms
-24/05/2023	19:08:14	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}}	(200)	137ms
-24/05/2023	19:08:14	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	12ms
-24/05/2023	19:08:16	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null}	(200)	1ms
-24/05/2023	19:08:16	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	29ms
-24/05/2023	19:08:16	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	19:08:16	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-24/05/2023	19:08:18	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null}	(200)	1ms
-24/05/2023	19:08:18	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	34ms
-24/05/2023	19:08:18	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null}	(200)	1ms
-24/05/2023	19:08:18	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	20ms
-24/05/2023	19:08:18	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}}	(304)	18ms
-24/05/2023	19:08:19	::1	OPTIONS	http://localhost:5173	/favorite/6	Body:[null}	(200)	1ms
-24/05/2023	19:08:19	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	34ms
-24/05/2023	19:08:19	::1	OPTIONS	http://localhost:5173	/comments/6	Body:[null}	(200)	1ms
-24/05/2023	19:08:20	::1	GET	http://localhost:5173	/6	Body:[{}}	(200)	44ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:21	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null}	(200)	0ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}}	(200)	29ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/sha/1	Body:[{}}	(200)	46ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/historique/1	Body:[{}}	(200)	96ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/seller/1	Body:[{}}	(200)	125ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/6/1	Body:[{}}	(200)	157ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/comments/1	Body:[{}}	(200)	144ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/7	Body:[{}}	(204)	9ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/8	Body:[{}}	(204)	15ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	17ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	6ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	19:08:21	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/comments/2	Body:[null}	(200)	1ms
-24/05/2023	19:08:26	::1	DELETE	http://localhost:5173	/2	Body:[{}}	(200)	25ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null}	(200)	0ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null}	(200)	1ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null}	(200)	0ms
-24/05/2023	19:08:26	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null}	(200)	0ms
-24/05/2023	19:08:26	::1	GET	http://localhost:5173	/comments/1	Body:[{}}	(200)	14ms
-24/05/2023	19:08:26	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}}	(200)	21ms
-24/05/2023	19:08:26	::1	GET	http://localhost:5173	/sha/1	Body:[{}}	(304)	51ms
-24/05/2023	19:08:26	::1	GET	http://localhost:5173	/historique/1	Body:[{}}	(304)	90ms
-24/05/2023	19:08:26	::1	GET	http://localhost:5173	/seller/1	Body:[{}}	(304)	103ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/	Body:[{}}	(200)	7ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/favorite/undefined/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/compare/sha/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/compare/historique/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/compare/seller/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/compare/comments/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/product/gpu/33	Body:[{}}	(200)	45ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/sha/33	Body:[{}}	(200)	60ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/undefined/33	Body:[{}}	(204)	75ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/historique/33	Body:[{}}	(200)	62ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/seller/33	Body:[{}}	(200)	74ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/comments/33	Body:[{}}	(200)	82ms
-24/05/2023	19:08:32	::1	OPTIONS	http://localhost:5173	/favorite/6/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	10ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/6/33	Body:[{}}	(204)	34ms
-24/05/2023	19:08:32	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-24/05/2023	19:08:33	::1	OPTIONS	http://localhost:5173	/favorite/6	Body:[null}	(200)	0ms
-24/05/2023	19:08:33	::1	PUT	http://localhost:5173	/6	Body:[{"Id_article_to_find":"33"}}	(200)	26ms
-24/05/2023	19:08:33	::1	GET	http://localhost:5173	/6/33	Body:[{}}	(200)	22ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/comments/	Body:[null}	(200)	1ms
-24/05/2023	19:08:37	::1	PUT	http://localhost:5173	/	Body:[{"Id_article":"33","Id_customer":6,"content":"tata","note":2}}	(200)	20ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/compare/comments/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/compare/sha/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/compare/seller/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:37	::1	OPTIONS	http://localhost:5173	/compare/historique/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/comments/33	Body:[{}}	(200)	16ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/product/gpu/33	Body:[{}}	(200)	26ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/sha/33	Body:[{}}	(304)	31ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/seller/33	Body:[{}}	(304)	32ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/historique/33	Body:[{}}	(304)	38ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	7ms
-24/05/2023	19:08:37	::1	GET	http://localhost:5173	/download/6	Body:[{}}	(304)	8ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/comments/40	Body:[null}	(200)	0ms
-24/05/2023	19:08:43	::1	PATCH	http://localhost:5173	/40	Body:[{"Id_customer":6,"content":"good","note":4}}	(200)	20ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/compare/comments/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/compare/historique/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/compare/sha/33	Body:[null}	(200)	1ms
-24/05/2023	19:08:43	::1	OPTIONS	http://localhost:5173	/compare/seller/33	Body:[null}	(200)	0ms
-24/05/2023	19:08:43	::1	GET	http://localhost:5173	/comments/33	Body:[{}}	(200)	13ms
-24/05/2023	19:08:43	::1	GET	http://localhost:5173	/product/gpu/33	Body:[{}}	(200)	23ms
-24/05/2023	19:08:43	::1	GET	http://localhost:5173	/sha/33	Body:[{}}	(304)	27ms
-24/05/2023	19:08:43	::1	GET	http://localhost:5173	/seller/33	Body:[{}}	(304)	30ms
-24/05/2023	19:08:43	::1	GET	http://localhost:5173	/historique/33	Body:[{}}	(304)	30ms
-24/05/2023	19:14:40	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	18ms
-24/05/2023	19:14:40	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	54ms
-24/05/2023	19:14:41	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	6ms
-24/05/2023	19:15:04	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(500)	15ms
-24/05/2023	19:16:25	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	16ms
-24/05/2023	19:16:37	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(500)	15ms
-24/05/2023	19:18:50	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(500)	18ms
-24/05/2023	19:19:12	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(500)	5ms
-24/05/2023	19:20:21	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(500)	11ms
-20230524	19:20:51	a4c1d143-6923-411a-97e1-80b8037457a3	GET	http://localhost:5173	/register/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw
-24/05/2023	19:21:57	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	12ms
-20230524	19:22:22	0df25c12-0b78-4409-b666-0aa4452ae4ec	GET	http://localhost:5173	/register/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw
-24/05/2023	19:22:50	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	15ms
-24/05/2023	19:28:12	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	12ms
-24/05/2023	19:29:13	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	15ms
-24/05/2023	19:30:00	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	13ms
-24/05/2023	19:32:12	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	12ms
-24/05/2023	19:32:42	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	11ms
-24/05/2023	19:32:57	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	9ms
-24/05/2023	19:32:58	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	52ms
-24/05/2023	19:32:58	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	19:32:58	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	19:33:03	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	19:33:03	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	11ms
-24/05/2023	19:33:04	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	19:33:04	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	19:33:04	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	5ms
-24/05/2023	19:42:45	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJRd1kvcElVLzJzR2F6bGdLWWphZkV1OTJEM0lYanUvYnNCWk16ak4vLmt1cFdFb0g3RXhBeSIsInBzZXVkbyI6ImNjY2NjYyIsImZpcnN0bmFtZSI6ImFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYiIsImlhdCI6MTY4NDk0MDcyNywiZXhwIjoxNjg0OTQ0MzI3fQ.NEBqwOReIBx6vmEFenJmLBOv1fQh1NPwuhOxlVswZzw	Body:[{}]	(401)	12ms
-24/05/2023	19:44:16	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null]	(200)	6ms
-24/05/2023	19:44:16	::1	GET	http://localhost:5173	/6	Body:[{}]	(304)	65ms
-24/05/2023	19:44:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
-24/05/2023	19:44:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	19:44:17	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
-24/05/2023	19:44:18	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	16ms
-24/05/2023	19:44:19	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
-24/05/2023	19:44:19	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	86ms
-24/05/2023	19:44:19	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	19:44:21	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	7ms
-24/05/2023	19:44:59	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	0ms
-24/05/2023	19:44:59	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	10ms
-24/05/2023	19:46:43	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	4ms
-24/05/2023	19:46:43	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	49ms
-24/05/2023	19:47:05	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:47:05	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	11ms
-24/05/2023	19:47:20	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:47:20	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	9ms
-24/05/2023	19:54:25	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	4ms
-24/05/2023	19:54:25	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	44ms
-24/05/2023	19:54:30	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	11ms
-24/05/2023	19:54:47	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:54:47	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	7ms
-24/05/2023	19:56:01	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	5ms
-24/05/2023	19:56:01	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	43ms
-24/05/2023	19:56:45	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:56:45	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	7ms
-24/05/2023	19:57:23	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	4ms
-24/05/2023	19:57:23	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	44ms
-24/05/2023	19:57:23	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	19:57:24	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	1086ms
-24/05/2023	19:58:59	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:58:59	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	10ms
-24/05/2023	19:58:59	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	19:59:00	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	566ms
-24/05/2023	19:59:05	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	19:59:05	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	9ms
-24/05/2023	19:59:05	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	19:59:05	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	586ms
-24/05/2023	19:59:21	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	4ms
-24/05/2023	19:59:21	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	47ms
-24/05/2023	20:01:52	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:01:52	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	10ms
-24/05/2023	20:01:57	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:01:57	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	6ms
-24/05/2023	20:01:57	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:01:58	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	670ms
-24/05/2023	20:03:28	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	8ms
-24/05/2023	20:03:28	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:03:28	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:03:28	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:04:13	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:04:13	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:04:13	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:04:13	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:04:37	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:04:37	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:04:38	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:04:38	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:04:39	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
-24/05/2023	20:04:39	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	90ms
-24/05/2023	20:04:39	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
-24/05/2023	20:04:50	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	7ms
-24/05/2023	20:04:50	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:04:50	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	20:04:50	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:05:20	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	20:05:20	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
-24/05/2023	20:05:21	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	5ms
-24/05/2023	20:05:21	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
-24/05/2023	20:05:22	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	20:05:22	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:05:23	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	5ms
-24/05/2023	20:05:23	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:05:24	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	0ms
-24/05/2023	20:05:24	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	6ms
-24/05/2023	20:05:26	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
-24/05/2023	20:05:26	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	90ms
-24/05/2023	20:05:26	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
-24/05/2023	20:05:33	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	6ms
-24/05/2023	20:05:33	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	20:05:34	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	5ms
-24/05/2023	20:05:34	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:05:44	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	7ms
-24/05/2023	20:05:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	20:05:45	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	20:05:45	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
-24/05/2023	20:05:46	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	20:05:46	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
-24/05/2023	20:05:47	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
-24/05/2023	20:05:47	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	6ms
-24/05/2023	20:05:58	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:05:58	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:05:58	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:05:58	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:05:59	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
-24/05/2023	20:05:59	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	85ms
-24/05/2023	20:05:59	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	20:06:05	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
-24/05/2023	20:06:05	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	5ms
-24/05/2023	20:06:16	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:06:16	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	9ms
-24/05/2023	20:06:27	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:06:27	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:06:27	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:06:27	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:06:28	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
-24/05/2023	20:06:28	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	80ms
-24/05/2023	20:06:28	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
-24/05/2023	20:06:32	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
-24/05/2023	20:06:32	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	7ms
-24/05/2023	20:06:40	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:06:40	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	7ms
-24/05/2023	20:07:04	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:07:04	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	7ms
-24/05/2023	20:07:04	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:07:04	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"Secut","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	655ms
-24/05/2023	20:08:29	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
-24/05/2023	20:08:29	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"Secute","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	7ms
-24/05/2023	20:08:29	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:08:29	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaa","lastname":"bbbbbbb","pseudo":"Secute","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	627ms
-24/05/2023	20:15:40	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	5ms
-24/05/2023	20:15:40	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaa","lastname":"bbbbbbb","pseudo":"Secuto","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	50ms
-24/05/2023	20:15:40	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:15:40	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaa","lastname":"bbbbbbb","pseudo":"Secuto","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	792ms
-24/05/2023	20:38:36	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	3ms
-24/05/2023	20:38:36	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaa","lastname":"bbbbbbb","pseudo":"Secuto","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	50ms
-24/05/2023	20:38:36	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:38:37	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaa","lastname":"bbbbbbb","pseudo":"Secuto","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	856ms
-24/05/2023	20:38:56	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	9ms
-24/05/2023	20:38:56	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:41:13	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(500)	12ms
-24/05/2023	20:41:24	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(500)	7ms
-24/05/2023	20:42:19	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(200)	52ms
-24/05/2023	20:43:10	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(304)	43ms
-24/05/2023	20:47:08	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	15ms
-24/05/2023	20:47:09	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	7ms
-24/05/2023	20:47:09	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:47:09	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:47:10	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(304)	37ms
-24/05/2023	20:49:18	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(204)	42ms
-24/05/2023	20:50:17	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	14ms
-24/05/2023	20:50:17	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	7ms
-24/05/2023	20:50:20	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(204)	47ms
-24/05/2023	20:50:40	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	17ms
-24/05/2023	20:50:40	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	9ms
-24/05/2023	20:50:41	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(201)	40ms
-24/05/2023	20:52:02	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	16ms
-24/05/2023	20:52:02	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:52:03	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	37ms
-24/05/2023	20:52:53	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	22ms
-24/05/2023	20:52:53	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	7ms
-24/05/2023	20:52:54	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	39ms
-24/05/2023	20:55:31	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	15ms
-24/05/2023	20:55:32	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	20:55:33	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	35ms
-24/05/2023	20:56:46	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	14ms
-24/05/2023	20:56:46	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	7ms
-24/05/2023	20:56:47	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	47ms
-24/05/2023	20:56:53	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	7ms
-24/05/2023	20:57:40	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	0ms
-24/05/2023	20:57:40	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbbbb","pseudo":"Bobby","email":"maxence.allart@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	22ms
-24/05/2023	20:57:40	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	1ms
-24/05/2023	20:57:41	::1	POST	http://localhost:5173	/	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbbbb","pseudo":"Bobby","email":"maxence.allart@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	697ms
-24/05/2023	20:58:01	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
-24/05/2023	20:58:01	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	20:58:23	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGVuY2UuYWxsYXJ0QGdtYWlsLmNvbSIsImhhc2hlZFBhc3N3b3JkIjoicXUwalFDekI4aGgvVThpRklSbHN3T3JqempFbzZtTS41ODRqNHUvTXJKSzFLUUwxeHZLVmkiLCJwc2V1ZG8iOiJCb2JieSIsImZpcnN0bmFtZSI6ImFhYWFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYmJiYmIiLCJpYXQiOjE2ODQ5NTQ2NjAsImV4cCI6MTY4NDk1ODI2MH0.og2MyqPYllX9DdspNQTwQfQMrzedFi6lHa0YJHFvMsM	Body:[{}]	(200)	14ms
-24/05/2023	21:03:01	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	8ms
-24/05/2023	21:03:01	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	21:03:02	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGVuY2UuYWxsYXJ0QGdtYWlsLmNvbSIsImhhc2hlZFBhc3N3b3JkIjoicXUwalFDekI4aGgvVThpRklSbHN3T3JqempFbzZtTS41ODRqNHUvTXJKSzFLUUwxeHZLVmkiLCJwc2V1ZG8iOiJCb2JieSIsImZpcnN0bmFtZSI6ImFhYWFhYWFhYWEiLCJsYXN0bmFtZSI6ImJiYmJiYmJiYmIiLCJpYXQiOjE2ODQ5NTQ2NjAsImV4cCI6MTY4NDk1ODI2MH0.og2MyqPYllX9DdspNQTwQfQMrzedFi6lHa0YJHFvMsM	Body:[{}]	(406)	7ms
-24/05/2023	21:03:27	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	0ms
-24/05/2023	21:03:27	::1	POST	http://localhost:5173	/	Body:[{"email":"maxence.allart@gmail.com","password":"*** MASKED ***"}]	(200)	84ms
-24/05/2023	21:03:32	::1	OPTIONS	http://localhost:5173	/customer/14	Body:[null]	(200)	1ms
-24/05/2023	21:03:32	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	25ms
-24/05/2023	21:03:33	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	8ms
-24/05/2023	21:03:33	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	6ms
-24/05/2023	21:03:36	::1	OPTIONS	http://localhost:5173	/favorite/14	Body:[null]	(200)	1ms
-24/05/2023	21:03:36	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	26ms
-24/05/2023	21:03:37	::1	OPTIONS	http://localhost:5173	/comments/14	Body:[null]	(200)	1ms
-24/05/2023	21:03:37	::1	GET	http://localhost:5173	/14	Body:[{}]	(204)	30ms
-24/05/2023	21:03:37	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	7ms
-24/05/2023	21:03:37	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	6ms
-24/05/2023	21:03:39	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null]	(200)	1ms
-24/05/2023	21:03:39	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	8ms
-24/05/2023	21:03:39	::1	OPTIONS	http://localhost:5173	/compare/gpu	Body:[null]	(200)	1ms
-24/05/2023	21:03:40	::1	GET	http://localhost:5173	/gpu	Body:[{}]	(200)	509ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/favorite/14/2	Body:[null]	(200)	0ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/compare/sha/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/compare/historique/2	Body:[null]	(200)	0ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/compare/comments/2	Body:[null]	(200)	0ms
-24/05/2023	21:03:41	::1	OPTIONS	http://localhost:5173	/compare/seller/2	Body:[null]	(200)	0ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/product/gpu/2	Body:[{}]	(200)	36ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/sha/2	Body:[{}]	(200)	42ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/historique/2	Body:[{}]	(200)	50ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/seller/2	Body:[{}]	(200)	56ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/comments/2	Body:[{}]	(200)	64ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/14/2	Body:[{}]	(204)	74ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	6ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/960	Body:[{}]	(204)	15ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/816	Body:[{}]	(204)	16ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	19ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	28ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	13ms
-24/05/2023	21:03:41	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	15ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/comments/	Body:[null]	(200)	1ms
-24/05/2023	21:03:49	::1	PUT	http://localhost:5173	/	Body:[{"Id_article":"2","Id_customer":14,"content":"Le top !!!!!!!","note":4}]	(200)	17ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/compare/comments/2	Body:[null]	(200)	0ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/compare/sha/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/compare/historique/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:49	::1	OPTIONS	http://localhost:5173	/compare/seller/2	Body:[null]	(200)	1ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/comments/2	Body:[{}]	(200)	18ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/product/gpu/2	Body:[{}]	(200)	27ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/sha/2	Body:[{}]	(304)	25ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/historique/2	Body:[{}]	(304)	30ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/seller/2	Body:[{}]	(304)	37ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	8ms
-24/05/2023	21:03:49	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	8ms
-24/05/2023	21:03:53	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	6ms
-24/05/2023	21:03:53	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	7ms
-24/05/2023	21:04:03	::1	POST	http://localhost:5173	/upload/14	Body:[{}]	(200)	23ms
-24/05/2023	21:04:06	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	6ms
-24/05/2023	21:04:06	::1	OPTIONS	http://localhost:5173	/customer/14	Body:[null]	(200)	1ms
-24/05/2023	21:04:06	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	27ms
-24/05/2023	21:04:06	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	8ms
-24/05/2023	21:04:06	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(200)	24ms
-24/05/2023	21:04:09	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
-24/05/2023	21:04:09	::1	GET	http://localhost:5173	/14	Body:[{}]	(304)	26ms
-24/05/2023	21:04:09	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:04:09	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	10ms
-24/05/2023	21:04:11	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
-24/05/2023	21:04:11	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	6ms
-24/05/2023	21:04:19	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	0ms
-24/05/2023	21:04:19	::1	POST	http://localhost:5173	/	Body:[{"email":"maxence.allart@gmail.com","password":"*** MASKED ***"}]	(200)	85ms
-24/05/2023	21:04:19	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	6ms
-24/05/2023	21:05:09	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	10ms
-24/05/2023	21:05:09	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	8ms
-24/05/2023	21:05:10	::1	OPTIONS	http://localhost:5173	/favorite/14	Body:[null]	(200)	1ms
-24/05/2023	21:05:10	::1	GET	http://localhost:5173	/14	Body:[{}]	(304)	18ms
-24/05/2023	21:05:11	::1	OPTIONS	http://localhost:5173	/comments/14	Body:[null]	(200)	1ms
-24/05/2023	21:05:11	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	22ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/favorite/14/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/compare/seller/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/compare/historique/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/compare/sha/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	OPTIONS	http://localhost:5173	/compare/comments/2	Body:[null]	(200)	1ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/product/gpu/2	Body:[{}]	(304)	43ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/sha/2	Body:[{}]	(304)	28ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/historique/2	Body:[{}]	(304)	32ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/seller/2	Body:[{}]	(304)	37ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/14/2	Body:[{}]	(204)	61ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/comments/2	Body:[{}]	(304)	41ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	8ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/download/960	Body:[{}]	(204)	11ms
-24/05/2023	21:05:12	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	13ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/816	Body:[{}]	(204)	9ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	16ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	18ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	13ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:05:13	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	11ms
-24/05/2023	21:05:15	::1	OPTIONS	http://localhost:5173	/favorite/14	Body:[null]	(200)	1ms
-24/05/2023	21:05:15	::1	PUT	http://localhost:5173	/14	Body:[{"Id_article_to_find":"2"}]	(200)	21ms
-24/05/2023	21:05:15	::1	GET	http://localhost:5173	/14/2	Body:[{}]	(200)	18ms
-24/05/2023	21:05:19	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}]	(304)	14ms
-24/05/2023	21:05:32	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}]	(304)	11ms
-24/05/2023	21:18:01	::ffff:127.0.0.1	GET	undefined	/comparer	Body:[{}]	(404)	10ms
-24/05/2023	21:19:16	::1	OPTIONS	http://localhost:5173	/customer/14	Body:[null]	(200)	1ms
-24/05/2023	21:19:16	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	66ms
-24/05/2023	21:19:16	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	9ms
-24/05/2023	21:19:16	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	11ms
-24/05/2023	21:19:21	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiI4cFRSSU51Z3hRNGVzem5nVGFlTHZ1d0liWEhSUTlGeHBGeGpmakdDZkJVS3FwcVR4WWFydSIsInBzZXVkbyI6IlNlY3V0byIsImZpcnN0bmFtZSI6ImFhYWFhYSIsImxhc3RuYW1lIjoiYmJiYmJiYiIsImlhdCI6MTY4NDk1MzUxNiwiZXhwIjoxNjg0OTU3MTE2fQ.BC7RVnqYCTmhEpUsCLEmnDKG4kqJl2Q3ANm5zW8aKrc	Body:[{}]	(406)	8ms
-24/05/2023	21:19:51	::1	OPTIONS	http://localhost:5173	/customer/14	Body:[null]	(200)	2ms
-24/05/2023	21:19:51	::1	GET	http://localhost:5173	/14	Body:[{}]	(304)	21ms
-24/05/2023	21:19:51	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:19:51	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:19:55	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	9ms
-24/05/2023	21:19:55	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	25ms
-24/05/2023	21:19:55	::1	GET	http://localhost:5173	/14	Body:[{}]	(304)	32ms
-24/05/2023	21:19:55	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:19:55	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	6ms
-24/05/2023	21:19:57	::1	OPTIONS	http://localhost:5173	/favorite/14	Body:[null]	(200)	1ms
-24/05/2023	21:19:57	::1	GET	http://localhost:5173	/14	Body:[{}]	(200)	30ms
-24/05/2023	21:19:57	::1	OPTIONS	http://localhost:5173	/comments/14	Body:[null]	(200)	1ms
-24/05/2023	21:19:57	::1	GET	http://localhost:5173	/14	Body:[{}]	(304)	26ms
-24/05/2023	21:19:58	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	8ms
-24/05/2023	21:19:58	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(304)	7ms
-24/05/2023	21:20:01	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	0ms
-24/05/2023	21:20:01	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	23ms
-24/05/2023	21:20:02	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	0ms
-24/05/2023	21:20:02	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	89ms
-24/05/2023	21:20:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
-24/05/2023	21:20:06	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null]	(200)	1ms
-24/05/2023	21:20:06	::1	GET	http://localhost:5173	/6	Body:[{}]	(200)	23ms
-24/05/2023	21:20:06	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	5ms
-24/05/2023	21:20:06	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
-24/05/2023	21:20:14	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}]	(304)	14ms
-24/05/2023	21:20:15	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
-24/05/2023	21:20:15	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	17ms
-24/05/2023	21:20:31	::1	GET	http://localhost:5173	/?signal=[object+AbortSignal]	Body:[{}]	(304)	10ms
-24/05/2023	21:20:33	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
-24/05/2023	21:20:33	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
-24/05/2023	21:20:38	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	0ms
-24/05/2023	21:20:38	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	7ms
-24/05/2023	21:20:52	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:20:52	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(500)	10ms
-24/05/2023	21:21:48	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	4ms
-24/05/2023	21:21:49	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(200)	827ms
-24/05/2023	21:24:23	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	3ms
-24/05/2023	21:24:24	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(200)	597ms
-24/05/2023	21:25:58	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:25:59	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(200)	556ms
-24/05/2023	21:26:39	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:26:40	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(200)	578ms
-24/05/2023	21:26:52	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	0ms
-24/05/2023	21:26:52	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(401)	6ms
-24/05/2023	21:27:21	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:27:21	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(401)	5ms
-24/05/2023	21:27:48	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:27:48	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(401)	6ms
-24/05/2023	21:28:40	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	3ms
-24/05/2023	21:28:40	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(401)	45ms
-24/05/2023	21:29:08	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	8ms
-24/05/2023	21:29:08	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	21:29:12	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	21:29:12	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	6ms
-24/05/2023	21:29:15	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	21:29:15	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	21:29:18	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	21:29:18	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
-24/05/2023	21:29:35	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:29:35	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(401)	6ms
-24/05/2023	21:30:16	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	3ms
-24/05/2023	21:30:16	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(500)	44ms
-24/05/2023	21:31:06	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:31:07	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com"}]	(200)	585ms
-24/05/2023	21:31:58	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:31:58	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(500)	8ms
-24/05/2023	21:33:54	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	4ms
-24/05/2023	21:33:54	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(200)	44ms
-24/05/2023	21:33:59	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:33:59	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(200)	8ms
-24/05/2023	21:35:25	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	3ms
-24/05/2023	21:35:25	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.comz"}]	(200)	40ms
-24/05/2023	21:35:43	::1	OPTIONS	http://localhost:5173	/reset	Body:[null]	(200)	1ms
-24/05/2023	21:35:44	::1	POST	http://localhost:5173	/	Body:[{"email":"maxence.allart@gmail.com"}]	(200)	596ms
+24/05/2023	23:28:38	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJoODBBMVZ3Zm9WOS9obzNhdkI2QVMuTWJPd0dOVGZVLkpNT0Vla1BDcnA2d05SdE5PWEgwYSIsInBzZXVkbyI6IlNlY3V0emUiLCJmaXJzdG5hbWUiOiJhYWFhYWFhYWFhIiwibGFzdG5hbWUiOiJiYmJiYmJiYmIiLCJpYXQiOjE2ODQ5NjM2NTgsImV4cCI6MTY4NDk2NzI1OH0.2InfMUU_ty647ti1edp8hefGOGklMKCT20bY5a40fqM	Body:[{}]	(406)	10ms
+24/05/2023	23:28:54	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heG9hNTlAZ21haWwuY29tIiwiaGFzaGVkUGFzc3dvcmQiOiJoODBBMVZ3Zm9WOS9obzNhdkI2QVMuTWJPd0dOVGZVLkpNT0Vla1BDcnA2d05SdE5PWEgwYSIsInBzZXVkbyI6IlNlY3V0emUiLCJmaXJzdG5hbWUiOiJhYWFhYWFhYWFhIiwibGFzdG5hbWUiOiJiYmJiYmJiYmIiLCJpYXQiOjE2ODQ5NjM2NTgsImV4cCI6MTY4NDk2NzI1OH0.2InfMUU_ty647ti1edp8hefGOGklMKCT20bY5a40fqM	Body:[{}]	(406)	8ms
+24/05/2023	23:29:51	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	1ms
+24/05/2023	23:29:51	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"azerty","lastname":"qsdfg","pseudo":"Billy","email":"maxence.allart@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	9ms
+24/05/2023	23:29:51	::1	OPTIONS	http://localhost:5173	/register	Body:[null]	(200)	0ms
+24/05/2023	23:29:51	::1	POST	http://localhost:5173	/	Body:[{"firstname":"azerty","lastname":"qsdfg","pseudo":"Billy","email":"maxence.allart@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	587ms
+24/05/2023	23:30:07	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
+24/05/2023	23:30:07	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	5ms
+24/05/2023	23:30:12	::1	GET	http://localhost:5173	/verify?eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Im1heGVuY2UuYWxsYXJ0QGdtYWlsLmNvbSIsImhhc2hlZFBhc3N3b3JkIjoiZ0NuU1RxbnpHT1pmdTRta3ZhRFVtdVMveWdyS3BNajFEVndySndISXRML1lGZ2hrd2RiVGkiLCJwc2V1ZG8iOiJCaWxseSIsImZpcnN0bmFtZSI6ImF6ZXJ0eSIsImxhc3RuYW1lIjoicXNkZmciLCJpYXQiOjE2ODQ5NjM3OTEsImV4cCI6MTY4NDk2NzM5MX0.Xs3JxNnx_kBmBIy334iWmLvCBy2Mn-fwdrgKvzc_KaI	Body:[{}]	(200)	15ms
+24/05/2023	23:34:58	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	6ms
+24/05/2023	23:34:58	::1	POST	http://localhost:5173	/register/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(500)	22ms
+24/05/2023	23:35:59	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	3ms
+24/05/2023	23:35:59	::1	POST	http://localhost:5173	/register/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(500)	18ms
+24/05/2023	23:42:10	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	5ms
+24/05/2023	23:42:10	::1	POST	http://localhost:5173	/register/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(500)	22ms
+24/05/2023	23:42:26	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	4ms
+24/05/2023	23:42:26	::1	POST	http://localhost:5173	/register/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(500)	18ms
+24/05/2023	23:45:41	::1	OPTIONS	http://localhost:5173	/register/pseudo	Body:[null]	(200)	5ms
+24/05/2023	23:45:41	::1	POST	http://localhost:5173	/pseudo	Body:[{"firstname":"aaaaaaaaaa","lastname":"bbbbbbbb","pseudo":"Secu","email":"maxoa59@gmail.com","password":"*** MASKED ***","password2":"*** MASKED ***"}]	(200)	51ms
+24/05/2023	23:51:56	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	4ms
+24/05/2023	23:51:57	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"aaaaaa","email":"maxoa59@gmail.com","subject":"1234","message":"azerty"}]	(200)	821ms
+24/05/2023	23:52:06	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:52:06	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"aaaaaaaaa","email":"maxoa59@gmail.com","subject":"azererrt","message":"1234"}]	(429)	2ms
+24/05/2023	23:53:47	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	4ms
+24/05/2023	23:53:48	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(200)	507ms
+24/05/2023	23:53:50	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:54:05	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:54:05	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	1ms
+24/05/2023	23:54:11	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:54:11	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:54:15	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	3ms
+24/05/2023	23:54:23	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:54:23	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	1ms
+24/05/2023	23:54:41	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	0ms
+24/05/2023	23:54:41	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:55:23	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:55:23	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	1ms
+24/05/2023	23:56:07	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	4ms
+24/05/2023	23:56:08	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(200)	606ms
+24/05/2023	23:56:10	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:57:16	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	0ms
+24/05/2023	23:57:16	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:57:24	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	0ms
+24/05/2023	23:57:24	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+24/05/2023	23:58:22	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+24/05/2023	23:58:22	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+25/05/2023	00:01:48	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	1ms
+25/05/2023	00:01:48	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(429)	2ms
+25/05/2023	00:02:16	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	4ms
+25/05/2023	00:02:16	::1	POST	http://localhost:5173	/about/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(500)	18ms
+25/05/2023	00:04:43	::1	OPTIONS	http://localhost:5173	/about/contactme	Body:[null]	(200)	5ms
+25/05/2023	00:04:44	::1	POST	http://localhost:5173	/contactme	Body:[{"name":"azerty","email":"maxoa59@gmail.com","subject":"&1243","message":"azeaze"}]	(200)	709ms
+25/05/2023	00:10:29	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	4ms
+25/05/2023	00:10:29	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	128ms
+25/05/2023	00:10:29	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	11ms
+25/05/2023	00:10:31	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null]	(200)	1ms
+25/05/2023	00:10:31	::1	GET	http://localhost:5173	/6	Body:[{}]	(200)	30ms
+25/05/2023	00:10:31	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:10:31	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
+25/05/2023	00:10:33	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null]	(200)	1ms
+25/05/2023	00:10:33	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	41ms
+25/05/2023	00:10:33	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null]	(200)	1ms
+25/05/2023	00:10:33	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	34ms
+25/05/2023	00:14:04	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	44ms
+25/05/2023	00:14:04	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	11ms
+25/05/2023	00:14:08	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	13ms
+25/05/2023	00:14:08	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(200)	16ms
+25/05/2023	00:14:08	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null]	(200)	2ms
+25/05/2023	00:14:08	::1	GET	http://localhost:5173	/6	Body:[{}]	(200)	36ms
+25/05/2023	00:14:08	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:14:08	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
+25/05/2023	00:14:10	::1	OPTIONS	http://localhost:5173	/alluserdata	Body:[null]	(200)	1ms
+25/05/2023	00:14:10	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	35ms
+25/05/2023	00:14:10	::1	OPTIONS	http://localhost:5173	/allroledata	Body:[null]	(200)	1ms
+25/05/2023	00:14:10	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	22ms
+25/05/2023	00:25:40	::1	OPTIONS	http://localhost:5173	/comments/6	Body:[null]	(200)	4ms
+25/05/2023	00:25:40	::1	GET	http://localhost:5173	/6	Body:[{}]	(200)	100ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null]	(200)	2ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null]	(200)	2ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:41	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}]	(200)	60ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/sha/1	Body:[{}]	(200)	77ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/6/1	Body:[{}]	(200)	102ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/seller/1	Body:[{}]	(200)	83ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/historique/1	Body:[{}]	(200)	127ms
+25/05/2023	00:25:41	::1	GET	http://localhost:5173	/comments/1	Body:[{}]	(200)	161ms
+25/05/2023	00:25:42	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	20ms
+25/05/2023	00:25:42	::1	GET	http://localhost:5173	/download/8	Body:[{}]	(204)	14ms
+25/05/2023	00:25:42	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
+25/05/2023	00:25:42	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	12ms
+25/05/2023	00:25:42	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/comments/22	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	PATCH	http://localhost:5173	/22	Body:[{"Id_customer":6,"content":"This GPU is amazing! I was able to play all my favorite games at max settings with no issues. GREAT ! Really!!!!","note":5}]	(200)	32ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null]	(200)	1ms
+25/05/2023	00:25:47	::1	GET	http://localhost:5173	/comments/1	Body:[{}]	(200)	21ms
+25/05/2023	00:25:47	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}]	(200)	32ms
+25/05/2023	00:25:47	::1	GET	http://localhost:5173	/historique/1	Body:[{}]	(304)	70ms
+25/05/2023	00:25:47	::1	GET	http://localhost:5173	/sha/1	Body:[{}]	(304)	95ms
+25/05/2023	00:25:47	::1	GET	http://localhost:5173	/seller/1	Body:[{}]	(304)	105ms
+25/05/2023	00:28:01	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	22ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/favorite/undefined/1	Body:[null]	(200)	3ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null]	(200)	4ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null]	(200)	8ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null]	(200)	3ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:01	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null]	(200)	2ms
+25/05/2023	00:28:02	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/comments/1	Body:[{}]	(304)	137ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/sha/1	Body:[{}]	(304)	204ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/seller/1	Body:[{}]	(304)	248ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/historique/1	Body:[{}]	(304)	331ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}]	(304)	388ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/undefined/1	Body:[{}]	(204)	427ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	238ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/6/1	Body:[{}]	(304)	244ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/8	Body:[{}]	(204)	9ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	12ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:28:02	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/favorite/undefined/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/compare/sha/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/compare/historique/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/compare/comments/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/	Body:[{}]	(204)	4ms
+25/05/2023	00:28:15	::1	OPTIONS	http://localhost:5173	/compare/seller/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/product/gpu/1	Body:[{}]	(304)	45ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/sha/1	Body:[{}]	(304)	61ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/historique/1	Body:[{}]	(304)	112ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/undefined/1	Body:[{}]	(204)	137ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/seller/1	Body:[{}]	(304)	147ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/comments/1	Body:[{}]	(304)	230ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	257ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	14ms
+25/05/2023	00:28:15	::1	GET	http://localhost:5173	/download/8	Body:[{}]	(204)	12ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	6ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
+25/05/2023	00:28:16	::1	OPTIONS	http://localhost:5173	/favorite/6/1	Body:[null]	(200)	1ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/6/1	Body:[{}]	(304)	18ms
+25/05/2023	00:28:16	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	10ms
+25/05/2023	00:28:28	::1	OPTIONS	http://localhost:5173	/customer/6	Body:[null]	(200)	0ms
+25/05/2023	00:28:28	::1	GET	http://localhost:5173	/6	Body:[{}]	(200)	26ms
+25/05/2023	00:28:28	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	5ms
+25/05/2023	00:28:28	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:28:29	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	25ms
+25/05/2023	00:28:29	::1	GET	http://localhost:5173	/6	Body:[{}]	(304)	27ms
+25/05/2023	00:28:29	::1	GET	http://localhost:5173	/	Body:[{}]	(304)	6ms
+25/05/2023	00:28:30	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:28:30	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	13ms
+25/05/2023	00:32:11	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	3ms
+25/05/2023	00:32:11	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	21ms
+25/05/2023	00:32:12	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	1ms
+25/05/2023	00:32:12	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	133ms
+25/05/2023	00:32:12	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	13ms
+25/05/2023	00:32:15	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	8ms
+25/05/2023	00:34:30	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	3ms
+25/05/2023	00:34:30	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	125ms
+25/05/2023	00:34:30	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	12ms
+25/05/2023	00:34:33	::1	OPTIONS	http://localhost:5173	/login/logout	Body:[null]	(200)	1ms
+25/05/2023	00:34:33	::1	POST	http://localhost:5173	/logout	Body:[{}]	(200)	10ms
+25/05/2023	00:46:38	::1	OPTIONS	http://localhost:5173	/login	Body:[null]	(200)	6ms
+25/05/2023	00:46:38	::1	POST	http://localhost:5173	/	Body:[{"email":"maxoa59@gmail.com","password":"*** MASKED ***"}]	(200)	171ms
+25/05/2023	00:46:38	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	15ms
+25/05/2023	00:46:41	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null]	(200)	1ms
+25/05/2023	00:46:41	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	12ms
+25/05/2023	00:46:42	::1	OPTIONS	http://localhost:5173	/compare/gpu	Body:[null]	(200)	1ms
+25/05/2023	00:46:42	::1	GET	http://localhost:5173	/gpu	Body:[{}]	(200)	537ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/favorite/6/2	Body:[null]	(200)	0ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/2	Body:[null]	(200)	1ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/compare/sha/2	Body:[null]	(200)	0ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/compare/historique/2	Body:[null]	(200)	1ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/compare/seller/2	Body:[null]	(200)	0ms
+25/05/2023	00:46:44	::1	OPTIONS	http://localhost:5173	/compare/comments/2	Body:[null]	(200)	1ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/product/gpu/2	Body:[{}]	(200)	52ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/sha/2	Body:[{}]	(200)	86ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/historique/2	Body:[{}]	(200)	101ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/seller/2	Body:[{}]	(200)	110ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/comments/2	Body:[{}]	(200)	108ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/6/2	Body:[{}]	(200)	152ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	29ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	34ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/960	Body:[{}]	(204)	21ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/816	Body:[{}]	(204)	19ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	18ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	6ms
+25/05/2023	00:46:44	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	11ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	22ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/favorite/undefined/2	Body:[null]	(200)	2ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/compare/product/gpu/2	Body:[null]	(200)	1ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/compare/sha/2	Body:[null]	(200)	2ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/compare/historique/2	Body:[null]	(200)	1ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/compare/seller/2	Body:[null]	(200)	1ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/compare/comments/2	Body:[null]	(200)	1ms
+25/05/2023	00:48:36	::1	OPTIONS	http://localhost:5173	/favorite/6/2	Body:[null]	(200)	1ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/sha/2	Body:[{}]	(200)	157ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/historique/2	Body:[{}]	(200)	164ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/product/gpu/2	Body:[{}]	(200)	211ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/seller/2	Body:[{}]	(200)	191ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/undefined/2	Body:[{}]	(204)	287ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/comments/2	Body:[{}]	(200)	226ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/6/2	Body:[{}]	(200)	182ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(200)	244ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/14	Body:[{}]	(204)	13ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	16ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/960	Body:[{}]	(204)	14ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/816	Body:[{}]	(204)	18ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	20ms
+25/05/2023	00:48:36	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
+25/05/2023	00:48:37	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	7ms
+25/05/2023	00:48:37	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
+25/05/2023	00:48:37	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	8ms
+25/05/2023	00:48:40	::1	OPTIONS	http://localhost:5173	/dropdownmenu	Body:[null]	(200)	1ms
+25/05/2023	00:48:40	::1	GET	http://localhost:5173	/	Body:[{}]	(200)	9ms
+25/05/2023	00:48:41	::1	OPTIONS	http://localhost:5173	/compare/cpu	Body:[null]	(200)	1ms
+25/05/2023	00:48:41	::1	GET	http://localhost:5173	/cpu	Body:[{}]	(200)	77ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/favorite/6/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/compare/product/cpu/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/compare/sha/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/compare/seller/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/compare/historique/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:42	::1	OPTIONS	http://localhost:5173	/compare/comments/168	Body:[null]	(200)	1ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/product/cpu/168	Body:[{}]	(200)	34ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/sha/168	Body:[{}]	(200)	39ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/historique/168	Body:[{}]	(200)	45ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/seller/168	Body:[{}]	(200)	61ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/comments/168	Body:[{}]	(200)	65ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/6/168	Body:[{}]	(204)	101ms
+25/05/2023	00:48:43	::1	GET	http://localhost:5173	/download/6	Body:[{}]	(304)	9ms
