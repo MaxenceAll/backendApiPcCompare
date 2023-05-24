@@ -16,7 +16,50 @@ async function resetPassword(req, res) {
       const { id, email } = user;
       const data = { id, email };
       const token = jwt.sign(data, process.env.JWT_SECRET, { expiresIn: '1h' });
-      const html = `Pour renouveler votre mot de passe, cliquez sur ce lien <a href="${config.FRONTEND.URL}reset?t=${token}">Nouveau mot de passe</a>`;
+      const html = `
+      <!DOCTYPE html>
+      <html>
+      <head>
+        <meta charset="UTF-8">
+        <title>Vérification de votre compte ${process.env.APP_NAME}</title>
+        <style>
+          body{
+              padding: 5%;
+              background-color: #46465C;
+              color: white;
+          }
+          @media (prefers-color-scheme: dark) {
+              body {
+              background-color: #46465C;
+              color: white;
+              }
+          @media (prefers-color-scheme: light) {
+              body {
+              background-color: white;
+              color: black;
+              }
+      
+        </style>
+      </head>
+      <body>
+      <header>
+      <h1>${process.env.APP_NAME} !</h1>
+      </header>
+      <main>
+        <h2>Vérification de votre compte ${process.env.APP_NAME}</h2>
+        <p>Merci de votre inscription sur ${process.env.APP_NAME}.</p>
+        <p>Pour valider votre compte vous devez cliquer sur le bouton suivant :</p>
+        <p><button><a href="${config.FRONTEND.URL}verify?t=${token}">Vérifier mon compte</button></a></p>
+        <small>
+        <i>Si vous n'avez pas fait d'inscription sur notre site ou si vous avez déjà un compte, vous pouvez ignorer ce mail. N'hésitez pas à nous faire part de tout abus directement via notre rubrique APropos sur notre site.</i>
+        </small>
+      </main>
+      <footer>
+      ${process.env.APP_NAME}© Tout droits réservés.
+      </footer>
+      </body>
+      </html>
+      `;
       const mailParams = {
         to: email,
         subject: "Nouveau mot de passe demandé pour PCCompare",
@@ -24,14 +67,15 @@ async function resetPassword(req, res) {
       };
       const mailResult = await mailer.send(mailParams);
       consolelog(`!! Retour du mailer :`,mailResult);
-      res.status(200).json({data: mailResult, result: true, message: `Mail de réinitialisation de mot passe envoyé avec succès.`});
+      return res.status(200).json({ result: true, message: `Envoi d'un e-mail de récupération de mot passe à votre adresse : ${email} ; vérifiez votre boite mail ! Vous avez 10 minutes pour ré-initialiser votre mot de passe.`});
     } else {
+      // Précisions en log mais retour au client neutre.
       consolelog(`XX Aucun compte avec l'email ${email} !`)
-      res.status(401).json({ data: null, result: false, message: "Erreur lors de la récupération de mot de passe." });
+      return res.status(200).json({ result: true, message: `Envoi d'un e-mail de récupération de mot passe à votre adresse : ${email} ; vérifiez votre boite mail ! Vous avez 10 minutes pour ré-initialiser votre mot de passe.`});
     }
   } catch (error) {
     consolelog(`XX Erreur dans resetPassword :`,error)
-    res.status(500).json({ data: null, result: false, message: "Erreur lors de la récupération de mot de passe." });
+    return res.status(500).json({ message: "Erreur lors de la récupération de mot de passe.", error: error.message});
   }
 }
 

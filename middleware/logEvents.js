@@ -3,8 +3,10 @@ const { v4: uuid } = require("uuid");
 const fs = require("fs");
 const fsPromises = require("fs").promises;
 const path = require("path");
+const consolelog = require("../Tools/consolelog");
 
 const logEvents = async (message, logName) => {
+  // consolelog('Logging event:', message);
   const dateTime = `${format(new Date(), "dd/MM/yyyy\tHH:mm:ss")}`;
   const logItem = `${dateTime}\t${message}\n`;
 
@@ -26,19 +28,16 @@ const sanitizeRequestBody = (body) => {
   if (!body) {
     return null;
   }
-
   const sanitizedBody = { ...body };
-
   for (const key in sanitizedBody) {
     if (sanitizedBody.hasOwnProperty(key) && key.toLowerCase().includes("password")) {
       sanitizedBody[key] = "*** MASKED ***";
     }
   }
-
   return sanitizedBody;
 };
 
-const logger = (req, res, next) => {
+const logger = async (req, res, next) => {
   const ip =
     req.ip ||
     req.connection.remoteAddress ||
@@ -47,12 +46,12 @@ const logger = (req, res, next) => {
 
   const start = Date.now();
 
-  res.on("finish", () => {
+  res.on("finish", async () => {
     const duration = Date.now() - start;
     const sanitizedBody = sanitizeRequestBody(req.body);
 
-    logEvents(
-      `${ip}\t${req.method}\t${req.headers.origin}\t${req.url}\tBody:[${        sanitizedBody ? JSON.stringify(sanitizedBody) : null      }}\t(${res.statusCode})\t${duration}ms`,
+    await logEvents(
+      `${ip}\t${req.method}\t${req.headers.origin}\t${req.url}\tBody:[${sanitizedBody ? JSON.stringify(sanitizedBody) : null}]\t(${res.statusCode})\t${duration}ms`,
       "reqLog.txt"
     );
   });

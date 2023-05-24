@@ -9,8 +9,8 @@ const errorHandler = (err, req, res, next) => {
     // Ajout d'une verif si l'erreur est à cause du RateLimiter
     res.status(429).json({ error: 'Trop de requête !' });
   } else {
-    res.status(500).send(err.message);
   }
+  res.status(500).send(err.message);
 };
 
 module.exports = errorHandler;
