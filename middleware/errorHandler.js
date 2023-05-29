@@ -1,7 +1,7 @@
 const consolelog = require('../Tools/consolelog');
 const { logEvents } = require('./logEvents');
 
-const errorHandler = (err, req, res, next) => {
+const errorHandler = async(err, req, res, next) => {
 
   let messageDeRetour;
   if (res.messageRetour){
@@ -9,10 +9,8 @@ const errorHandler = (err, req, res, next) => {
   } else {
     messageDeRetour = `Erreur interne. (Contactez un administrateur)`
   }
-
-  consolelog("Yo l'erreur attrapée a le nom:",err.name);
-
-  logEvents(`${err.name}: ${err.message} \n${err.stack}`, 'errLog.txt');
+  
+  await logEvents(`${err.name}: ${err.message} \n${err.stack}`, 'errLog.txt');
   
   if (err.name === 'RateLimitError') {
     return res.status(429).json({message: "Erreur interne. (Contactez un administrateur)", error: 'Stop le spam!'});

@@ -25,7 +25,6 @@ app.use(express.json());
 app.use('/', express.static(path.join(__dirname, '/public')));
 // built-in middleware pour parse les cookies
 app.use(cookieParser());
-
 // Custom middleware for limiter le nb de requests Anti timing attack + brute force
 const limiter = require('./Tools/rateLimiter');
 // Customer middleware pour limiter le nombre de mail via le formulaire de contact
@@ -47,8 +46,8 @@ app.use('/refresh', limiter, require(`./routes/${config.API.VERSION}/login/refre
 app.use('/auth', limiter, require(`./routes/${config.API.VERSION}/login/auth`));
 // Debut des routes protégées avec verifyRefreshToken:
 const verifyRefreshToken = require('./middleware/verifyRefreshToken ');
-app.use('/alluserdata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`)); //TODO à refaire
-app.use('/allroledata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`)); //TODO à refaire
+app.use('/alluserdata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allUsersData`));
+app.use('/allroledata', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/allRoleData`));
 app.use('/customer', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/customer`));
 app.use('/account', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/account`));
 app.use('/favorite', limiter,verifyRefreshToken, require(`./routes/${config.API.VERSION}/api/favorite`));
@@ -64,8 +63,6 @@ app.all('*', (req, res) => {
         res.type('txt').send("404 Not Found");
     }
 });
-
-// On place le errorHandler à la fin
 app.use(errorHandler);
 
 app.listen(config.API.PORT, () => {
