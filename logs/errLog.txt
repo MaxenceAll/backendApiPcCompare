@@ -7,3 +7,15 @@ ReferenceError: tata is not defined
     at C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express-rate-limit\dist\index.cjs:244:7
     at process.processTicksAndRejections (node:internal/process/task_queues:95:5)
     at async C:\Users\cQpro Fixe\Desktop\Work\Project File Rouge\v3\newBackendApi\node_modules\express-rate-limit\dist\index.cjs:152:5
+30/05/2023	10:45:27	Error: connect ECONNREFUSED ::1:3306 
+Error: connect ECONNREFUSED ::1:3306
+    at Object.createConnection (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\mysql2\promise.js:252:31)
+    at connect (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\services\database.service.js:19:22)
+    at query (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\services\database.service.js:32:28)
+    at Object.selectAllgpu (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\controllers\v1\api\compareController.js:29:24)
+    at C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\routes\v1\api\compare.js:10:27
+    at Layer.handle [as handle_request] (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at next (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\express\lib\router\route.js:144:13)
+    at Route.dispatch (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\express\lib\router\route.js:114:3)
+    at Layer.handle [as handle_request] (C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\express\lib\router\layer.js:95:5)
+    at C:\Users\hsl_s\Desktop\work\Project fil rouge\back\newBackendApi\node_modules\express\lib\router\index.js:284:15

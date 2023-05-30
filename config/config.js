@@ -31,7 +31,7 @@ const config = {
                 user: "maxtestnodejs@gmail.com",
                 pass: 'xiwkuvhwjlwjhrtq'
             },
-            privateEmails: ["maxoa59@gmail.com", "maxence.allart@gmail.com"]
+            privateEmails: ["maxoa59@gmail.com", "maxence.allart@gmail.com", "mikackerman093@outlook.fr"]
         },
         // API ACCESS key :
         authorization:{
